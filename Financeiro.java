@@ -1,15 +1,15 @@
 public abstract class Financeiro implements interfaceCadastro {
 
-    int id;
-    int numero;
-    String emissao;
-    String vencimento;
-    String pagamento;
-    double valor;
-    double juros;
-    double multa;
-    double desconto;
-    double total;
+    private int id;
+    private int numero;
+    private String emissao;
+    private String vencimento;
+    private String pagamento;
+    private double valor;
+    private double juros;
+    private double multa;
+    private double desconto;
+    private double total;
 
     public void setId(int id) {
         this.id = id;

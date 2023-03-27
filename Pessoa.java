@@ -1,10 +1,10 @@
 abstract class Pessoa implements interfaceCadastro {
 
-    int id;
-    String nome;
-    Endereco endereco;
-    Telefone telefone;
-    String email;
+    private int id;
+    private String nome;
+    private Endereco endereco;
+    private Telefone telefone;
+    private String email;
 
     public void setId(int id) {
         this.id = id;
@@ -22,16 +22,16 @@ abstract class Pessoa implements interfaceCadastro {
         return nome;
     }
 
-    public void setEndereco() {
-        endereco.entrar();
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setTelefone() {
-        telefone.entrar();
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
     }
 
     public Telefone getTelefone() {
@@ -57,10 +57,10 @@ abstract class Pessoa implements interfaceCadastro {
         setNome(leia.next());
 
         System.out.printf("\nInforme o endereço:");
-        setEndereco();
+        setEndereco(endereco);
 
         System.out.printf("\nInforme o telefone:");
-        setTelefone();
+        setTelefone(telefone);
 
         System.out.printf("\nInforme o email:");
         setEmail(leia.next());

@@ -4,6 +4,11 @@ public class Telefone implements interfaceCadastro {
     private int ddd;
     private long numero;
 
+    //construtor
+    public Telefone() {
+        entrar();
+    }
+
     //Entrada de saída de dados 
     public void setDdd(int ddd) {
         this.ddd = ddd;

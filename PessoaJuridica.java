@@ -1,8 +1,8 @@
 public abstract class PessoaJuridica extends Pessoa {
 
-    String cnpj;
-    String inscricao_estadual;
-    String contato;
+    private String cnpj;
+    private String inscricao_estadual;
+    private String contato;
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;

@@ -1,8 +1,8 @@
 public abstract class PessoaFisica extends Pessoa {
 
-    String cpf;
-    String rg;
-    String emissor;
+    private String cpf;
+    private String rg;
+    private String emissor;
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
