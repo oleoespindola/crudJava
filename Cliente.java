@@ -3,6 +3,10 @@ public class Cliente extends PessoaJuridica{
     private double limite_credito;
     private Endereco endereco_cobranca;
 
+    public Cliente() {
+        entrar();
+    }
+
     public void setLimite_credito(double limite_credito) {
         this.limite_credito = limite_credito;
     }
@@ -28,6 +32,15 @@ public class Cliente extends PessoaJuridica{
 
         System.out.printf("z]\nInforme o endereco de cobranca: ");
         setEndereco_cobranca(endereco_cobranca);
+    }
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+
+        System.out.printf("\nO limite de credito e: ", getLimite_credito());
+        System.out.printf("\nO endereco de cobranca e: ");
+        getEndereco().imprimir();
     }
     
 }
