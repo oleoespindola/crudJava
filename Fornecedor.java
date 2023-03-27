@@ -4,6 +4,11 @@ public class Fornecedor extends Pessoa {
     private String data_cadastro;
     private String site;
 
+    //Construtor
+    public Fornecedor() {
+        entrar();
+    }
+
     public void setLimite_compra(String limite_compra) {
         this.limite_compra = limite_compra;
     }
