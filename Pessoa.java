@@ -1,4 +1,4 @@
-public abstract class Pessoa implements interfaceCadastro {
+abstract class Pessoa implements interfaceCadastro {
 
     int id;
     String nome;
@@ -49,6 +49,7 @@ public abstract class Pessoa implements interfaceCadastro {
     // Sobrecarga
     @Override
     public void entrar() {
+
         System.out.printf("\nInforme o ID:");
         setId(leia.nextInt());
 
