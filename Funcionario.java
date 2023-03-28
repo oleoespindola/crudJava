@@ -1,10 +1,17 @@
 public class Funcionario extends Pessoa {
 
+    // Mpetodos
     private String data_admissao;
     private String data_demissao;
     private String ctps;
     private double salario;
 
+    // Construtor
+    public Funcionario() {
+        entrar();
+    }
+
+    // Encapsulamento
     public void setData_admissao(String data_admissao) {
         this.data_admissao = data_admissao;
     }
@@ -37,20 +44,18 @@ public class Funcionario extends Pessoa {
         return salario;
     }
 
+    // Sobrecarga de métodos
     @Override
     public void entrar() {
         super.entrar();
 
         System.out.printf("\nInforme o(a) data de admissao: ");
         setData_admissao(leia.next());
-
         System.out.printf("\nInforme o(a) data de demissao (se houver) ");
         setData_demissao(leia.next());
-
         System.out.printf("\nInforme o(a) registro da carteira de trabalho");
         setCtps(leia.next());
-
-        System.out.print("\nInforme o salario");
+        System.out.printf("\nInforme o salario");
         setSalario(leia.nextDouble());
     }
 

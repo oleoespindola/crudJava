@@ -1,5 +1,6 @@
 public abstract class Financeiro implements interfaceCadastro {
 
+    // Atributos
     private int id;
     private int numero;
     private String emissao;
@@ -11,6 +12,10 @@ public abstract class Financeiro implements interfaceCadastro {
     private double desconto;
     private double total;
 
+    // Construtor
+    public Financeiro() {}
+
+    // Encapsulamento
     public void setId(int id) {
         this.id = id;
     }
@@ -91,36 +96,30 @@ public abstract class Financeiro implements interfaceCadastro {
         return total;
     }
 
+
+    // sobrecarga de métodos
     @Override
     public void entrar() {
+
         System.out.printf("\nInforme o(a) ID");
         setId(leia.nextInt());
-
-        System.out.printf("\nInforme o(a) numero");
+        System.out.printf("\nInforme o(a) numero: ");
         setNumero(leia.nextInt());
-
-        System.out.printf("\nInforme o(a) emissao");
+        System.out.printf("\nInforme o(a) emissao: ");
         setEmissao(leia.next());
-
-        System.out.printf("\nInforme o(a) vencimento");
+        System.out.printf("\nInforme o(a) vencimento: ");
         setVencimento(leia.next());
-
-        System.out.printf("\nInforme o(a) pagamento");
+        System.out.printf("\nInforme o(a) pagamento: ");
         setPagamento(leia.next());
-
-        System.out.printf("\nInforme o(a) valor");
+        System.out.printf("\nInforme o(a) valor: ");
         setValor(leia.nextDouble());
-
-        System.out.printf("\nInforme o(a) juros");
+        System.out.printf("\nInforme o(a) juros: ");
         setJuros(leia.nextDouble());
-
-        System.out.printf("\nInforme o(a) multa");
+        System.out.printf("\nInforme o(a) multa: ");
         setMulta(leia.nextDouble());
-
         System.out.printf("\nInforme o(a) desconto");
         setDesconto(leia.nextDouble());
-
-        System.out.printf("\nInforme o(a) total");
+        System.out.printf("\nInforme o(a) total: ");
         setTotal(leia.nextDouble());
     }
 

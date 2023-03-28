@@ -1,5 +1,6 @@
 public class Fornecedor extends Pessoa {
 
+    // Atributos
     private String limite_compra;
     private String data_cadastro;
     private String site;
@@ -9,6 +10,7 @@ public class Fornecedor extends Pessoa {
         entrar();
     }
 
+    // Encapsulamento
     public void setLimite_compra(String limite_compra) {
         this.limite_compra = limite_compra;
     }
@@ -33,17 +35,16 @@ public class Fornecedor extends Pessoa {
         return site;
     }
 
+    // Sobrecarga de métdos
     @Override
     public void entrar() {
         super.entrar();
 
-        System.out.printf("Informe o(a): ");
+        System.out.printf("\nInforme o(a) limite de compra: ");
         setLimite_compra(leia.next());
-
-        System.out.printf("Informe o(a): ");
+        System.out.printf("\nInforme o(a) data do cadastro: ");
         setData_cadastro(leia.next());
-
-        System.out.printf("Informe o(a): ");
+        System.out.printf("\nInforme o(a) URL do site: ");
         setSite(leia.next());
 
     }
@@ -51,9 +52,10 @@ public class Fornecedor extends Pessoa {
     @Override
     public void imprimir() {
         super.imprimir();
-        System.out.printf("O limite de compra e de: ", getLimite_compra());
-        System.out.printf("A data do cadastro e: ", getData_cadastro());
-        System.out.printf("O site do fornecedor e: ", getSite());
+
+        System.out.printf("\nO limite de compra e de: ", getLimite_compra());
+        System.out.printf("\nA data do cadastro e: ", getData_cadastro());
+        System.out.printf("\nO site do fornecedor e: ", getSite());
     }
 
 }

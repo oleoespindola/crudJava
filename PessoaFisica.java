@@ -1,9 +1,14 @@
 public abstract class PessoaFisica extends Pessoa {
 
+    //Atribútos
     private String cpf;
     private String rg;
     private String emissor;
 
+    //Construtor
+    public PessoaFisica() {}
+
+    //Encapsulamento
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
@@ -28,19 +33,20 @@ public abstract class PessoaFisica extends Pessoa {
         return emissor;
     }
 
+
+    //Sobrecarga de métodos
     @Override
     public void entrar() {
 
         super.entrar();
 
-        System.out.printf("Informe o CPF: ");
+        System.out.printf("\nInforme o CPF: ");
         setCpf(leia.next());
-
-        System.out.print("Informe o rg: ");
+        System.out.printf("\nInforme o rg: ");
         setRg(leia.next());
-
-        System.out.printf("Informe o orgao expeditor: ");
+        System.out.printf("\nInforme o orgao expeditor: ");
         setEmissor(leia.next());
+
     }
 
     @Override
@@ -51,6 +57,7 @@ public abstract class PessoaFisica extends Pessoa {
         System.out.printf("\nO CPF e: ", getCpf());
         System.out.printf("\nO RG e: ", getRg());
         System.out.printf("\nO orgao expeditor e: ", getEmissor());
+
     }
 
 }

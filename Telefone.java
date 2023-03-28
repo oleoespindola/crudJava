@@ -26,13 +26,13 @@ public class Telefone implements interfaceCadastro {
         return numero;
     }
 
-    //métodos
+    //Sobrecarga de métodos
     @Override
     public void entrar() {
-        System.out.println("Informe o DDD: ");
+        System.out.printf("\nInforme o DDD: ");
         setDdd(leia.nextInt());
         
-        System.out.println("Informe o numero do telefone: ");
+        System.out.printf("\nInforme o numero do telefone: ");
         setNumero(leia.nextLong());
     }
 

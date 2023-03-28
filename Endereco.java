@@ -79,23 +79,23 @@ public class Endereco implements interfaceCadastro {
         System.out.printf("\nInforme o complemento :");
         setComplement(leia.next());
 
-        System.out.printf("Informe o bairro: ");
+        System.out.printf("\nInforme o bairro: ");
         setBairro(leia.next());
 
-        System.out.printf("Infome a cidade");
+        System.out.printf("\nInfome a cidade: ");
         setCidade(leia.next());
 
-        System.out.printf("Informe o estado");
+        System.out.printf("\nInforme o estado: ");
         setEstado(leia.next());
 
-        System.out.printf("Informe o CEP");
+        System.out.printf("\nInforme o CEP: ");
         setCep(leia.nextInt());
 
     }
 
     @Override
     public void imprimir() {
-        System.out.printf("Logradou: ", getLogradouro(), "\nNumero: ", getNumero(), "\nComplemento: ", getComplemeno(), "\nBairro: ", getBairro(), "Cidade: ", getCidade(), "Estado: ", getEstado(), "CEP: ", getCep());
+        System.out.printf("Logradouro: ", getLogradouro(), "\nNumero: ", getNumero(), "\nComplemento: ", getComplemeno(), "\nBairro: ", getBairro(), "Cidade: ", getCidade(), "Estado: ", getEstado(), "CEP: ", getCep());
     }
 
 }

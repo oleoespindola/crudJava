@@ -30,8 +30,9 @@ public class Cliente extends PessoaJuridica{
         System.out.printf("\nInforme o limite de credito: ");
         setLimite_credito(leia.nextDouble());
 
-        System.out.printf("z]\nInforme o endereco de cobranca: ");
-        setEndereco_cobranca(endereco_cobranca);
+        System.out.printf("\nInforme o endereco de cobranca: ");
+        Endereco capturarEndereco = new Endereco();
+        setEndereco_cobranca(capturarEndereco);
     }
 
     @Override
@@ -40,7 +41,7 @@ public class Cliente extends PessoaJuridica{
 
         System.out.printf("\nO limite de credito e: ", getLimite_credito());
         System.out.printf("\nO endereco de cobranca e: ");
-        getEndereco().imprimir();
+        endereco_cobranca.imprimir();
     }
     
 }

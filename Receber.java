@@ -1,10 +1,19 @@
 public class Receber extends Financeiro{
 
+    // Atributos
     private Cliente cliente;
     private String nota_fiscal;
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+
+    // Construtor
+    public Receber() {
+        entrar();
+    }
+
+    // Encapsulamento
+    public void setCliente() {
+        Cliente coletaCliente = new Cliente();
+        this.cliente = coletaCliente;
     }
 
     public Cliente getCliente() {
@@ -19,12 +28,13 @@ public class Receber extends Financeiro{
         return nota_fiscal;
     }
 
+    // Sobrecarga de métodos
     @Override
     public void entrar() {
         super.entrar();
 
         System.out.printf("\nInforme os dados do cliente");
-        setCliente(cliente);
+        setCliente();
 
         System.out.printf("\nInforme o numero da nota fiscal: ");
         setNota_fiscal(nota_fiscal);
@@ -35,7 +45,7 @@ public class Receber extends Financeiro{
     public void imprimir() {
         super.imprimir();
 
-        System.out.print("\nOs dados do cliente sao");
+        System.out.printf("\n=== Dados do cliente ===");
         getCliente().imprimir();
         System.out.printf("\nO numero da nota e: ", getNota_fiscal());
         
