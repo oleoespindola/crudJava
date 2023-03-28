@@ -51,11 +51,11 @@ public class Funcionario extends Pessoa {
 
         System.out.printf("\nInforme o(a) data de admissao: ");
         setData_admissao(leia.next());
-        System.out.printf("\nInforme o(a) data de demissao (se houver) ");
+        System.out.printf("\nInforme o(a) data de demissao (se houver): ");
         setData_demissao(leia.next());
-        System.out.printf("\nInforme o(a) registro da carteira de trabalho");
+        System.out.printf("\nInforme o(a) registro da carteira de trabalho: ");
         setCtps(leia.next());
-        System.out.printf("\nInforme o salario");
+        System.out.printf("\nInforme o salario: ");
         setSalario(leia.nextDouble());
     }
 
@@ -63,10 +63,10 @@ public class Funcionario extends Pessoa {
     public void imprimir() {
         super.imprimir();
 
-        System.out.printf("O(a) data de admissao e: ", getData_admissao());
-        System.out.printf("O(a) data de demissao e: ", getData_demissao());
-        System.out.printf("O(a) registro da carteira de trabalho e: ", getCtps());
-        System.out.printf("O(a) salario e: ", getSalario());
+        System.out.printf("O(a) data de admissao e: %s", getData_admissao());
+        System.out.printf("O(a) data de demissao e: %s", getData_demissao());
+        System.out.printf("O(a) registro da carteira de trabalho e: %s", getCtps());
+        System.out.printf("O(a) salario e: %d", getSalario());
     }
 
 }

@@ -75,10 +75,10 @@ abstract class Pessoa implements interfaceCadastro {
 
     @Override
     public void imprimir() {
-        System.out.printf("\nO ID da pessoa e: ", getId());
-        System.out.printf("\nO nome da pessoa e: ", getNome());
+        System.out.printf("\nO ID da pessoa e: %i", getId());
+        System.out.printf("\nO nome da pessoa e: %s", getNome());
         telefone.imprimir();
         endereco.imprimir();
-        System.out.printf("\nO email da pessoa e: ", getEmail());
+        System.out.printf("\nO email da pessoa e: %s", getEmail());
     }
 }

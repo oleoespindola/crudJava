@@ -47,7 +47,7 @@ public class Receber extends Financeiro{
 
         System.out.printf("\n=== Dados do cliente ===");
         getCliente().imprimir();
-        System.out.printf("\nO numero da nota e: ", getNota_fiscal());
+        System.out.printf("\nO numero da nota e: %s", getNota_fiscal());
         
     }
     

@@ -53,9 +53,9 @@ public class Fornecedor extends Pessoa {
     public void imprimir() {
         super.imprimir();
 
-        System.out.printf("\nO limite de compra e de: ", getLimite_compra());
-        System.out.printf("\nA data do cadastro e: ", getData_cadastro());
-        System.out.printf("\nO site do fornecedor e: ", getSite());
+        System.out.printf("\nO limite de compra e de: %s", getLimite_compra());
+        System.out.printf("\nA data do cadastro e: %s", getData_cadastro());
+        System.out.printf("\nO site do fornecedor e: %s", getSite());
     }
 
 }

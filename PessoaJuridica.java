@@ -52,9 +52,9 @@ public abstract class PessoaJuridica extends Pessoa {
 
         super.imprimir();
 
-        System.out.printf("\nSeu CNPJ e: ", getCnpj());
-        System.out.printf("\nSua incricao estadual e: ", getInscricao_estadual());
-        System.out.printf("\nSeu contato e: ", getContato());
+        System.out.printf("\nSeu CNPJ e: %s", getCnpj());
+        System.out.printf("\nSua incricao estadual e: %s", getInscricao_estadual());
+        System.out.printf("\nSeu contato e: %s", getContato());
 
     }
 }

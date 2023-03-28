@@ -97,12 +97,12 @@ public class Menu {
     // Métodos
     private void menu() {
         System.out.printf(
-                "\nEscolha uma das opcoes abaixo:\n1 - Funcionario\n2- Forcenedor\n3 - Cliente\n4- Valor a receber\n5 - Valor a pagar\n6 - Sair\n");
+                "\nEscolha uma das opcoes abaixo:\n1 - Funcionario\n2 - Forcenedor\n3 - Cliente\n4 - Valor a receber\n5 - Valor a pagar\n6 - Sair\n");
         setOpcao_menu(leia.nextInt());
     }
 
     private void submenu() {
-        System.out.printf("\nEscolha uma das opcoes:\n1 - Cadastrar\n2 - Ler\n3 - Imprimir\n4 - Voltar\n");
+        System.out.printf("\nEscolha uma das opcoes:\n1 - Cadastrar\n2 - Ler\n3 - Excluir\n4 - Voltar\n");
         setOpcao_submenu(leia.nextInt());
     }
 
@@ -128,11 +128,13 @@ public class Menu {
                             break;
                         case 4:
                             menu();
+                            break;
                         default:
                             System.out.printf("\nOpcao invalida ");
                             menu();
+                            break;
                     }
-
+                    break;
                 case 2:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -149,11 +151,13 @@ public class Menu {
                             break;
                         case 4:
                             menu();
+                            break;
                         default:
                             System.out.printf("\nOpcao invalida ");
                             menu();
+                            break;
                     }
-
+                    break;
                 case 3:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -170,12 +174,13 @@ public class Menu {
                             submenu();
                         case 4:
                             menu();
+                            break;
                         default:
                             System.out.printf("\nOpcao invalida ");
                             menu();
-                            ;
+                            break;
                     }
-
+                    break;
                 case 4:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -192,12 +197,13 @@ public class Menu {
                             submenu();
                         case 4:
                             menu();
+                            break;
                         default:
                             System.out.printf("\nOpcao invalida ");
                             menu();
-                            ;
+                            break;
                     }
-
+                    break;
                 case 5:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -214,11 +220,13 @@ public class Menu {
                             submenu();
                         case 4:
                             menu();
+                            break;
                         default:
                             System.out.printf("\nOpcao invalida ");
                             menu();
+                            break;
                     }
-
+                    break;
                 case 6:
                     setContinuar_executando(false);
                     break;
@@ -226,10 +234,9 @@ public class Menu {
                 default:
                     System.out.printf("\nOpcao Invalida");
                     menu();
+                    break;
             }
-
+            break;
         }
-
     }
-
 }

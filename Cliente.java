@@ -30,7 +30,7 @@ public class Cliente extends PessoaJuridica{
         System.out.printf("\nInforme o limite de credito: ");
         setLimite_credito(leia.nextDouble());
 
-        System.out.printf("\nInforme o endereco de cobranca: ");
+        System.out.printf("\n=== Endereço decobrença ===");
         Endereco capturarEndereco = new Endereco();
         setEndereco_cobranca(capturarEndereco);
     }
@@ -39,8 +39,8 @@ public class Cliente extends PessoaJuridica{
     public void imprimir() {
         super.imprimir();
 
-        System.out.printf("\nO limite de credito e: ", getLimite_credito());
-        System.out.printf("\nO endereco de cobranca e: ");
+        System.out.printf("\nO limite de credito e: %s", getLimite_credito());
+        System.out.printf("\n=== Endereço decobrença ===");
         endereco_cobranca.imprimir();
     }
     

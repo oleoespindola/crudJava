@@ -6,7 +6,9 @@ public abstract class PessoaFisica extends Pessoa {
     private String emissor;
 
     //Construtor
-    public PessoaFisica() {}
+    public PessoaFisica() {
+        entrar();
+    }
 
     //Encapsulamento
     public void setCpf(String cpf) {
@@ -54,9 +56,9 @@ public abstract class PessoaFisica extends Pessoa {
 
         super.imprimir();
 
-        System.out.printf("\nO CPF e: ", getCpf());
-        System.out.printf("\nO RG e: ", getRg());
-        System.out.printf("\nO orgao expeditor e: ", getEmissor());
+        System.out.printf("\nO CPF e: %s", getCpf());
+        System.out.printf("\nO RG e: %s", getRg());
+        System.out.printf("\nO orgao expeditor e: %s", getEmissor());
 
     }
 

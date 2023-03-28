@@ -38,7 +38,7 @@ public class Telefone implements interfaceCadastro {
 
     @Override
     public void imprimir() {
-        System.out.printf("\nO número do Telefone e (", getDdd(), ") ", getNumero());
+        System.out.printf("\nO número do Telefone e (%i) %i", getDdd(), getNumero());
     }
 
     
