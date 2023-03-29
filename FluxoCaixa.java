@@ -60,10 +60,10 @@ public class FluxoCaixa implements InterfaceCadastro {
     public void imprimir() {
 
         System.out.printf("=== Fluxo de Caixa ===\n");
-        System.out.printf("Vencimento | Credito | Debito | Saldo");
-        System.out.printf("%s | %2.f | 0 | %2.f", getVencimentoCredito(), getCredito(), getCredito());
-        System.out.printf("%s | 0 | %2.f | %2.f", getVencimentoDebito(), getDebito(), getDebito());
-        System.out.printf("Totais | %2.f | %2.f | %2.f", getCredito(), getDebito(), (getCredito() - getDebito()));
+        System.out.printf("Vencimento | Credito | Debito | Saldo\n");
+        System.out.printf("%s | %.2f | 0 | %.2f\n", getVencimentoCredito(), getCredito(), getCredito());
+        System.out.printf("%s | 0 | %.2f | %.2f\n", getVencimentoDebito(), getDebito(), getDebito());
+        System.out.printf("Totais | %.2f | %.2f | %.2f\n", getCredito(), getDebito(), (getCredito() - getDebito()));
 
     }
     

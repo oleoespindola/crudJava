@@ -98,7 +98,7 @@ public class Menu {
     // Métodos
     private void menu() {
         System.out.printf(
-                "\nEscolha uma das opcoes abaixo:\n1 - Funcionario\n2 - Forcenedor\n3 - Cliente\n4 - Valor a receber\n5 - Valor a pagar\n6 - Sair\n");
+                "\nEscolha uma das opcoes abaixo:\n1 - Funcionario\n2 - Forcenedor\n3 - Cliente\n4 - Valor a receber\n5 - Valor a pagar\n6 - Fluxo de caixa\n7 - Sair\n");
         setOpcao_menu(leia.nextInt());
     }
 

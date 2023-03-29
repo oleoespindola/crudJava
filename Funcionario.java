@@ -66,6 +66,6 @@ public class Funcionario extends PessoaFisica {
         System.out.printf("\nO(a) data de admissao e: %s", getData_admissao());
         System.out.printf("\nO(a) data de demissao e: %s", getData_demissao());
         System.out.printf("\nO(a) registro da carteira de trabalho e: %s", getCtps());
-        System.out.printf("\nO(a) salario e: %2.f", getSalario());
+        System.out.printf("\nO(a) salario e: %.2f", getSalario());
     }
 }
