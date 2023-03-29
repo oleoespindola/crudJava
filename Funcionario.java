@@ -1,10 +1,10 @@
-public class Funcionario extends Pessoa {
+public class Funcionario extends PessoaFisica {
 
     // Mpetodos
     private String data_admissao;
     private String data_demissao;
     private String ctps;
-    private double salario;
+    private String salario;
 
     // Construtor
     public Funcionario() {
@@ -36,11 +36,11 @@ public class Funcionario extends Pessoa {
         return ctps;
     }
 
-    public void setSalario(double salario) {
+    public void setSalario(String salario) {
         this.salario = salario;
     }
 
-    public double getSalario() {
+    public String getSalario() {
         return salario;
     }
 
@@ -56,7 +56,7 @@ public class Funcionario extends Pessoa {
         System.out.printf("\nInforme o(a) registro da carteira de trabalho: ");
         setCtps(leia.next());
         System.out.printf("\nInforme o salario: ");
-        setSalario(leia.nextDouble());
+        setSalario(leia.next());
     }
 
     @Override
@@ -66,7 +66,7 @@ public class Funcionario extends Pessoa {
         System.out.printf("O(a) data de admissao e: %s", getData_admissao());
         System.out.printf("O(a) data de demissao e: %s", getData_demissao());
         System.out.printf("O(a) registro da carteira de trabalho e: %s", getCtps());
-        System.out.printf("O(a) salario e: %d", getSalario());
+        System.out.printf("O(a) salario e: %s", getSalario());
     }
 
 }

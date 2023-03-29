@@ -1,4 +1,4 @@
-public abstract class Financeiro implements interfaceCadastro {
+public abstract class Financeiro implements InterfaceCadastro {
 
     // Atributos
     private int id;

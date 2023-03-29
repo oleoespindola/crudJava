@@ -1,13 +1,11 @@
-public class Telefone implements interfaceCadastro {
+public class Telefone implements InterfaceCadastro {
     
     //variáveis 
     private int ddd;
     private long numero;
 
     //construtor
-    public Telefone() {
-        entrar();
-    }
+    public Telefone() {}
 
     //Entrada de saída de dados 
     public void setDdd(int ddd) {
@@ -38,7 +36,7 @@ public class Telefone implements interfaceCadastro {
 
     @Override
     public void imprimir() {
-        System.out.printf("\nO número do Telefone e (%i) %i", getDdd(), getNumero());
+        System.out.printf("\nO número do Telefone e (%d) %d", getDdd(), getNumero());
     }
 
     

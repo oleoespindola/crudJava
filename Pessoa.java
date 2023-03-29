@@ -1,4 +1,4 @@
-abstract class Pessoa implements interfaceCadastro {
+abstract class Pessoa implements InterfaceCadastro {
 
     private int id;
     private String nome;
@@ -6,9 +6,7 @@ abstract class Pessoa implements interfaceCadastro {
     private Telefone telefone;
     private String email;
 
-    public Pessoa() {
-
-    }
+    public Pessoa() {}
 
     public void setId(int id) {
         this.id = id;
@@ -75,7 +73,7 @@ abstract class Pessoa implements interfaceCadastro {
 
     @Override
     public void imprimir() {
-        System.out.printf("\nO ID da pessoa e: %i", getId());
+        System.out.printf("\nO ID da pessoa e: %s", getId());
         System.out.printf("\nO nome da pessoa e: %s", getNome());
         telefone.imprimir();
         endereco.imprimir();

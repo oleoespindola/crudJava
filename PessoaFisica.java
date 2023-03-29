@@ -6,9 +6,7 @@ public abstract class PessoaFisica extends Pessoa {
     private String emissor;
 
     //Construtor
-    public PessoaFisica() {
-        entrar();
-    }
+    public PessoaFisica() {}
 
     //Encapsulamento
     public void setCpf(String cpf) {

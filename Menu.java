@@ -108,10 +108,12 @@ public class Menu {
 
     public void executar() {
 
-        while (getContinuar_executando() == true) {
+        while (getContinuar_executando()) {
 
             menu();
+
             switch (getOpcao_menu()) {
+
                 case 1:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -127,14 +129,13 @@ public class Menu {
                             setFuncionario(null);
                             break;
                         case 4:
-                            menu();
                             break;
                         default:
                             System.out.printf("\nOpcao invalida ");
-                            menu();
                             break;
                     }
                     break;
+
                 case 2:
                     submenu();
                     switch (getOpcao_submenu()) {
@@ -150,93 +151,87 @@ public class Menu {
                             setFornecedor(null);
                             break;
                         case 4:
-                            menu();
                             break;
                         default:
                             System.out.printf("\nOpcao invalida ");
-                            menu();
-                            break;
+                            return;
                     }
                     break;
+
                 case 3:
                     submenu();
                     switch (getOpcao_submenu()) {
                         case 1:
                             Cliente capturarCliente = new Cliente();
                             setCliente(capturarCliente);
-                            submenu();
+                            break;
                         case 2:
                             Cliente cliente = getCliente();
                             cliente.imprimir();
-                            submenu();
+                            break;
                         case 3:
                             setCliente(null);
-                            submenu();
+                            break;
                         case 4:
-                            menu();
                             break;
                         default:
                             System.out.printf("\nOpcao invalida ");
-                            menu();
                             break;
                     }
                     break;
+
                 case 4:
                     submenu();
                     switch (getOpcao_submenu()) {
                         case 1:
                             Receber capturarReceber = new Receber();
                             setReceber(capturarReceber);
-                            submenu();
+                            break;
                         case 2:
                             Receber receber = getReceber();
                             receber.imprimir();
-                            submenu();
+                            break;
                         case 3:
                             setReceber(null);
-                            submenu();
+                            break;
                         case 4:
-                            menu();
                             break;
                         default:
                             System.out.printf("\nOpcao invalida ");
-                            menu();
                             break;
                     }
                     break;
+
                 case 5:
                     submenu();
                     switch (getOpcao_submenu()) {
                         case 1:
                             Pagar capturarPagar = new Pagar();
                             setPagar(capturarPagar);
-                            submenu();
+                            break;
                         case 2:
                             Pagar pagar = getPagar();
                             pagar.imprimir();
-                            submenu();
+                            break;
                         case 3:
                             setPagar(null);
-                            submenu();
+                            break;
                         case 4:
-                            menu();
                             break;
                         default:
                             System.out.printf("\nOpcao invalida ");
-                            menu();
                             break;
                     }
                     break;
+
                 case 6:
                     setContinuar_executando(false);
                     break;
 
                 default:
                     System.out.printf("\nOpcao Invalida");
-                    menu();
                     break;
             }
-            break;
         }
     }
 }

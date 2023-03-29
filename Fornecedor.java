@@ -1,4 +1,4 @@
-public class Fornecedor extends Pessoa {
+public class Fornecedor extends PessoaFisica {
 
     // Atributos
     private String limite_compra;

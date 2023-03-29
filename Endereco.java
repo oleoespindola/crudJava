@@ -1,4 +1,4 @@
-public class Endereco implements interfaceCadastro {
+public class Endereco implements InterfaceCadastro {
 
     private String logradouro;
     private int numero;
@@ -95,13 +95,14 @@ public class Endereco implements interfaceCadastro {
 
     @Override
     public void imprimir() {
+
         System.out.printf("Logradouro: %s", getLogradouro());
-        System.out.printf("\nNumero: %i", getNumero());
+        System.out.printf("\nNumero: %s", getNumero());
         System.out.printf("\nComplemento: %s", getComplemeno());
         System.out.printf( "\nBairro: %s", getBairro());
         System.out.printf( "\nCidade: %s", getCidade());
         System.out.printf( "\nEstado: %s", getEstado());
-        System.out.printf("\nCEP: %i", getCep());
+        System.out.printf("\nCEP: %s", getCep());
     }
 
 }
