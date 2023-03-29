@@ -5,7 +5,9 @@ public class Telefone implements InterfaceCadastro {
     private long numero;
 
     //construtor
-    public Telefone() {}
+    public Telefone() {
+        entrar();
+    }
 
     //Entrada de saída de dados 
     public void setDdd(int ddd) {

@@ -70,24 +70,19 @@ public class Endereco implements InterfaceCadastro {
 
     @Override
     public void entrar() {
-        System.out.printf("\nInforme o logradouro :");
-        setLogradouro(leia.next());
 
+        System.out.printf("\nInforme o logradouro: ");
+        setLogradouro(leia.next());
         System.out.printf("\nInfome o numero: ");
         setNumero(leia.nextInt());
-
         System.out.printf("\nInforme o complemento :");
         setComplement(leia.next());
-
         System.out.printf("\nInforme o bairro: ");
         setBairro(leia.next());
-
         System.out.printf("\nInfome a cidade: ");
         setCidade(leia.next());
-
         System.out.printf("\nInforme o estado: ");
         setEstado(leia.next());
-
         System.out.printf("\nInforme o CEP: ");
         setCep(leia.nextInt());
 
@@ -96,7 +91,7 @@ public class Endereco implements InterfaceCadastro {
     @Override
     public void imprimir() {
 
-        System.out.printf("Logradouro: %s", getLogradouro());
+        System.out.printf("\nLogradouro: %s", getLogradouro());
         System.out.printf("\nNumero: %s", getNumero());
         System.out.printf("\nComplemento: %s", getComplemeno());
         System.out.printf( "\nBairro: %s", getBairro());

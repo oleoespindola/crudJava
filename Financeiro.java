@@ -101,7 +101,7 @@ public abstract class Financeiro implements InterfaceCadastro {
     @Override
     public void entrar() {
 
-        System.out.printf("\nInforme o(a) ID");
+        System.out.printf("\nInforme o(a) ID: ");
         setId(leia.nextInt());
         System.out.printf("\nInforme o(a) numero: ");
         setNumero(leia.nextInt());
@@ -117,7 +117,7 @@ public abstract class Financeiro implements InterfaceCadastro {
         setJuros(leia.nextDouble());
         System.out.printf("\nInforme o(a) multa: ");
         setMulta(leia.nextDouble());
-        System.out.printf("\nInforme o(a) desconto");
+        System.out.printf("\nInforme o(a) desconto: ");
         setDesconto(leia.nextDouble());
         System.out.printf("\nInforme o(a) total: ");
         setTotal(leia.nextDouble());
@@ -134,8 +134,8 @@ public abstract class Financeiro implements InterfaceCadastro {
         System.out.printf("\nO valor e: %s", getValor());
         System.out.printf("\nO juros e: %s", getJuros());
         System.out.printf("\nA multa e: %s", getMulta());
-        System.out.printf("\nO desconto e: %d", getDesconto());
-        System.out.printf("\nO total e: %d", getTotal());
+        System.out.printf("\nO desconto e: %2.f", getDesconto());
+        System.out.printf("\nO total e: %2.f", getTotal());
     }
 
 }

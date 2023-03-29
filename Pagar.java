@@ -38,4 +38,16 @@ public class Pagar extends Financeiro {
         setBoleto(leia.next());
     }
     
+    @Override
+    public void imprimir() {
+        super.imprimir();
+
+        //Divisao
+        System.out.printf("\n=== Dados do fornecedor ===");
+        Fornecedor capturarForcenedor = getFornecedor();
+        capturarForcenedor.imprimir();
+
+        System.out.printf("\nDados do Boleto: %s", getBoleto());
+    }
+
 }

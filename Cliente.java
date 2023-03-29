@@ -25,6 +25,7 @@ public class Cliente extends PessoaJuridica{
 
     @Override
     public void entrar() {
+        
         super.entrar();
 
         System.out.printf("\nInforme o limite de credito: ");
@@ -37,10 +38,11 @@ public class Cliente extends PessoaJuridica{
 
     @Override
     public void imprimir() {
+        
         super.imprimir();
 
         System.out.printf("\nO limite de credito e: %s", getLimite_credito());
-        System.out.printf("\n=== Endereço decobrença ===");
+        System.out.printf("\n=== Endereco de cobranca ===");
         endereco_cobranca.imprimir();
     }
     

@@ -1,10 +1,10 @@
 public class Funcionario extends PessoaFisica {
 
-    // Mpetodos
+    // Metodos
     private String data_admissao;
     private String data_demissao;
     private String ctps;
-    private String salario;
+    private double salario;
 
     // Construtor
     public Funcionario() {
@@ -36,11 +36,11 @@ public class Funcionario extends PessoaFisica {
         return ctps;
     }
 
-    public void setSalario(String salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
 
-    public String getSalario() {
+    public double getSalario() {
         return salario;
     }
 
@@ -56,17 +56,16 @@ public class Funcionario extends PessoaFisica {
         System.out.printf("\nInforme o(a) registro da carteira de trabalho: ");
         setCtps(leia.next());
         System.out.printf("\nInforme o salario: ");
-        setSalario(leia.next());
+        setSalario(leia.nextDouble());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();
 
-        System.out.printf("O(a) data de admissao e: %s", getData_admissao());
-        System.out.printf("O(a) data de demissao e: %s", getData_demissao());
-        System.out.printf("O(a) registro da carteira de trabalho e: %s", getCtps());
-        System.out.printf("O(a) salario e: %s", getSalario());
+        System.out.printf("\nO(a) data de admissao e: %s", getData_admissao());
+        System.out.printf("\nO(a) data de demissao e: %s", getData_demissao());
+        System.out.printf("\nO(a) registro da carteira de trabalho e: %s", getCtps());
+        System.out.printf("\nO(a) salario e: %2.f", getSalario());
     }
-
 }
