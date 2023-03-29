@@ -12,6 +12,7 @@ public class Menu {
     Cliente cliente;
     Receber receber;
     Pagar pagar;
+    FluxoCaixa fluxoCaixa;
     Scanner leia;
 
     // construtor
@@ -225,6 +226,9 @@ public class Menu {
                     break;
 
                 case 6:
+                    fluxoCaixa = new FluxoCaixa(pagar.getVencimento(), receber.getVencimento(), receber.getValor(), pagar.getValor());
+                    break;
+                case 7:
                     setContinuar_executando(false);
                     break;
 

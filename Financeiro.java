@@ -126,14 +126,14 @@ public abstract class Financeiro implements InterfaceCadastro {
     @Override
     public void imprimir() {
 
-        System.out.printf("\nO ID e: %i", getId());
-        System.out.printf("\nO numero e: %i", getNumero());
+        System.out.printf("\nO ID e: %d", getId());
+        System.out.printf("\nO numero e: %d", getNumero());
         System.out.printf("\nA emissao e: %s", getEmissao());
         System.out.printf("\nO vencimento e: %s", getVencimento());
         System.out.printf("\nO pagamento e: %s", getPagamento());
-        System.out.printf("\nO valor e: %s", getValor());
-        System.out.printf("\nO juros e: %s", getJuros());
-        System.out.printf("\nA multa e: %s", getMulta());
+        System.out.printf("\nO valor e: %2.f", getValor());
+        System.out.printf("\nO juros e: %2.f", getJuros());
+        System.out.printf("\nA multa e: %2.f", getMulta());
         System.out.printf("\nO desconto e: %2.f", getDesconto());
         System.out.printf("\nO total e: %2.f", getTotal());
     }
