@@ -1,6 +1,6 @@
-package financeiro;
+package financeiro.cadastro.pessoa.tiposPessoas.funcionario;
 
-import financeiro.cadastro.pessoa.pessoas.*;
+import financeiro.cadastro.pessoa.tiposPessoas.*;
 
 public class Funcionario extends PessoaFisica {
 

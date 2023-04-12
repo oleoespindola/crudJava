@@ -1,7 +1,7 @@
-package financeiro;
+package financeiro.cadastro.pessoa.tiposPessoas.cliente;
 
 import financeiro.cadastro.pessoa.*;
-import financeiro.cadastro.pessoa.pessoas.*;
+import financeiro.cadastro.pessoa.tiposPessoas.*;
 
 public class Cliente extends PessoaJuridica{
 

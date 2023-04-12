@@ -1,4 +1,6 @@
-package financeiro;
+package financeiro.cadastro.pessoa.tiposPessoas.cliente;
+
+import financeiro.Financeiro;
 
 public class Receber extends Financeiro{
 

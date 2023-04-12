@@ -1,5 +1,9 @@
+package classes;
 
-import financeiro.*;
+import financeiro.caixa.*;
+import financeiro.cadastro.pessoa.tiposPessoas.cliente.*;
+import financeiro.cadastro.pessoa.tiposPessoas.fornencedor.*;
+import financeiro.cadastro.pessoa.tiposPessoas.funcionario.*;
 
 import java.util.Scanner;
 

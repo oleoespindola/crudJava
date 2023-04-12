@@ -1,4 +1,4 @@
-package financeiro;
+package financeiro.caixa;
 
 import financeiro.cadastro.InterfaceCadastro;
 

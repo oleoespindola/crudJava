@@ -1,4 +1,4 @@
-package financeiro.cadastro.pessoa.pessoas;
+package financeiro.cadastro.pessoa.tiposPessoas;
 
 import financeiro.cadastro.pessoa.*;
 

@@ -1,4 +1,6 @@
-package financeiro;
+package financeiro.cadastro.pessoa.tiposPessoas.fornencedor;
+
+import financeiro.Financeiro;
 
 public class Pagar extends Financeiro {
 
