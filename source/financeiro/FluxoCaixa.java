@@ -1,3 +1,7 @@
+package financeiro;
+
+import financeiro.cadastro.InterfaceCadastro;
+
 public class FluxoCaixa implements InterfaceCadastro {
 
     // Atritbutos

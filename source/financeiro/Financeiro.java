@@ -1,3 +1,7 @@
+package financeiro;
+
+import financeiro.cadastro.*;
+
 public abstract class Financeiro implements InterfaceCadastro {
 
     // Atributos

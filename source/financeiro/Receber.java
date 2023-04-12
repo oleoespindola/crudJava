@@ -1,3 +1,5 @@
+package financeiro;
+
 public class Receber extends Financeiro{
 
     // Atributos

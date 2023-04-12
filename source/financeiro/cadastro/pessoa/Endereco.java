@@ -1,3 +1,7 @@
+package financeiro.cadastro.pessoa;
+
+import financeiro.cadastro.InterfaceCadastro;
+
 public class Endereco implements InterfaceCadastro {
 
     private String logradouro;

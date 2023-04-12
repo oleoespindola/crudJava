@@ -1,4 +1,8 @@
-abstract class Pessoa implements InterfaceCadastro {
+package financeiro.cadastro.pessoa;
+
+import financeiro.cadastro.InterfaceCadastro;
+
+public abstract class Pessoa implements InterfaceCadastro {
 
     private int id;
     private String nome;

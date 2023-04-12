@@ -1,3 +1,7 @@
+package financeiro;
+
+import financeiro.cadastro.pessoa.pessoas.*;
+
 public class Fornecedor extends PessoaFisica {
 
     // Atributos

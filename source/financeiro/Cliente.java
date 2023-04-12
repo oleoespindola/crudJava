@@ -1,3 +1,8 @@
+package financeiro;
+
+import financeiro.cadastro.pessoa.*;
+import financeiro.cadastro.pessoa.pessoas.*;
+
 public class Cliente extends PessoaJuridica{
 
     private double limite_credito;

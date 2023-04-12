@@ -1,3 +1,4 @@
+package financeiro.cadastro;
 import java.util.Scanner;
 
 public interface InterfaceCadastro {

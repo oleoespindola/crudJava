@@ -1,3 +1,7 @@
+package financeiro.cadastro.pessoa;
+
+import financeiro.cadastro.*;
+
 public class Telefone implements InterfaceCadastro {
     
     //variáveis 

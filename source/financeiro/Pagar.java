@@ -1,3 +1,5 @@
+package financeiro;
+
 public class Pagar extends Financeiro {
 
     // Atributos

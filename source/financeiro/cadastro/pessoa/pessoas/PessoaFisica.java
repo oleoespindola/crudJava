@@ -1,3 +1,7 @@
+package financeiro.cadastro.pessoa.pessoas;
+
+import financeiro.cadastro.pessoa.*;
+
 public abstract class PessoaFisica extends Pessoa {
 
     //Atribútos
