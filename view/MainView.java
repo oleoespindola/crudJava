@@ -1,4 +1,4 @@
-package model;
+viewpackage model;
 import menu.Menu;
 
 public class Main {

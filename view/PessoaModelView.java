@@ -1,4 +1,7 @@
-package model;
+package view;
+
+import model.Endereco;
+import model.Telefone;
 
 public abstract class PessoaModel implements InterfaceCadastro {
 

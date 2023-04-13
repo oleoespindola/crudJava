@@ -1,6 +1,6 @@
 package model;
 
-public class ClienteModel extends PessoaJuridica{
+public class ClienteModel extends PessoaJuridica {
 
     private double limite_credito;
     private Endereco endereco_cobranca;

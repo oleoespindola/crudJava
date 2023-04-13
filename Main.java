@@ -1,5 +1,4 @@
-package model;
-import menu.Menu;
+import menu.*;
 
 public class Main {
     

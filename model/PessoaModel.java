@@ -1,15 +1,21 @@
 package model;
 
-public abstract class PessoaModel implements InterfaceCadastro {
+public abstract class PessoaModel {
 
+    // Atributos
     private int id;
     private String nome;
-    private Endereco endereco;
-    private Telefone telefone;
+    private EnderecoModel endereco;
+    private TelefoneModel telefone;
     private String email;
 
+    // Constructor 
     public PessoaModel() {}
 
+
+        // Getters & Setters 
+
+    // ID 
     public void setId(int id) {
         this.id = id;
     }
@@ -18,6 +24,7 @@ public abstract class PessoaModel implements InterfaceCadastro {
         return id;
     }
 
+    // Nome
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -26,19 +33,21 @@ public abstract class PessoaModel implements InterfaceCadastro {
         return nome;
     }
 
-    public void setEndereco(Endereco endereco) {
+    // Endereço
+    public void setEndereco(EnderecoModel endereco) {
         this.endereco = endereco;
     }
 
-    public Endereco getEndereco() {
+    public EnderecoModel getEndereco() {
         return endereco;
     }
 
-    public void setTelefone(Telefone telefone) {
+    // Telefone
+    public void setTelefone(TelefoneModel telefone) {
         this.telefone = telefone;
     }
 
-    public Telefone getTelefone() {
+    public TelefoneModel getTelefone() {
         return telefone;
     }
 

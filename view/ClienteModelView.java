@@ -1,4 +1,6 @@
-package model;
+package view;
+
+import model.Endereco;
 
 public class ClienteModel extends PessoaJuridica{
 

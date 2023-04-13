@@ -1,4 +1,4 @@
-package model;
+package modviewel;
 import InterfaceCadastro;
 
 public abstract class FianceiroModel implements InterfaceCadastro {

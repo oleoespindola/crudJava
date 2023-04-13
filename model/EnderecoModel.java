@@ -1,9 +1,6 @@
 package model;
 
-
-import financeiro.cadastro.InterfaceCadastro;
-
-public class Endereco implements InterfaceCadastro {
+public class EnderecoModel {
 
     private String logradouro;
     private int numero;
@@ -13,10 +10,13 @@ public class Endereco implements InterfaceCadastro {
     private String estado;
     private int cep;
 
-    public Endereco() {
-        entrar();
+    public EnderecoModel() {
+
     }
 
+        // Getters & Setters    
+
+    //Logradouro
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
     }
@@ -25,6 +25,7 @@ public class Endereco implements InterfaceCadastro {
         return logradouro;
     }
 
+    // Número
     public void setNumero(int numero) {
         this.numero = numero;
     }
@@ -33,14 +34,16 @@ public class Endereco implements InterfaceCadastro {
         return numero;
     }
 
-    public void setComplement(String complemento) {
+    // Complemento
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 
-    public String getComplemeno() {
+    public String getComplemento() {
         return complemento;
     }
 
+    // Bairro
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
@@ -49,6 +52,7 @@ public class Endereco implements InterfaceCadastro {
         return bairro;
     }
 
+    // Cidade 
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
@@ -57,6 +61,7 @@ public class Endereco implements InterfaceCadastro {
         return cidade;
     }
 
+    // Estado 
     public void setEstado(String estado) {
         this.estado = estado;
     }
@@ -65,44 +70,13 @@ public class Endereco implements InterfaceCadastro {
         return estado;
     }
 
+    // CEP 
     public void setCep(int cep) {
         this.cep = cep;
     }
 
     public int getCep() {
         return cep;
-    }
-
-    @Override
-    public void entrar() {
-
-        System.out.printf("\nInforme o logradouro: ");
-        setLogradouro(leia.next());
-        System.out.printf("\nInfome o numero: ");
-        setNumero(leia.nextInt());
-        System.out.printf("\nInforme o complemento :");
-        setComplement(leia.next());
-        System.out.printf("\nInforme o bairro: ");
-        setBairro(leia.next());
-        System.out.printf("\nInfome a cidade: ");
-        setCidade(leia.next());
-        System.out.printf("\nInforme o estado: ");
-        setEstado(leia.next());
-        System.out.printf("\nInforme o CEP: ");
-        setCep(leia.nextInt());
-
-    }
-
-    @Override
-    public void imprimir() {
-
-        System.out.printf("\nLogradouro: %s", getLogradouro());
-        System.out.printf("\nNumero: %s", getNumero());
-        System.out.printf("\nComplemento: %s", getComplemeno());
-        System.out.printf( "\nBairro: %s", getBairro());
-        System.out.printf( "\nCidade: %s", getCidade());
-        System.out.printf( "\nEstado: %s", getEstado());
-        System.out.printf("\nCEP: %s", getCep());
     }
 
 }

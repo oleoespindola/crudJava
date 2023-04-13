@@ -1,21 +1,17 @@
 package model;
 
-
-import InterfaceCadastro;
-import financeiro.cadastro.*;
-
-public class Telefone implements InterfaceCadastro {
+public class TelefoneModel {
     
-    //variáveis 
+    // Atributos 
     private int ddd;
     private long numero;
 
-    //construtor
-    public Telefone() {
-        entrar();
-    }
+    // Constructor 
+    public TelefoneModel() {}
 
-    //Entrada de saída de dados 
+        // Getters & Setters 
+
+    // DDD
     public void setDdd(int ddd) {
         this.ddd = ddd;
     }
@@ -24,6 +20,7 @@ public class Telefone implements InterfaceCadastro {
         return ddd;
     }
 
+    // Númmero
     public void setNumero(long numero) {
         this.numero = numero;
     }
@@ -31,21 +28,5 @@ public class Telefone implements InterfaceCadastro {
     public long getNumero() {
         return numero;
     }
-
-    //Sobrecarga de métodos
-    @Override
-    public void entrar() {
-        System.out.printf("\nInforme o DDD: ");
-        setDdd(leia.nextInt());
-        
-        System.out.printf("\nInforme o numero do telefone: ");
-        setNumero(leia.nextLong());
-    }
-
-    @Override
-    public void imprimir() {
-        System.out.printf("\nO número do Telefone e (%d) %d", getDdd(), getNumero());
-    }
-
     
 }

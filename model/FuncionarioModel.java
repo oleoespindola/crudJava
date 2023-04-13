@@ -1,8 +1,5 @@
 package model;
-
-import financeiro.cadastro.pessoa.tiposPessoas.*;
-
-public class Funcionario extends PessoaFisica {
+public class FuncionarioModel extends PessoaFisicaModel {
 
     // Metodos
     private String data_admissao;
@@ -11,7 +8,7 @@ public class Funcionario extends PessoaFisica {
     private double salario;
 
     // Construtor
-    public Funcionario() {
+    public FuncionarioModel() {
         entrar();
     }
 

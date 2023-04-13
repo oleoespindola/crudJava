@@ -1,6 +1,7 @@
 package view;
 
 import model.*;
+import model.Endereco;
 
 public abstract class PessoaView {
 
