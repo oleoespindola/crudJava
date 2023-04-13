@@ -1,8 +1,7 @@
-package financeiro;
+package model;
+import InterfaceCadastro;
 
-import financeiro.cadastro.*;
-
-public abstract class Financeiro implements InterfaceCadastro {
+public abstract class FianceiroModel implements InterfaceCadastro {
 
     // Atributos
     private int id;
@@ -17,7 +16,7 @@ public abstract class Financeiro implements InterfaceCadastro {
     private double total;
 
     // Construtor
-    public Financeiro() {}
+    public FianceiroModel() {}
 
     // Encapsulamento
     public void setId(int id) {
@@ -92,8 +91,8 @@ public abstract class Financeiro implements InterfaceCadastro {
         return desconto;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public void setTotal() {
+        this.total = valor - ((valor * (juros/100)) + multa + (valor * (desconto/100)));
     }
 
     public double getTotal() {
@@ -117,14 +116,13 @@ public abstract class Financeiro implements InterfaceCadastro {
         setPagamento(leia.next());
         System.out.printf("\nInforme o(a) valor: ");
         setValor(leia.nextDouble());
-        System.out.printf("\nInforme o(a) juros: ");
+        System.out.printf("\nInforme o(a) juros em porcentagem: (Ex: 5)");
         setJuros(leia.nextDouble());
-        System.out.printf("\nInforme o(a) multa: ");
+        System.out.printf("\nInforme o(a) multa em R$: (Ex: 5)");
         setMulta(leia.nextDouble());
-        System.out.printf("\nInforme o(a) desconto: ");
+        System.out.printf("\nInforme o(a) desconto em porcentagem: (Ex: 5)");
         setDesconto(leia.nextDouble());
-        System.out.printf("\nInforme o(a) total: ");
-        setTotal(leia.nextDouble());
+        setTotal();
     }
 
     @Override

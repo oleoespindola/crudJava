@@ -1,10 +1,3 @@
-package classes;
-
-import financeiro.caixa.*;
-import financeiro.cadastro.pessoa.tiposPessoas.cliente.*;
-import financeiro.cadastro.pessoa.tiposPessoas.fornencedor.*;
-import financeiro.cadastro.pessoa.tiposPessoas.funcionario.*;
-
 import java.util.Scanner;
 
 public class Menu {
@@ -20,13 +13,11 @@ public class Menu {
     Receber receber;
     Pagar pagar;
     FluxoCaixa fluxoCaixa;
-    Scanner leia;
+    Scanner leia = new Scanner(System.in);
 
     // construtor
     public Menu() {
         setContinuar_executando(true);
-        Scanner leia = new Scanner(System.in);
-        setLeia(leia);
     }
 
     // Encapsulamento
@@ -126,8 +117,8 @@ public class Menu {
                     submenu();
                     switch (getOpcao_submenu()) {
                         case 1:
-                            Funcionario capturarFuncionario = new Funcionario();
-                            setFuncionario(capturarFuncionario);
+                            Funcionario funcionario = new Funcionario();
+                            setFuncionario(funcionario);
                             break;
                         case 2:
                             Funcionario funcionario = getFuncionario();

@@ -1,11 +1,11 @@
-package financeiro.cadastro.pessoa.tiposPessoas.cliente;
+package model;
 
-import financeiro.Financeiro;
+import financeiro.cadastro.pessoa.tiposPessoas.cliente.Cliente;
 
-public class Receber extends Financeiro{
+public class Receber extends FianceiroModel{
 
     // Atributos
-    private Cliente cliente;
+    private ClienteModel cliente;
     private String nota_fiscal;
 
 
@@ -16,11 +16,11 @@ public class Receber extends Financeiro{
 
     // Encapsulamento
     public void setCliente() {
-        Cliente coletaCliente = new Cliente();
+        ClienteModel coletaCliente = new ClienteModel();
         this.cliente = coletaCliente;
     }
 
-    public Cliente getCliente() {
+    public ClienteModel getCliente() {
         return cliente;
     }
 

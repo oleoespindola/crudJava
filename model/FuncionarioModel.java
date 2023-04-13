@@ -1,4 +1,4 @@
-package financeiro.cadastro.pessoa.tiposPessoas.funcionario;
+package model;
 
 import financeiro.cadastro.pessoa.tiposPessoas.*;
 

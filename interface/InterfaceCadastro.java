@@ -1,4 +1,3 @@
-package financeiro.cadastro;
 import java.util.Scanner;
 
 public interface InterfaceCadastro {
@@ -7,4 +6,5 @@ public interface InterfaceCadastro {
 
     public void entrar();
     public void imprimir();
+    public void faker();
 }

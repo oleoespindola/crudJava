@@ -1,8 +1,8 @@
-package financeiro.cadastro.pessoa.tiposPessoas;
+package model;
 
 import financeiro.cadastro.pessoa.*;
 
-public abstract class PessoaFisica extends Pessoa {
+public abstract class PessoaFisica extends PessoaModel {
 
     //Atribútos
     private String cpf;

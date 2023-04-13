@@ -1,8 +1,8 @@
-package financeiro.cadastro.pessoa.tiposPessoas.fornencedor;
+package model;
 
-import financeiro.Financeiro;
+import financeiro.cadastro.pessoa.tiposPessoas.fornencedor.Fornecedor;
 
-public class Pagar extends Financeiro {
+public class Pagar extends FianceiroModel {
 
     // Atributos
     private Fornecedor fornecedor;

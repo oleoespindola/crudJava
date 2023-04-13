@@ -1,14 +1,11 @@
-package financeiro.cadastro.pessoa.tiposPessoas.cliente;
+package model;
 
-import financeiro.cadastro.pessoa.*;
-import financeiro.cadastro.pessoa.tiposPessoas.*;
-
-public class Cliente extends PessoaJuridica{
+public class ClienteModel extends PessoaJuridica{
 
     private double limite_credito;
     private Endereco endereco_cobranca;
 
-    public Cliente() {
+    public ClienteModel() {
         entrar();
     }
 

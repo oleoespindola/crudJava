@@ -1,5 +1,7 @@
-package financeiro.cadastro.pessoa;
+package model;
 
+
+import InterfaceCadastro;
 import financeiro.cadastro.*;
 
 public class Telefone implements InterfaceCadastro {

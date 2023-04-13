@@ -1,4 +1,5 @@
-package financeiro.cadastro.pessoa;
+package model;
+
 
 import financeiro.cadastro.InterfaceCadastro;
 
