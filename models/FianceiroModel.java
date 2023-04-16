@@ -1,4 +1,4 @@
-package model;
+package models;
 
 public abstract class FianceiroModel {
 
@@ -75,7 +75,7 @@ public abstract class FianceiroModel {
 
     // Juros
     public void setJuros(double juros) {
-        this.juros = juros;
+        this.juros = juros/100;
     }
 
     public double getJuros() {
@@ -84,13 +84,27 @@ public abstract class FianceiroModel {
 
     // Multa
     public void setMulta(double multa) {
-        this.multa = multa;
+        this.multa = multa/100;
     }
 
     public double getMulta() {
         return multa;
     }
 
-    // Espeço para Juros, multa e total
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
+
+    public void setTotal() {
+        this.total = valor - (desconto + (juros * valor) + (multa * valor));
+    }
+
+    public double getTotal() {
+        return total;
+    }
 
 }

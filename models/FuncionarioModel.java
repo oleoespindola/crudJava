@@ -1,4 +1,5 @@
-package model;
+package models;
+
 public class FuncionarioModel extends PessoaFisicaModel {
 
     // Atributos

@@ -1,4 +1,4 @@
-package model;
+package models;
 public abstract class PessoaJuridicaModel extends PessoaModel {
 
     //Atributos
