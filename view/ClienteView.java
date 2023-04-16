@@ -1,10 +1,12 @@
 package view;
 
 import models.ClienteModel;
+import controllers.ClienteController;
 
 public class ClienteView extends PessoaFisicaView {
 
     ClienteModel cliente;
+    ClienteController controller;
 
     @Override
     public void entrar() {
@@ -17,6 +19,7 @@ public class ClienteView extends PessoaFisicaView {
         System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
         cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
         
+        controller.incluir(this.cliente);
     }
     
     @Override

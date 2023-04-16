@@ -1,9 +1,9 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import interfaces.InterfaceView;
 import models.EnderecoModel;
 
-public class EnderecoView implements InterfaceCadastro{
+public class EnderecoView implements InterfaceView{
 
     EnderecoModel endereco;
 

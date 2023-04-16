@@ -1,8 +1,8 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import interfaces.InterfaceView;
 
-public class FluxoCaixaView implements InterfaceCadastro {
+public class FluxoCaixaView implements InterfaceView {
 
 
     @Override

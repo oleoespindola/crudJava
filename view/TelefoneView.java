@@ -1,9 +1,9 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import interfaces.InterfaceView;
 import models.TelefoneModel;
 
-public class TelefoneView implements InterfaceCadastro{
+public class TelefoneView implements InterfaceView{
 
     TelefoneModel telefone;
 

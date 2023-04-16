@@ -1,9 +1,9 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import interfaces.InterfaceView;
 import models.*;
 
-public abstract class PessoaView implements InterfaceCadastro{
+public abstract class PessoaView implements InterfaceView{
 
     PessoaModel pessoa;
 

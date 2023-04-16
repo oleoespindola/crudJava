@@ -2,7 +2,7 @@ package interfaces;
 
 import java.util.Scanner;
 
-public interface InterfaceCadastro {
+public interface InterfaceView {
 
     Scanner leia = new Scanner(System.in);
 

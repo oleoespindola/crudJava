@@ -1,9 +1,9 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import interfaces.InterfaceView;
 import models.FinanceiroModel;
 
-public abstract class FinanceiroView implements InterfaceCadastro {
+public abstract class FinanceiroView implements InterfaceView {
 
     FinanceiroModel financeiro;
 
