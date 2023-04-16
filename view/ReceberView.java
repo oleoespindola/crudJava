@@ -1,19 +1,24 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import models.ReceberModel;
 
-public class ReceberView implements InterfaceCadastro {
+public class ReceberView extends FinanceiroView {
 
-    public void faker() {
-        // TODO Auto-generated method stub
+    ReceberModel receber;
 
-    }
-
+    @Override
     public void entrar() {
-        // TODO Auto-generated method stub
+    System.out.printf("REGISTRAR RECEITA");
 
+    super.entrar();
+
+    System.out.printf("Informe o ID do cliente: ");
+    receber.setCliente(leia.nextInt());
+    System.out.printf("Informe o número da NF: ");
+    receber.setNota_fiscal(leia.next());
     }
 
+    @Override
     public void imprimir() {
         // TODO Auto-generated method stub
 

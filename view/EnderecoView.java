@@ -5,30 +5,32 @@ import models.EnderecoModel;
 
 public class EnderecoView implements InterfaceCadastro{
 
-    EnderecoModel endereco = new EnderecoModel();
+    EnderecoModel endereco;
 
-    @Override
-    public void faker() {
-        // TODO Auto-generated method stub
-        
+    public EnderecoView () {
+        entrar();
+    }
+
+    public EnderecoModel getEndereco() {
+        return endereco;
     }
 
     @Override
     public void entrar() {
         System.out.printf("Informe o logradouro: ");
-        endereco.setLogradouro(null);
+        endereco.setLogradouro(leia.next());
         System.out.printf("Informe o numero");
-        endereco.setNumero(0);
+        endereco.setNumero(leia.nextInt());
         System.out.printf("Informe o complemento (se houver): ");
-        endereco.setComplemento(null);
+        endereco.setComplemento(leia.next());
         System.out.printf("Informe o bairro: ");
-        endereco.setBairro(null);
+        endereco.setBairro(leia.next());
         System.out.printf("Informe a cidade: ");
-        endereco.setCidade(null);
+        endereco.setCidade(leia.next());
         System.out.printf("Informe o estado: ");
-        endereco.setEstado(null);
+        endereco.setEstado(leia.next());
         System.out.printf("Infoeme o CEP: ");
-        endereco.setCep(0);
+        endereco.setCep(leia.nextInt());
     }
 
     @Override

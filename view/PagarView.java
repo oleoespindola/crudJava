@@ -1,21 +1,27 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import models.PagarModel;
 
-public class PagarView implements InterfaceCadastro {
+public class PagarView extends FinanceiroView {
 
-    public void faker() {
-        // TODO Auto-generated method stub
-        
-    }
+    PagarModel pagar;
 
+    @Override
     public void entrar() {
-        // TODO Auto-generated method stub
-        
+        System.out.printf("REGISTRO DE PAGAMENTOS");
+
+        super.entrar();
+
+        System.out.printf("Informe o ID do fornecedor: ");
+        pagar.setFornecedor(leia.nextInt());
+        System.out.printf("Informe o código de barras");
+        pagar.setBoleto(leia.next());
+
     }
 
+    @Override
     public void imprimir() {
         // TODO Auto-generated method stub
-        
+
     }
 }

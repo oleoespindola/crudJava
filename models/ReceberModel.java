@@ -1,11 +1,10 @@
 package models;
 
-public class ReceberModel extends FianceiroModel{
+public class ReceberModel extends FinanceiroModel{
 
     // Atributos
-    private ClienteModel cliente;
+    private int id_cliente;
     private String nota_fiscal;
-
 
     // Construtor
     public ReceberModel() {}
@@ -13,13 +12,12 @@ public class ReceberModel extends FianceiroModel{
         // Getters & Setters
 
     // Cliente
-    public void setCliente() {
-        ClienteModel coletaCliente = new ClienteModel();
-        this.cliente = coletaCliente;
+    public void setCliente(int id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
-    public ClienteModel getCliente() {
-        return cliente;
+    public int getCliente() {
+        return id_cliente;
     }
 
     // Nota Fiscal

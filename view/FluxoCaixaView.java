@@ -4,11 +4,6 @@ import interfaces.InterfaceCadastro;
 
 public class FluxoCaixaView implements InterfaceCadastro {
 
-    @Override
-    public void faker() {
-        // TODO Auto-generated method stub
-        
-    }
 
     @Override
     public void entrar() {

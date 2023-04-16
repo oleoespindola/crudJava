@@ -1,19 +1,21 @@
 package view;
 
-import interfaces.InterfaceCadastro;
+import models.ClienteModel;
 
-public class ClienteView implements InterfaceCadastro {
+public class ClienteView extends PessoaFisicaView {
 
-    
-    @Override
-    public void faker() {
-        // TODO Auto-generated method stub
-        
-    }
+    ClienteModel cliente;
 
     @Override
     public void entrar() {
-        // TODO Auto-generated method stub
+        System.out.printf("CADASTRO DE CLIENTES");
+
+        super.entrar();
+
+        System.out.printf("Informe o limite de crédito do cliente: ");
+        cliente.setLimite_credito(leia.nextInt());
+        System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
+        cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
         
     }
     

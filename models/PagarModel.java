@@ -1,9 +1,9 @@
 package models;
 
-public class PagarModel extends FianceiroModel {
+public class PagarModel extends FinanceiroModel {
 
     // Atributos
-    private FornecedorModel fornecedor;
+    private int id_fornecedor;
     private String boleto;
 
     // Constructor
@@ -12,12 +12,12 @@ public class PagarModel extends FianceiroModel {
         // Getters & Setters
 
     // Fornecedor
-    public void setFornecedor(FornecedorModel fornecedor) {
-        this.fornecedor = fornecedor;
+    public void setFornecedor(int id_fornecedor) {
+        this.id_fornecedor = id_fornecedor;
     }
 
-    public FornecedorModel getFornecedor() {
-        return fornecedor;
+    public int getFornecedor() {
+        return id_fornecedor;
     }
 
     // Boleto

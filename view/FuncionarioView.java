@@ -1,12 +1,10 @@
 package view;
 
-import interfaces.InterfaceCadastro;
-import models.EnderecoModel;
 import models.FuncionarioModel;
 
-public class FuncionarioView implements InterfaceCadastro {
+public class FuncionarioView extends PessoaFisicaView {
 
-    FuncionarioModel funcionario = new FuncionarioModel();
+    FuncionarioModel funcionario;
 
     public void faker() {
         // TODO Auto-generated method stub
@@ -14,21 +12,18 @@ public class FuncionarioView implements InterfaceCadastro {
     }
 
     public void entrar() {
-        System.out.printf("CADASTRO DE FUNCIONÁRIOS\nI - Informe o ID: ");
-        funcionario.setId(leia.nextInt());
-        System.out.printf("Infome  o nome do Funcionário: ");
-        funcionario.setNome(leia.next());
-        System.out.printf("Informe o endereço: ");
-        funcionario.setEndereco(new EnderecoModel());
-        System.out.printf("Informe o Telefone: ");
-        System.out.printf("Informe o e-mail: ");
-        System.out.printf("Informe o CPF: ");
-        System.out.printf("Informe o RG: ");
-        System.out.printf("Informe o orgão emissor: ");
+        System.out.printf("CADASTRO DE FUNCIONÁRIOS");
+
+        super.entrar();
+
         System.out.printf("Data de admissão: ");
+        funcionario.setData_admissao(leia.next());
         System.out.printf("Data de demissão (se houver): ");
+        funcionario.setData_demissao(leia.next());
         System.out.printf("CTPS: ");
+        funcionario.setCtps(leia.next());
         System.out.printf("Informe o salário: ");
+        funcionario.setSalario(leia.nextDouble());
     }
 
     public void imprimir() {

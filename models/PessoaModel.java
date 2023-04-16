@@ -34,20 +34,20 @@ public abstract class PessoaModel {
     }
 
     // Endereço
-    public void setEndereco(EnderecoModel endereco) {
+    public void setEnderecoModel(EnderecoModel endereco) {
         this.endereco = endereco;
     }
 
-    public EnderecoModel getEndereco() {
+    public EnderecoModel getEnderecoModel() {
         return endereco;
     }
 
     // Telefone
-    public void setTelefone(TelefoneModel telefone) {
+    public void setTelefoneModel(TelefoneModel telefone) {
         this.telefone = telefone;
     }
 
-    public TelefoneModel getTelefone() {
+    public TelefoneModel getTelefoneModel() {
         return telefone;
     }
 

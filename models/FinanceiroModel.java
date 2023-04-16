@@ -1,6 +1,6 @@
 package models;
 
-public abstract class FianceiroModel {
+public abstract class FinanceiroModel {
 
     // Atributos
     private int id;
@@ -15,7 +15,7 @@ public abstract class FianceiroModel {
     private double total;
 
     // Constructo
-    public FianceiroModel() {}
+    public FinanceiroModel() {}
 
             // Getters & Setters
 
