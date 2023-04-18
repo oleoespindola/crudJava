@@ -18,19 +18,19 @@ public class EnderecoView implements InterfaceView{
     @Override
     public void entrar() {
         System.out.printf("Informe o logradouro: ");
-        endereco.setLogradouro(leia.next());
+        endereco.setLogradouro(faker.gerarLogradouro());
         System.out.printf("Informe o numero");
-        endereco.setNumero(leia.nextInt());
+        endereco.setNumero(faker.gerarNumero());
         System.out.printf("Informe o complemento (se houver): ");
-        endereco.setComplemento(leia.next());
+        endereco.setComplemento(faker.gerarComplemento());
         System.out.printf("Informe o bairro: ");
-        endereco.setBairro(leia.next());
+        endereco.setBairro(faker.gerarBairro());
         System.out.printf("Informe a cidade: ");
-        endereco.setCidade(leia.next());
+        endereco.setCidade(faker.gerarCidade());
         System.out.printf("Informe o estado: ");
-        endereco.setEstado(leia.next());
+        endereco.setEstado(faker.gerarEstado());
         System.out.printf("Infoeme o CEP: ");
-        endereco.setCep(leia.nextInt());
+        endereco.setCep(faker.gerarCep());
     }
 
     @Override

@@ -12,11 +12,11 @@ public abstract class PessoaJuridicaView extends PessoaView {
         super.entrar();
 
         System.out.printf("Infome o CNPJ: ");
-        pessoa.setCnpj(leia.next());
+        pessoa.setCnpj(faker.gerarCNPJ());
         System.out.printf("Informe a inscrção estadual: ");
-        pessoa.setInscricao_estadual(leia.next());
+        pessoa.setInscricao_estadual(faker.gerarInscricaoEstadual());
         System.out.printf("Informe um contato: ");
-        pessoa.setContato(leia.next());
+        pessoa.setContato(faker.gerarNome());
     }
 
     @Override

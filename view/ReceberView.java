@@ -13,9 +13,9 @@ public class ReceberView extends FinanceiroView {
     super.entrar();
 
     System.out.printf("Informe o ID do cliente: ");
-    receber.setCliente(leia.nextInt());
+    receber.setCliente(faker.gerarId());
     System.out.printf("Informe o número da NF: ");
-    receber.setNota_fiscal(leia.next());
+    receber.setNota_fiscal(faker.gerarNf());
     }
 
     @Override

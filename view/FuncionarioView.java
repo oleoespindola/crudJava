@@ -6,24 +6,19 @@ public class FuncionarioView extends PessoaFisicaView {
 
     FuncionarioModel funcionario;
 
-    public void faker() {
-        // TODO Auto-generated method stub
-
-    }
-
     public void entrar() {
         System.out.printf("CADASTRO DE FUNCIONÁRIOS");
 
         super.entrar();
 
         System.out.printf("Data de admissão: ");
-        funcionario.setData_admissao(leia.next());
+        funcionario.setData_admissao(faker.gerarData());
         System.out.printf("Data de demissão (se houver): ");
-        funcionario.setData_demissao(leia.next());
+        funcionario.setData_demissao(faker.gerarData());
         System.out.printf("CTPS: ");
-        funcionario.setCtps(leia.next());
+        funcionario.setCtps(faker.gerarInscricaoEstadual());
         System.out.printf("Informe o salário: ");
-        funcionario.setSalario(leia.nextDouble());
+        funcionario.setSalario(faker.gerarValor());
     }
 
     public void imprimir() {

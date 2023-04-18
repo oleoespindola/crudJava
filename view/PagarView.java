@@ -13,9 +13,9 @@ public class PagarView extends FinanceiroView {
         super.entrar();
 
         System.out.printf("Informe o ID do fornecedor: ");
-        pagar.setFornecedor(leia.nextInt());
+        pagar.setFornecedor(faker.gerarId());
         System.out.printf("Informe o código de barras");
-        pagar.setBoleto(leia.next());
+        pagar.setBoleto(faker.gerarBoleto());
 
     }
 

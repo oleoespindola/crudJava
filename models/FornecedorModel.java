@@ -3,7 +3,7 @@ package models;
 public class FornecedorModel extends PessoaFisicaModel {
 
     // Atributos
-    private String limite_compra;
+    private double limite_compra;
     private String data_cadastro;
     private String site;
 
@@ -13,11 +13,11 @@ public class FornecedorModel extends PessoaFisicaModel {
         // Getters & Setters
 
     // Limite de Compra
-    public void setLimite_compra(String limite_compra) {
+    public void setLimite_compra(Double limite_compra) {
         this.limite_compra = limite_compra;
     }
 
-    public String getLimite_compra() {
+    public double getLimite_compra() {
         return limite_compra;
     }
 

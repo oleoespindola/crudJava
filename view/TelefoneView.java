@@ -18,9 +18,9 @@ public class TelefoneView implements InterfaceView{
     @Override
     public void entrar() {
         System.out.printf("Informe o DDD: ");
-        telefone.setDdd(leia.nextInt());
-        System.out.printf("Infoem o telefone: ");
-        telefone.setNumero(leia.nextInt());
+        telefone.setDdd(14);
+        System.out.printf("Informe o telefone: ");
+        telefone.setNumero(987687645);
     }
 
     @Override

@@ -71,7 +71,7 @@ public class Faker {
                 + "-" + this.random.nextInt(90) + 9;
     }
 
-    public String geraRg() {
+    public String gerarRg() {
         return this.random.nextInt(90) + 9 + "." + this.random.nextInt(900) + 99 + "." + this.random.nextInt(900) + 9
                 + "-" + this.random.nextInt(9);
     }
@@ -89,7 +89,7 @@ public class Faker {
         return this.random.nextInt(90) + 9 + "." + this.random.nextInt(900000) + 99999 + "-" + this.random.nextInt(9);
     }
 
-    public double gerarLimite() {
+    public double gerarValor() {
         return this.random.nextDouble(9000) + 999;
     }
 
@@ -107,6 +107,14 @@ public class Faker {
             boleto = boleto + "." + this.random.nextInt(900) + 99;
         }
         return boleto;
+    }
+
+    public String gerarEmail() { 
+        return gerarNome() + this.provedorEmail.get(this.random.nextInt(this.provedorEmail.size()));
+    }
+
+    public String gerarSite() {
+        return this.sites.get(this.random.nextInt(this.sites.size()));
     }
 
 }

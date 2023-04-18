@@ -14,11 +14,11 @@ public class FornecedorView extends PessoaJuridicaView {
         super.entrar();
    
         System.out.printf("Limite de compra: ");
-        fornecedor.setLimite_compra(leia.next());;
+        fornecedor.setLimite_compra(faker.gerarValor());;
         System.out.printf("Data do cadastro: ");
-        fornecedor.setData_cadastro(leia.next());;
+        fornecedor.setData_cadastro(faker.gerarData());;
         System.out.printf("Site: ");
-        fornecedor.setSite(leia.next());
+        fornecedor.setSite(faker.gerarSite());
     }
 
     @Override

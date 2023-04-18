@@ -15,7 +15,7 @@ public class ClienteView extends PessoaFisicaView {
         super.entrar();
 
         System.out.printf("Informe o limite de crédito do cliente: ");
-        cliente.setLimite_credito(leia.nextInt());
+        cliente.setLimite_credito(faker.gerarValor());
         System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
         cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
         

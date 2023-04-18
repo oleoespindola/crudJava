@@ -10,15 +10,15 @@ public abstract class PessoaView implements InterfaceView{
     @Override
     public void entrar() {
         System.out.printf("Informe o ID: ");
-        pessoa.setId(leia.nextInt());
+        pessoa.setId(faker.gerarId());
         System.out.printf("Infome  o nome do Funcionário: ");
-        pessoa.setNome(leia.next());
+        pessoa.setNome(faker.gerarNome());
         System.out.printf("CADASTRO DE ENDEREÇO");
         pessoa.setEnderecoModel(new EnderecoView().getEndereco());
         System.out.printf("CADASTRO DO TELEFONE");
         pessoa.setTelefoneModel(new TelefoneView().getTelefone());
         System.out.printf("Informe o e-mail: ");
-        pessoa.setEmail(leia.next());       
+        pessoa.setEmail(faker.gerarEmail());       
     }
 
     @Override
