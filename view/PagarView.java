@@ -22,6 +22,11 @@ public class PagarView extends FinanceiroView {
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
+        super.imprimir();
 
+        
+        System.out.printf("\n=== Dados do fornecedor ===");
+        FornecedorView.getFornecedor().imprimir();
+        System.out.println("Número do Boleto: " + pagar.getBoleto());
     }
 }

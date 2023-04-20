@@ -24,7 +24,10 @@ public abstract class PessoaView implements InterfaceView{
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
-        
-    }
-    
+        System.out.println("ID: "+ pessoa.getId());
+        System.out.println("Nome: "+ pessoa.getNome());
+        view.TelefoneView.imprimir();
+        EnderecoView.imprimir();
+        System.out.println("Email: "+ pessoa.getEmail());
+    } 
 }

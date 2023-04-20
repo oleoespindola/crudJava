@@ -24,6 +24,9 @@ public class FornecedorView extends PessoaJuridicaView {
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
-        
+        super.imprimir();
+        System.out.println("Limite de Compra: "+ fornecedor.getLimite_compra());
+        System.out.println("Data de Cadastro: "+ fornecedor.getData_cadastro());
+        System.out.println("Site: "+ fornecedor.getSite());
     }
 }

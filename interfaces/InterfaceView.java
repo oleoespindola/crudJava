@@ -1,7 +1,6 @@
 package interfaces;
 
 import java.util.Scanner;
-import test.Faker;
 
 public interface InterfaceView {
 

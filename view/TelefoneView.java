@@ -26,7 +26,7 @@ public class TelefoneView implements InterfaceView{
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
-        
+        System.out.printf("Telefone:(%d)%d\n", telefone.getDdd(), telefone.getNumero());
     }
     
 }

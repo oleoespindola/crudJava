@@ -21,7 +21,10 @@ public class ReceberView extends FinanceiroView {
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
+        super.imprimir();
 
+        System.out.printf("\n=== Dados do cliente ===");
+        ClienteView.getCliente().imprimir();
+        System.out.printf("\nO numero da nota e: %s", receber.getNota_fiscal());
     }
-
 }

@@ -23,6 +23,8 @@ public abstract class PessoaJuridicaView extends PessoaView {
     public void imprimir() {
         // TODO Auto-generated method stub
         super.imprimir();
-    }
-    
+        System.out.println("CNPJ: "+ pessoa.getCnpj());
+        System.out.println("Incricao Estadual : "+ pessoa.getInscricao_estadual());
+        System.out.println("Contato: "+ pessoa.getContato());
+    } 
 }

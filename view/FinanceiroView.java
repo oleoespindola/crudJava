@@ -36,7 +36,16 @@ public abstract class FinanceiroView implements InterfaceView {
     @Override
     public void imprimir() {
         // TODO Auto-generated method stub
-
+        System.out.println("ID: "+ financeiro.getId());
+        System.out.println("Número: "+ financeiro.getNumero());
+        System.out.println("Emissao: "+ financeiro.getEmissao());
+        System.out.println("Deta de Vencimento: "+ financeiro.getVencimento());
+        System.out.println("aPgamento: "+ financeiro.getPagamento());
+        System.out.println("Valor: "+ financeiro.getValor());
+        System.out.println("Juros: "+ financeiro.getJuros());
+        System.out.println("Multa: "+ financeiro.getMulta());
+        System.out.println("Desconto: "+ financeiro.getDesconto());
+        System.out.printf("TOTAL = %2.f", financeiro.getTotal());
     }
 
 }
