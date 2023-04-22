@@ -17,9 +17,9 @@ public class FuncionarioList {
         return this.Funcionarios.get(posicao);
     }
 
-    public FuncionarioModel consultarCNPJ(String CNPJ) {
+    public FuncionarioModel consultarCPF(String CPF) {
         for(FuncionarioModel Funcionario : this.Funcionarios) {
-            if(CNPJ == Funcionario.getCpf()) {
+            if(CPF == Funcionario.getCpf()) {
                 return Funcionario;
             }
         }

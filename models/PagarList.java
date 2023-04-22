@@ -6,7 +6,7 @@ public class PagarList {
 
     ArrayList<PagarModel> pagamentos = new ArrayList<PagarModel>();
 
-    public void incluir() {
+    public void incluir(PagarModel Pagar) {
 
     }
 
@@ -14,7 +14,11 @@ public class PagarList {
 
     }
 
-    public PagarModel consultarPeloNome(String Nome) {
+    public PagarModel consultarPeloCNPJ(String CNPJ) {
+        return null;
+    }
+
+    public PagarModel consultarPeloNumero(int numero) {
         return null;
     }
 
@@ -22,15 +26,13 @@ public class PagarList {
         return null;
     }
 
-    public PagarModel consultarPeloNumero(String Nome) {
+  
+
+    public PagarModel consultarPeloBoleto(String boleto) {
         return null;
     }
 
-    public PagarModel consultarPelaNf(String nota_fiscal) {
-        return null;
-    }
-
-    public void excluirPeloId() {
+    public void excluirPeloId(int id) {
         
     }
 

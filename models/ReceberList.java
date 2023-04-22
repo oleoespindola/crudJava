@@ -6,7 +6,7 @@ public class ReceberList {
 
     ArrayList<ReceberModel> receitas = new ArrayList<ReceberModel>();
 
-    public void incluir() {
+    public void incluir(ReceberModel Receber) {
 
     }
 
@@ -14,22 +14,23 @@ public class ReceberList {
 
     }
 
-    public PagarModel consultarPeloCnpj(String cnpj) {
+    public ReceberModel consultarPeloNome(String nome) {
         return null;
     }
     
-        public PagarModel consultarPeloNumero(String Nome) {
-            return null;
-        }
-    public PagarModel ConsultarPeloValor(double valor) {
+     public ReceberModel consultarPeloNumero(String numero) {
         return null;
     }
 
-    public PagarModel consultarPeloBoleto(String boleto) {
+    public ReceberModel ConsultarPeloValor(double valor) {
         return null;
     }
 
-    public void excluirPeloId() {
+    public ReceberModel consultarPelaNF(String nota_fiscal) {
+        return null;
+    }
+
+    public void excluirPeloId(int id) {
         
     }
 
