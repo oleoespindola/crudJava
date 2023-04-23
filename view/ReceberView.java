@@ -1,6 +1,5 @@
 package view;
 
-import models.ClienteModel;
 import models.ReceberModel;
 
 public class ReceberView extends FinanceiroView {
@@ -10,8 +9,12 @@ public class ReceberView extends FinanceiroView {
 
     public ReceberView() {}
 
-    public ReceberView(ClienteModel cliente) {
-        this.cliente = new ClienteView(cliente);
+    public ReceberView(ReceberModel receber) {
+        this.receber = receber;
+    }
+
+    public ReceberModel getReceber() {
+        return receber;
     }
 
     @Override

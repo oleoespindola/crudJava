@@ -1,10 +1,16 @@
 package controllers;
 
+import java.util.ArrayList;
+
 import models.*;
 
 public class PagarController {
 
     PagarList pagamentos;
+
+    public ArrayList<PagarModel> getPagamentos() {
+        return this.pagamentos.getPagamentos();
+    }
 
     public void incluir(PagarModel pagar) {
         pagar.setTotal(pagar.getValor() - ((pagar.getJuros()/100 * pagar.getValor()) + pagar.getDesconto()));

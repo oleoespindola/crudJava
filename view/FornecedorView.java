@@ -12,6 +12,10 @@ public class FornecedorView extends PessoaJuridicaView {
         this.fornecedor = fornecedor;
     }
 
+    public FornecedorModel getFornecedor() {
+        return this.fornecedor;
+    }
+
     @Override
     public void entrar() {
         System.out.printf("CADASTRO DE FORNECEDORES");

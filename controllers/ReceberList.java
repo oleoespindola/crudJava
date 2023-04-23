@@ -8,6 +8,10 @@ public class ReceberList {
 
     ArrayList<ReceberModel> receitas;
 
+    public ArrayList<ReceberModel> getReceitas() {
+        return receitas;
+    }
+
     public void incluir(ReceberModel receber) {
         this.receitas.add(receber.getId(), receber);
     }

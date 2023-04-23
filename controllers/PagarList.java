@@ -8,6 +8,10 @@ public class PagarList {
 
     ArrayList<PagarModel> pagamentos;
 
+    public ArrayList<PagarModel> getPagamentos() {
+        return pagamentos;
+    }
+
     public void incluir(PagarModel pagar) {
         this.pagamentos.add(pagar);
     }
@@ -50,6 +54,7 @@ public class PagarList {
         }
         return null;
     }
+
 
     public void excluirPeloId(int id) {
         this.pagamentos.remove(id);

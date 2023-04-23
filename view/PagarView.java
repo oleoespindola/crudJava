@@ -1,6 +1,5 @@
 package view;
 
-import models.FornecedorModel;
 import models.PagarModel;
 
 public class PagarView extends FinanceiroView {
@@ -10,8 +9,12 @@ public class PagarView extends FinanceiroView {
 
     public PagarView() {}
 
-    public PagarView(FornecedorModel fornecedor) {
-        this.fornecedor = new FornecedorView(fornecedor);
+    public PagarView(PagarModel pagar) {
+        this.pagar = pagar;
+    }
+
+    public PagarModel getPagar() {
+        return pagar;
     }
 
     @Override

@@ -37,6 +37,15 @@ public class ClienteList {
         return null;
     }
 
+    public ClienteModel consutarNome(String nome) {
+        for(ClienteModel cliente : this.clientes) {
+            if(nome == cliente.getNome()) {
+                return cliente;
+            }
+        }
+        return null;
+    }
+
     public void excluir(int id) {
         this.clientes.remove(id);
     }

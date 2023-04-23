@@ -26,6 +26,10 @@ public class ClienteController {
         return this.clientes.consultarId(id);
     }
 
+    public ClienteModel consutarNome(String nome) {
+        return this.clientes.consutarNome(nome);
+    }
+
     public void excluir (int id) {
         this.clientes.excluir(id);
     }

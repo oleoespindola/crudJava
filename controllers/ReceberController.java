@@ -1,9 +1,15 @@
 package controllers;
 
+import java.util.ArrayList;
+
 import models.*;
 public class ReceberController {
 
     ReceberList receitas;
+
+    public ArrayList<ReceberModel> getReceitas() {
+        return this.receitas.getReceitas();
+    }
 
     public void incluir(ReceberModel receber) {
         receber.setTotal(receber.getValor() - ((receber.getJuros() / 100) + receber.getDesconto()));

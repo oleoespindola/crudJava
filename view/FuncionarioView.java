@@ -6,6 +6,12 @@ public class FuncionarioView extends PessoaFisicaView {
 
     FuncionarioModel funcionario;
 
+    public FuncionarioView() {}
+
+    public FuncionarioView(FuncionarioModel funcionario) {
+        this.funcionario = funcionario;
+    }
+
     public FuncionarioModel getFuncionario() {
         return this.funcionario;
     }
