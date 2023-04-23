@@ -21,9 +21,7 @@ public abstract class PessoaFisicaView extends PessoaView {
 
     @Override
     public void imprimir() {
-        // TODO Auto-generated method stub
         super.imprimir();
-
         System.out.println("CPF: "+ pessoa.getCpf());
         System.out.println("RG: "+ pessoa.getRg());
         System.out.println("Orgão Expedidor: "+ pessoa.getEmissor());

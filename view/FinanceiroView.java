@@ -27,15 +27,10 @@ public abstract class FinanceiroView implements InterfaceView {
         financeiro.setMulta(faker.gerarValor()/10);
         System.out.printf("Desconto: ");
         financeiro.setDesconto(faker.gerarValor()/80);
-
-        financeiro.setTotal();
-        System.out.printf("TOTAL = %2.f", financeiro.getTotal());
-
     }
 
     @Override
     public void imprimir() {
-        // TODO Auto-generated method stub
         System.out.println("ID: "+ financeiro.getId());
         System.out.println("Número: "+ financeiro.getNumero());
         System.out.println("Emissao: "+ financeiro.getEmissao());

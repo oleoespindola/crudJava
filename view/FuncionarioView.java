@@ -22,9 +22,7 @@ public class FuncionarioView extends PessoaFisicaView {
     }
 
     public void imprimir() {
-        // TODO Auto-generated method stub
         super.imprimir();
-
         System.out.println("Data de admissao: "+ funcionario.getData_admissao());
         System.out.println("Data de demissao: "+ funcionario.getData_demissao());
         System.out.println("CTPS: "+ funcionario.getCtps());

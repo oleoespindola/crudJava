@@ -75,7 +75,7 @@ public abstract class FinanceiroModel {
 
     // Juros
     public void setJuros(double juros) {
-        this.juros = juros/100;
+        this.juros = juros;
     }
 
     public double getJuros() {
@@ -84,7 +84,7 @@ public abstract class FinanceiroModel {
 
     // Multa
     public void setMulta(double multa) {
-        this.multa = multa/100;
+        this.multa = multa;
     }
 
     public double getMulta() {
@@ -99,8 +99,8 @@ public abstract class FinanceiroModel {
         return desconto;
     }
 
-    public void setTotal() {
-        this.total = valor - (desconto + (juros * valor) + (multa * valor));
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     public double getTotal() {

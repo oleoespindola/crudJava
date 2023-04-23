@@ -1,6 +1,8 @@
-package models;
+package controllers;
 
 import java.util.ArrayList;
+
+import models.FornecedorModel;
 
 public class FornecedorList {
     ArrayList<FornecedorModel> fornecedores = new ArrayList<FornecedorModel>();

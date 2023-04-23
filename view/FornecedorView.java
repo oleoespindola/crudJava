@@ -6,13 +6,16 @@ public class FornecedorView extends PessoaJuridicaView {
 
     FornecedorModel fornecedor;
 
+    public FornecedorView() {}
+
+    public FornecedorView(FornecedorModel fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
     @Override
     public void entrar() {
-
         System.out.printf("CADASTRO DE FORNECEDORES");
-        
         super.entrar();
-   
         System.out.printf("Limite de compra: ");
         fornecedor.setLimite_compra(faker.gerarValor());;
         System.out.printf("Data do cadastro: ");
@@ -23,7 +26,6 @@ public class FornecedorView extends PessoaJuridicaView {
 
     @Override
     public void imprimir() {
-        // TODO Auto-generated method stub
         super.imprimir();
         System.out.println("Limite de Compra: "+ fornecedor.getLimite_compra());
         System.out.println("Data de Cadastro: "+ fornecedor.getData_cadastro());

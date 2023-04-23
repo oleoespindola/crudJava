@@ -1,4 +1,4 @@
-package interfaces;
+package test;
 
 import java.util.List;
 import java.util.Random;

@@ -1,9 +1,11 @@
-package models;
+package controllers;
 
 import java.util.ArrayList;
 
+import models.ClienteModel;
+
 public class ClienteList {
-    ArrayList<ClienteModel> clientes = new ArrayList<ClienteModel>();
+    ArrayList<ClienteModel> clientes;
 
     public void incluir(ClienteModel cliente) {
         this.clientes.add(cliente.getId(), cliente);

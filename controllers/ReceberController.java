@@ -4,33 +4,34 @@ import models.*;
 
 public class ReceberController {
 
-    ReceberList receber;
+    ReceberList receitas;
 
-    public void incluir(ReceberModel Receber) {
-        this.receber.incluir(Receber);
+    public void incluir(ReceberModel receber) {
+        receber.setTotal(receber.getValor() - ((receber.getJuros() / 100) + receber.getDesconto()));
+        this.receitas.incluir(receber);
     }
 
     public void alterarPeloNumero(int numero) {
-        this.receber.alterarPeloNumero(numero);
+        this.receitas.alterarPeloNumero(numero);
     }
 
-    public ReceberModel consultarPeloNome(String nome) {
-        return this.receber.consultarPeloNome(nome);
+    public ReceberModel consultarPeloCliente(int id) {
+        return this.receitas.consultarPeloCliente(id);
     }
 
-    public ReceberModel consultarPeloNumero(String numero)  {
-        return this.receber.consultarPeloNumero( numero) ;
+    public ReceberModel consultarPeloNumero(int numero)  {
+        return this.receitas.consultarPeloNumero( numero) ;
     }
 
     public ReceberModel ConsultarPeloValor(double valor) {
-        return this.receber.ConsultarPeloValor(valor);
+        return this.receitas.ConsultarPeloValor(valor);
     }
 
     public ReceberModel consultarPelaNF(String nota_fiscal)  {
-        return this.receber.consultarPelaNF(nota_fiscal) ;
+        return this.receitas.consultarPelaNF(nota_fiscal) ;
     }
 
     public void excluirPeloId (int id) {
-        this.receber.excluirPeloId(id);
+        this.receitas.excluirPeloId(id);
     }
 }

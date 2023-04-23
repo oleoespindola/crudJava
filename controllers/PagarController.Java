@@ -4,34 +4,35 @@ import models.*;
 
 public class PagarControler {
 
-    PagarList pagar;
+    PagarList pagamentos;
 
-    public void incluir(PagarModel Pagar) {
-        this.pagar.incluir(Pagar);
+    public void incluir(PagarModel pagar) {
+        pagar.setTotal(pagar.getValor() - ((pagar.getJuros()/100 * pagar.getValor()) + pagar.getDesconto()));
+        this.pagamentos.incluir(pagar);
     }
 
-    public void alterarPeloNumero(int numero) {
-        this.pagar.alterarPeloNumero(numero)
+    public void alterarPeloNumero(int numero, PagarModel pagar) {
+        this.pagamentos.alterarPeloNumero(numero, pagar)
     }
 
     public PagarModel consultarPeloCNPJ(String CNPJ)  {
-        return this.pagar.consultarPeloCNPJ(CNPJ) ;
+        return this.pagamentos.consultarPeloCNPJ();
     }
 
     public PagarModel consultarPeloNumero(int numero) {
-        return this.pagar.consultarPeloNumero(numero);
+        return this.pagamentos.consultarPeloNumero(numero);
     }
 
     public PagarModel ConsultarPeloValor(double valor) {
-        return this.pagar.ConsultarPeloValor(valor);
+        return this.pagamentos.ConsultarPeloValor(valor);
     }
 
 
     public PagarModel consultarPeloBoleto(String boleto) {
-        return this.pagar.consultarPeloBoleto(boleto);
+        return this.pagamentos.consultarPeloBoleto(boleto);
     }
 
     public void excluir (int id) {
-        this.pagar.excluir(id);
+        this.pagamentos.excluir(id);
     }
 }

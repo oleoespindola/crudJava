@@ -11,6 +11,10 @@ public class EnderecoView implements InterfaceView{
         entrar();
     }
 
+    public EnderecoView (EnderecoModel endereco) {
+        this.endereco = endereco;
+    }
+
     public EnderecoModel getEndereco() {
         return endereco;
     }
@@ -35,7 +39,6 @@ public class EnderecoView implements InterfaceView{
 
     @Override
     public void imprimir() {
-        // TODO Auto-generated method stub
         System.out.println("Logradouro: "+ endereco.getLogradouro()+ "\nNúmero: "+ endereco.getNumero()+ "\nComplemento: "+ endereco.getComplemento()+ 
         "\nBairro: "+ endereco.getBairro()+ "\nCidade: "+ endereco.getCidade()+ "\nEstado: "+ endereco.getEstado()+ "\nCEP: "+ endereco.getCep());
     }

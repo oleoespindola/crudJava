@@ -1,29 +1,29 @@
 package view;
 
-import interfaces.InterfaceView;
-import models.FinanceiroModel;
+import java.util.ArrayList;
 
-public class FluxoCaixaView implements InterfaceView {
+import models.*;
 
-    FinanceiroModel financeiro;
+public class FluxoCaixaView {
 
-    public void entrar() {
-        setVencimentoCredito(vencimentoCredito);
-        setDebito(debito);
-        setCredito(credito);
-        setDebito(debito);
-        saldo = credito - debito;
-        setSaldo (saldo);
+    public FluxoCaixaView(ArrayList<ReceberModel> receitas, ArrayList<PagarModel> pagamentos) {
+        fluxoDeCaixa(receitas, pagamentos);
     }
 
-    @Override
-    public void imprimir() {
+    public void fluxoDeCaixa(ArrayList<ReceberModel> receitas, ArrayList<PagarModel> pagamentos) {
 
-        System.out.println("=== Fluxo de Caixa ===\n");
-        System.out.println("Vencimento | Credito | Debito | Saldo");
-        System.out.println( financeiro.getVencimentoCredito()+ financeiro.getCredito() + financeiro.getCredito());
-        System.out.println( getVencimentoDebito()+ getDebito()+ getDebito());
-        System.out.println( getCredito() + getDebito()+ getSaldo());
+        double saldo = 0;
+
+        System.out.printf("FLUXO DE CAIXA");
+        System.out.printf("Data | Credito | Débito | Saldo");
+        for(ReceberModel receita : receitas) {
+            saldo = saldo + receita.getTotal();
+            System.out.printf("%s | %2.f | 0 | %2.f", receita.getPagamento(), receita.getTotal(), saldo);            
+        }
+        for(PagarModel pagamento : pagamentos) {
+            saldo = saldo - pagamento.getTotal();
+            System.out.printf("%s | 0 | %2.f | %2.f", pagamento.getPagamento(), pagamento.getTotal(), saldo);            
+        }
     }
     
 }

@@ -1,9 +1,11 @@
-package models;
+package controllers;
 
 import java.util.ArrayList;
 
+import models.FuncionarioModel;
+
 public class FuncionarioList {
-    ArrayList<FuncionarioModel> Funcionarios = new ArrayList<FuncionarioModel>();
+    ArrayList<FuncionarioModel> Funcionarios;
 
     public void incluir(FuncionarioModel Funcionario) {
         this.Funcionarios.add(Funcionario.getId(), Funcionario);
