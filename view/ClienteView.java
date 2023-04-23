@@ -14,6 +14,10 @@ public class ClienteView extends PessoaFisicaView {
         this.cliente = cliente;
     }
 
+    public ClienteModel getCliente() {
+        return cliente;
+    }
+
     @Override
     public void entrar() {
         System.out.printf("CADASTRO DE CLIENTES");

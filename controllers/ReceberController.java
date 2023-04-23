@@ -1,7 +1,6 @@
 package controllers;
 
 import models.*;
-
 public class ReceberController {
 
     ReceberList receitas;

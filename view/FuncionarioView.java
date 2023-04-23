@@ -6,6 +6,10 @@ public class FuncionarioView extends PessoaFisicaView {
 
     FuncionarioModel funcionario;
 
+    public FuncionarioModel getFuncionario() {
+        return this.funcionario;
+    }
+
     public void entrar() {
         System.out.printf("CADASTRO DE FUNCIONÁRIOS");
 

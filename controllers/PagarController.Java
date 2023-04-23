@@ -1,8 +1,8 @@
-package controler;
+package controllers;
 
 import models.*;
 
-public class PagarControler {
+public class PagarController {
 
     PagarList pagamentos;
 
@@ -12,11 +12,11 @@ public class PagarControler {
     }
 
     public void alterarPeloNumero(int numero, PagarModel pagar) {
-        this.pagamentos.alterarPeloNumero(numero, pagar)
+        this.pagamentos.alterarPeloNumero(numero, pagar);
     }
 
-    public PagarModel consultarPeloCNPJ(String CNPJ)  {
-        return this.pagamentos.consultarPeloCNPJ();
+    public PagarModel consultarPeloFornecedor(int id)  {
+        return this.pagamentos.consultarPeloFornecedor(id);
     }
 
     public PagarModel consultarPeloNumero(int numero) {
@@ -32,7 +32,7 @@ public class PagarControler {
         return this.pagamentos.consultarPeloBoleto(boleto);
     }
 
-    public void excluir (int id) {
-        this.pagamentos.excluir(id);
+    public void excluir(int id) {
+        this.pagamentos.excluirPeloId(id);
     }
 }
