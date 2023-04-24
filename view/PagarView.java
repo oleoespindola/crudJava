@@ -4,8 +4,8 @@ import models.PagarModel;
 
 public class PagarView extends FinanceiroView {
 
-    PagarModel pagar;
-    FornecedorView fornecedor;
+    PagarModel pagar = new PagarModel();
+    FornecedorView fornecedor = new FornecedorView();
 
     public PagarView() {}
 

@@ -6,7 +6,7 @@ import models.ReceberModel;
 
 public class ReceberList {
 
-    ArrayList<ReceberModel> receitas;
+    ArrayList<ReceberModel> receitas = new ArrayList<ReceberModel>();
 
     public ArrayList<ReceberModel> getReceitas() {
         return receitas;

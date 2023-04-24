@@ -4,8 +4,8 @@ import models.ReceberModel;
 
 public class ReceberView extends FinanceiroView {
 
-    ReceberModel receber;
-    ClienteView cliente;
+    ReceberModel receber = new ReceberModel();
+    ClienteView cliente = new ClienteView();
 
     public ReceberView() {}
 

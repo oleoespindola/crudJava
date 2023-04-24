@@ -4,7 +4,7 @@ import models.*;
 
 public class ClienteController {
 
-    ClienteList clientes;
+    ClienteList clientes = new ClienteList();
 
     public void incluir(ClienteModel cliente) {
         this.clientes.incluir(cliente);

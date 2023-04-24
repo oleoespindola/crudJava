@@ -5,9 +5,11 @@ import models.*;
 
 public abstract class PessoaView implements InterfaceView{
 
-    PessoaModel pessoa;
-    TelefoneView telefone;
-    EnderecoView endereco;
+    PessoaModel pessoa = new PessoaModel() {
+        
+    };
+    TelefoneView telefone = new TelefoneView();
+    EnderecoView endereco = new EnderecoView();
 
     @Override
     public void entrar() {

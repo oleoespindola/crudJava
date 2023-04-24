@@ -4,7 +4,7 @@ import models.*;
 
 public class FuncionarioController {
 
-    FuncionarioList funcionarios;
+    FuncionarioList funcionarios = new FuncionarioList();
 
     public void incluir(FuncionarioModel Funcionario) {
         this.funcionarios.incluir(Funcionario);

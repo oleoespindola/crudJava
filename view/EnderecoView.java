@@ -5,11 +5,9 @@ import models.EnderecoModel;
 
 public class EnderecoView implements InterfaceView{
 
-    EnderecoModel endereco;
+    EnderecoModel endereco = new EnderecoModel();
 
-    public EnderecoView () {
-        entrar();
-    }
+    public EnderecoView () {}
 
     public EnderecoView (EnderecoModel endereco) {
         this.endereco = endereco;

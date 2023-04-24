@@ -6,7 +6,7 @@ import models.PagarModel;
 
 public class PagarList {
 
-    ArrayList<PagarModel> pagamentos;
+    ArrayList<PagarModel> pagamentos = new  ArrayList<PagarModel>();
 
     public ArrayList<PagarModel> getPagamentos() {
         return pagamentos;

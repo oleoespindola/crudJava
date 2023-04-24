@@ -6,7 +6,7 @@ import models.*;
 
 public class PagarController {
 
-    PagarList pagamentos;
+    PagarList pagamentos = new PagarList();
 
     public ArrayList<PagarModel> getPagamentos() {
         return this.pagamentos.getPagamentos();

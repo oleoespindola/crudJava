@@ -6,26 +6,30 @@ import controllers.*;
 
 public class Menu {
 
-    ClienteController clienteController;
-    FornecedorController fornecedorController;
-    FuncionarioController funcionarioController;
-    ReceberController receberController;
-    PagarController pagarController;
+    ClienteController clienteController  = new ClienteController();
+    FornecedorController fornecedorController  = new FornecedorController();
+    FuncionarioController funcionarioController  = new FuncionarioController();
+    ReceberController receberController  = new ReceberController();
+    PagarController pagarController  = new PagarController();
 
-    ClienteView clienteView;
-    FornecedorView fornecedorView;
-    FuncionarioView funcionarioView;
-    ReceberView receberView;
-    PagarView pagarView;
+    ClienteView clienteView = new ClienteView();
+    FornecedorView fornecedorView = new FornecedorView();
+    FuncionarioView funcionarioView = new FuncionarioView();
+    ReceberView receberView = new ReceberView();
+    PagarView pagarView = new PagarView();
+    
     FluxoCaixaView fluxoCaixaView;
 
     Scanner leia = new Scanner(System.in);
 
     public Menu() {
-        menuPrincupal();
+        boolean executar = true;
+        while(executar) {
+            executar = menuPrincupal();
+        }
     }
 
-    public void menuPrincupal() {
+    public boolean menuPrincupal() {
         String subMenu;
         String cnpj;
         int id;
@@ -264,10 +268,11 @@ public class Menu {
                 this.fluxoCaixaView = new FluxoCaixaView(this.receberController.getReceitas(), this.pagarController.getPagamentos());
                 break;
             case 7:
-                break;
+                return false;
             default:
                 System.out.printf("Opção inválida");
                 break;
         }
+        return true;
     }
 }

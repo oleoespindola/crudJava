@@ -5,8 +5,8 @@ import controllers.ClienteController;
 
 public class ClienteView extends PessoaFisicaView {
 
-    ClienteModel cliente;
-    ClienteController controller;
+    ClienteModel cliente = new ClienteModel();
+    ClienteController controller = new ClienteController();
 
     public ClienteView() {}
 

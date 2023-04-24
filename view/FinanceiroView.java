@@ -5,7 +5,9 @@ import models.FinanceiroModel;
 
 public abstract class FinanceiroView implements InterfaceView {
 
-    FinanceiroModel financeiro;
+    FinanceiroModel financeiro = new FinanceiroModel() {
+        
+    };
 
     @Override
     public void entrar() {

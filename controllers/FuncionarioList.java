@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import models.FuncionarioModel;
 
 public class FuncionarioList {
-    ArrayList<FuncionarioModel> Funcionarios;
+    ArrayList<FuncionarioModel> Funcionarios = new ArrayList<FuncionarioModel>();
 
     public void incluir(FuncionarioModel Funcionario) {
         this.Funcionarios.add(Funcionario.getId(), Funcionario);

@@ -4,7 +4,7 @@ import models.FornecedorModel;
 
 public class FornecedorView extends PessoaJuridicaView {
 
-    FornecedorModel fornecedor;
+    FornecedorModel fornecedor = new FornecedorModel();
 
     public FornecedorView() {}
 

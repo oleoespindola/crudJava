@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import models.*;
 public class ReceberController {
 
-    ReceberList receitas;
+    ReceberList receitas = new ReceberList();
 
     public ArrayList<ReceberModel> getReceitas() {
         return this.receitas.getReceitas();

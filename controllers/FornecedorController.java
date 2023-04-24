@@ -4,7 +4,7 @@ import models.*;
 
 public class FornecedorController {
 
-    FornecedorList Fornecedores;
+    FornecedorList Fornecedores = new FornecedorList();
 
     public void incluir(FornecedorModel Fornecedor) {
         this.Fornecedores.incluir(Fornecedor);

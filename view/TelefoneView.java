@@ -5,11 +5,9 @@ import models.TelefoneModel;
 
 public class TelefoneView implements InterfaceView{
 
-    TelefoneModel telefone;
+    TelefoneModel telefone = new TelefoneModel();
 
-    public TelefoneView() {
-        entrar();
-    }
+    public TelefoneView() {}
 
     public TelefoneView(TelefoneModel telefone) {
         this.telefone = telefone;

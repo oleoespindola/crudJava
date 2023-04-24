@@ -4,7 +4,7 @@ import models.FuncionarioModel;
 
 public class FuncionarioView extends PessoaFisicaView {
 
-    FuncionarioModel funcionario;
+    FuncionarioModel funcionario = new FuncionarioModel();
 
     public FuncionarioView() {}
 

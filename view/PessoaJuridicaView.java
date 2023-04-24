@@ -4,7 +4,9 @@ import models.PessoaJuridicaModel;
 
 public abstract class PessoaJuridicaView extends PessoaView {
 
-    PessoaJuridicaModel pessoa;
+    PessoaJuridicaModel pessoa = new PessoaJuridicaModel() {
+        
+    };
 
     @Override
     public void entrar() {
