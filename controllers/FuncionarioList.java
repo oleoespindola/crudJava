@@ -5,39 +5,39 @@ import java.util.ArrayList;
 import models.FuncionarioModel;
 
 public class FuncionarioList {
-    ArrayList<FuncionarioModel> Funcionarios = new ArrayList<FuncionarioModel>();
+    ArrayList<FuncionarioModel> funcionarios = new ArrayList<FuncionarioModel>();
 
-    public void incluir(FuncionarioModel Funcionario) {
-        this.Funcionarios.add(Funcionario.getId(), Funcionario);
+    public void incluir(FuncionarioModel funcionario) {
+        this.funcionarios.add(funcionario.getId(), funcionario);
     }
 
-    public void alterar(int id, FuncionarioModel Funcionario) {
-        this.Funcionarios.set(id, Funcionario);
+    public void alterar(int id, FuncionarioModel funcionario) {
+        this.funcionarios.set(id, funcionario);
     }
 
     public FuncionarioModel consultarPosicao(int posicao) {
-        return this.Funcionarios.get(posicao);
+        return this.funcionarios.get(posicao);
     }
 
     public FuncionarioModel consultarCPF(String CPF) {
-        for(FuncionarioModel Funcionario : this.Funcionarios) {
-            if(CPF == Funcionario.getCpf()) {
-                return Funcionario;
+        for(FuncionarioModel funcionario : this.funcionarios) {
+            if(CPF == funcionario.getCpf()) {
+                return funcionario;
             }
         }
         return null;
     }
 
     public FuncionarioModel consultarNome(String nome) {
-        for(FuncionarioModel Funcionario : this.Funcionarios) {
-            if(nome == Funcionario.getNome()) {
-                return Funcionario;
+        for(FuncionarioModel funcionario : this.funcionarios) {
+            if(nome == funcionario.getNome()) {
+                return funcionario;
             }
         }
         return null;
     }
 
     public void excluir(int id) {
-        this.Funcionarios.remove(id);
+        this.funcionarios.remove(id);
     }
 }

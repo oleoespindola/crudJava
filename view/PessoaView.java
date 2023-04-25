@@ -5,11 +5,10 @@ import models.*;
 
 public abstract class PessoaView implements InterfaceView{
 
-    PessoaModel pessoa = new PessoaModel() {
-        
-    };
-    TelefoneView telefone = new TelefoneView();
-    EnderecoView endereco = new EnderecoView();
+    PessoaModel pessoa;
+    
+    TelefoneView telefone;
+    EnderecoView endereco;
 
     @Override
     public void entrar() {
@@ -19,9 +18,11 @@ public abstract class PessoaView implements InterfaceView{
         pessoa.setNome(faker.gerarNome());
         System.out.printf("\nCADASTRO DE ENDEREÇO");
         this.endereco = new EnderecoView();
+        this.endereco.entrar();
         pessoa.setEnderecoModel(this.endereco.getEndereco());
         System.out.printf("\nCADASTRO DO TELEFONE");
         this.telefone = new TelefoneView();
+        this.telefone.entrar();
         pessoa.setTelefoneModel(this.telefone.getTelefone());
         System.out.printf("\nInforme o e-mail: ");
         pessoa.setEmail(faker.gerarEmail());       

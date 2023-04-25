@@ -6,12 +6,12 @@ public class FuncionarioController {
 
     FuncionarioList funcionarios = new FuncionarioList();
 
-    public void incluir(FuncionarioModel Funcionario) {
-        this.funcionarios.incluir(Funcionario);
+    public void incluir(FuncionarioModel funcionario) {
+        this.funcionarios.incluir(funcionario);
     }
 
-    public void alterar(int id, FuncionarioModel Funcionario) {
-        this.funcionarios.alterar(id, Funcionario);
+    public void alterar(int id, FuncionarioModel funcionario) {
+        this.funcionarios.alterar(id, funcionario);
     }
 
     public FuncionarioModel consultarPosicao(int posicao) {

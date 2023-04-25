@@ -38,7 +38,7 @@ public class Menu {
         Double valor;
 
         System.out.printf(
-                "1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
+                "\n1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
         int opcao = leia.nextInt();
         switch (opcao) {
             case 1:
@@ -60,7 +60,7 @@ public class Menu {
                         System.out.printf("\nInforme a Posição: ");
                         posicao = leia.nextInt();
                         this.funcionarioView = new FuncionarioView(
-                                this.funcionarioController.consultarPosicao(posicao));
+                            this.funcionarioController.consultarPosicao(posicao));
                         this.funcionarioView.imprimir();
                         break;
                     case "d":
