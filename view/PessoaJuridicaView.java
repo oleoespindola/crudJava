@@ -13,19 +13,19 @@ public abstract class PessoaJuridicaView extends PessoaView {
 
         super.entrar();
 
-        System.out.printf("Infome o CNPJ: ");
+        System.out.printf("\nInfome o CNPJ: ");
         pessoa.setCnpj(faker.gerarCNPJ());
-        System.out.printf("Informe a inscrção estadual: ");
+        System.out.printf("\nInforme a inscrção estadual: ");
         pessoa.setInscricao_estadual(faker.gerarInscricaoEstadual());
-        System.out.printf("Informe um contato: ");
+        System.out.printf("\nInforme um contato: ");
         pessoa.setContato(faker.gerarNome());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();
-        System.out.println("CNPJ: "+ pessoa.getCnpj());
-        System.out.println("Incricao Estadual : "+ pessoa.getInscricao_estadual());
-        System.out.println("Contato: "+ pessoa.getContato());
+        System.out.println("\nCNPJ: "+ pessoa.getCnpj());
+        System.out.println("\nIncricao Estadual : "+ pessoa.getInscricao_estadual());
+        System.out.println("\nContato: "+ pessoa.getContato());
     } 
 }

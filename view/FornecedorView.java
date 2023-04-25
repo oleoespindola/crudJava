@@ -18,21 +18,21 @@ public class FornecedorView extends PessoaJuridicaView {
 
     @Override
     public void entrar() {
-        System.out.printf("CADASTRO DE FORNECEDORES");
+        System.out.printf("\nCADASTRO DE FORNECEDORES");
         super.entrar();
-        System.out.printf("Limite de compra: ");
+        System.out.printf("\nLimite de compra: ");
         fornecedor.setLimite_compra(faker.gerarValor());;
-        System.out.printf("Data do cadastro: ");
+        System.out.printf("\nData do cadastro: ");
         fornecedor.setData_cadastro(faker.gerarData());;
-        System.out.printf("Site: ");
+        System.out.printf("\nSite: ");
         fornecedor.setSite(faker.gerarSite());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();
-        System.out.println("Limite de Compra: "+ fornecedor.getLimite_compra());
-        System.out.println("Data de Cadastro: "+ fornecedor.getData_cadastro());
-        System.out.println("Site: "+ fornecedor.getSite());
+        System.out.println("\nLimite de Compra: "+ fornecedor.getLimite_compra());
+        System.out.println("\nData de Cadastro: "+ fornecedor.getData_cadastro());
+        System.out.println("\nSite: "+ fornecedor.getSite());
     }
 }

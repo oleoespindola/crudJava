@@ -11,38 +11,38 @@ public abstract class FinanceiroView implements InterfaceView {
 
     @Override
     public void entrar() {
-        System.out.printf("Informe o ID da transação: ");
+        System.out.printf("\nInforme o ID da transação: ");
         financeiro.setId(faker.gerarId());
-        System.out.printf("Informe o número da transação: ");
+        System.out.printf("\nInforme o número da transação: ");
         financeiro.setNumero(faker.gerarId());
-        System.out.printf("Data da emissão: ");
+        System.out.printf("\nData da emissão: ");
         financeiro.setEmissao(faker.gerarData());
-        System.out.printf("Data de vencimento: ");
+        System.out.printf("\nData de vencimento: ");
         financeiro.setVencimento(faker.gerarData());
-        System.out.printf("Data do pagamento: ");
+        System.out.printf("\nData do pagamento: ");
         financeiro.setPagamento(faker.gerarData());
-        System.out.printf("Valor: ");
+        System.out.printf("\nValor: ");
         financeiro.setValor(faker.gerarValor());
-        System.out.printf("Juros: ");
+        System.out.printf("\nJuros: ");
         financeiro.setJuros(faker.gerarValor()/10);
-        System.out.printf("Multa");
+        System.out.printf("\nMulta");
         financeiro.setMulta(faker.gerarValor()/10);
-        System.out.printf("Desconto: ");
+        System.out.printf("\nDesconto: ");
         financeiro.setDesconto(faker.gerarValor()/80);
     }
 
     @Override
     public void imprimir() {
-        System.out.println("ID: "+ financeiro.getId());
-        System.out.println("Número: "+ financeiro.getNumero());
-        System.out.println("Emissao: "+ financeiro.getEmissao());
-        System.out.println("Deta de Vencimento: "+ financeiro.getVencimento());
-        System.out.println("aPgamento: "+ financeiro.getPagamento());
-        System.out.println("Valor: "+ financeiro.getValor());
-        System.out.println("Juros: "+ financeiro.getJuros());
-        System.out.println("Multa: "+ financeiro.getMulta());
-        System.out.println("Desconto: "+ financeiro.getDesconto());
-        System.out.printf("TOTAL = %2.f", financeiro.getTotal());
+        System.out.println("\nID: "+ financeiro.getId());
+        System.out.println("\nNúmero: "+ financeiro.getNumero());
+        System.out.println("\nEmissao: "+ financeiro.getEmissao());
+        System.out.println("\nDeta de Vencimento: "+ financeiro.getVencimento());
+        System.out.println("\naPgamento: "+ financeiro.getPagamento());
+        System.out.println("\nValor: "+ financeiro.getValor());
+        System.out.println("\nJuros: "+ financeiro.getJuros());
+        System.out.println("\nMulta: "+ financeiro.getMulta());
+        System.out.println("\nDesconto: "+ financeiro.getDesconto());
+        System.out.printf("\nTOTAL = %2.f", financeiro.getTotal());
     }
 
 }

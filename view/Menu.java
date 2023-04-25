@@ -38,12 +38,12 @@ public class Menu {
         Double valor;
 
         System.out.printf(
-                "1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair");
+                "1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
         int opcao = leia.nextInt();
         switch (opcao) {
             case 1:
                 System.out.printf(
-                        "a. Incluir\nb. Alterar pelo ID\nc. Consultar pela posição na Lista\nd. Consultar pelo CPF\ne. Consultar pelo Nome\nf. Excluir pelo ID");
+                        "    a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo CPF\n    e. Consultar pelo Nome\n    f. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -51,43 +51,43 @@ public class Menu {
                         this.funcionarioController.incluir(this.funcionarioView.getFuncionario());
                         break;
                     case "b":
-                        System.out.printf("Informe o ID");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.funcionarioView.entrar();
                         this.funcionarioController.alterar(id, this.funcionarioView.getFuncionario());
                         break;
                     case "c":
-                        System.out.printf("Informe a Posição");
+                        System.out.printf("\nInforme a Posição: ");
                         posicao = leia.nextInt();
                         this.funcionarioView = new FuncionarioView(
                                 this.funcionarioController.consultarPosicao(posicao));
                         this.funcionarioView.imprimir();
                         break;
                     case "d":
-                        System.out.printf("Informe o CPF");
+                        System.out.printf("\nInforme o CPF: ");
                         String cpf = leia.next();
                         this.funcionarioView = new FuncionarioView(this.funcionarioController.consultarCPF(cpf));
                         this.funcionarioView.imprimir();
                         break;
                     case "e":
-                        System.out.printf("Informe o nome");
+                        System.out.printf("\nInforme o nome: ");
                         String nome = leia.next();
                         this.funcionarioView = new FuncionarioView(this.funcionarioController.consutarNome(nome));
                         this.funcionarioView.imprimir();
                         break;
                     case "f":
-                        System.out.printf("Informe o ID");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.funcionarioController.excluir(id);
                         break;
                     default:
-                        System.out.printf("Opção inválida");
+                        System.out.printf("\nOpção inválida");
                         break;
                 }
                 break;
             case 2:
                 System.out.printf(
-                        "a. Incluir\nb. Alterar pelo ID\nc. Consultar pela posição na Lista\nd. Consultar pelo ID\ne. Consultar pelo CNPJ\nf. Excluir pelo ID\n");
+                        "   a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n  e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -95,31 +95,31 @@ public class Menu {
                         this.clienteController.incluir(this.clienteView.getCliente());
                         break;
                     case "b":
-                        System.out.printf("Informe o ID");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.clienteView.entrar();
                         this.clienteController.alterar(id, this.clienteView.getCliente());
                         break;
                     case "c":
-                        System.out.printf("Informe a posicao na lista");
+                        System.out.printf("\nInforme a posicao na lista: ");
                         posicao = leia.nextInt();
                         this.clienteView = new ClienteView(this.clienteController.consultarPosicao(posicao));
                         this.clienteView.imprimir();
                         break;
                     case "d":
-                        System.out.printf("Informe o ID");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.clienteView = new ClienteView(this.clienteController.consutarId(id));
                         this.clienteView.imprimir();
                         break;
                     case "e":
-                        System.out.printf("Informe o CNPJ");
+                        System.out.printf("\nInforme o CNPJ: ");
                         cnpj = leia.next();
                         this.clienteView = new ClienteView(this.clienteController.consultarCNPJ(cnpj));
                         this.clienteView.imprimir();
                         break;
                     case "f":
-                        System.out.printf("Informe o ID ");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.clienteController.excluir(id);
                         break;
@@ -127,7 +127,7 @@ public class Menu {
                 break;
             case 3:
                 System.out.printf(
-                        "a. Incluir\nb. Alterar pelo ID\nc. Consultar pela posição na Lista\nd. Consultar pelo ID\ne. Consultar pelo CNPJ\nf. Excluir pelo ID");
+                        "   a. Incluir\nb. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n  e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -135,41 +135,41 @@ public class Menu {
                         this.fornecedorController.incluir(this.fornecedorView.getFornecedor());
                         break;
                     case "b":
-                        System.out.printf("Informe o ID: ");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.fornecedorView.entrar();
                         this.fornecedorController.alterar(id, this.fornecedorView.getFornecedor());
                         break;
                     case "c":
-                        System.out.printf("Informe a posição do fornecedor na lista: ");
+                        System.out.printf("\nInforme a posição do fornecedor na lista: ");
                         posicao = leia.nextInt();
                         this.fornecedorView = new FornecedorView(this.fornecedorController.consultarPosicao(posicao));
                         this.fornecedorView.imprimir();
                         break;
                     case "d":
-                        System.out.printf("Informe o ID: ");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.fornecedorView = new FornecedorView(this.fornecedorController.consutarNome(id));
                         this.fornecedorView.imprimir();
                         break;
                     case "e":
-                        System.out.printf("Informe o CNPJ do fornecedor: ");
+                        System.out.printf("\nInforme o CNPJ do fornecedor: ");
                         cnpj = leia.next();
                         this.fornecedorView = new FornecedorView(this.fornecedorController.consultarCNPJ(cnpj));
                         this.fornecedorView.imprimir();
                         break;
                     case "f":
-                        System.out.printf("Informe o ID do cliente que deseja excluir: ");
+                        System.out.printf("\nInforme o ID do cliente que deseja excluir: ");
                         id = leia.nextInt();
                         this.fornecedorController.excluir(id);
                         break;
                     default:
-                        System.out.printf("Opção inválida");
+                        System.out.printf("\nOpção inválida");
                 }
                 break;
             case 4:
                 System.out.printf(
-                        "a. Incluir\nb. Alterar pelo número\nc. Consultar pelo Nome do Cliente\nd. Consultar pelo Número\ne. Consultar pelo Valor\nf. Consultar pela Nota Fiscal\ng. Excluir pelo ID");
+                        "   a. Incluir\n    b. Alterar pelo número\n    c. Consultar pelo Nome do Cliente\n d. Consultar pelo Número\n  e. Consultar pelo Valor\n   f. Consultar pela Nota Fiscal\n g. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -177,47 +177,47 @@ public class Menu {
                         this.receberController.incluir(this.receberView.getReceber());
                         break;
                     case "b":
-                        System.out.printf("Informe o número: ");
+                        System.out.printf("\nInforme o número: ");
                         numero = leia.nextInt();
                         this.receberView.entrar();
                         this.receberController.alterarPeloNumero(numero);
                         break;
                     case "c":
-                        System.out.printf("Informe o nome do cliente: ");
+                        System.out.printf("\nInforme o nome do cliente: ");
                         String nome = leia.next();
                         id = this.clienteController.consutarNome(nome).getId();
                         this.receberView = new ReceberView(this.receberController.consultarPeloCliente(id));
                         this.receberView.imprimir();
                         break;
                     case "d":
-                        System.out.printf("Informe o número: ");
+                        System.out.printf("\nInforme o número: ");
                         numero = leia.nextInt();
                         this.receberView = new ReceberView(this.receberController.consultarPeloNumero(numero));
                         this.receberView.imprimir();
                         break;
                     case "e":
-                        System.out.printf("Informe o valor: ");
+                        System.out.printf("\nInforme o valor: ");
                         valor = leia.nextDouble();
                         this.receberView = new ReceberView(this.receberController.ConsultarPeloValor(valor));
                         this.receberView.imprimir();
                         break;
                     case "f":
-                        System.out.printf("Informe a NF: ");
+                        System.out.printf("\nInforme a NF: ");
                         String nota_fiscal = leia.next();
                         this.receberView = new ReceberView(this.receberController.consultarPelaNF(nota_fiscal));
                         this.receberView.imprimir();
                     case "g":
-                        System.out.printf("Informe o ID: ");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.receberController.excluirPeloId(id);
                         break;
                     default:
-                        System.out.printf("Opção Inválida");
+                        System.out.printf("\nOpção Inválida");
                 }
                 break;
             case 5:
                 System.out.printf(
-                        "a. Incluir\nb. Alterar pelo número\nc. Consultar pelo CNPJ do Fornecedor\nd. Consultar pelo Número\ne. Consultar pelo Valor\nf. Consultar pelo Boleto\ng. Excluir pelo ID");
+                        "   a. Incluir\n    b. Alterar pelo número\n    c. Consultar pelo CNPJ do Fornecedor\n  d. Consultar pelo Número\n  e. Consultar pelo Valor\n   f. Consultar pelo Boleto\n  g. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch(subMenu) {
                     case "a":
@@ -225,43 +225,43 @@ public class Menu {
                         this.pagarController.incluir(this.pagarView.getPagar());
                         break;
                     case "b":
-                        System.out.printf("Informe o numero: ");
+                        System.out.printf("\nInforme o numero: ");
                         numero = leia.nextInt();
                         this.pagarView.entrar();
                         this.pagarController.alterarPeloNumero(numero, this.pagarView.getPagar());
                         break;
                     case "c": 
-                        System.out.printf("Informe o CNPJ");
+                        System.out.printf("\nInforme o CNPJ: ");
                         cnpj = leia.next();
                         id = this.fornecedorController.consultarCNPJ(cnpj).getId();
                         this.pagarView = new PagarView(this.pagarController.consultarPeloFornecedor(id));
                         this.pagarView.imprimir();;
                         break;
                     case "d":
-                        System.out.printf("Informe o numero");
+                        System.out.printf("\nInforme o numero: ");
                         numero = leia.nextInt();
                         this.pagarView = new PagarView(this.pagarController.consultarPeloNumero(numero));
                         this.pagarView.imprimir();
                         break;
                     case "e": 
-                        System.out.printf("Informe o valor");
+                        System.out.printf("\nInforme o valor: ");
                         valor = leia.nextDouble();
                         this.pagarView = new PagarView(this.pagarController.ConsultarPeloValor(valor));
                         this.pagarView.imprimir();
                         break;
                     case "f":
-                        System.out.printf("Informe o boleto ");
+                        System.out.printf("\nInforme o boleto: ");
                         String boleto = leia.next();
                         this.pagarView = new PagarView(this.pagarController.consultarPeloBoleto(boleto));
                         this.pagarView.imprimir();
                         break;
                     case "g":
-                        System.out.printf("Informe o ID");
+                        System.out.printf("\nInforme o ID: ");
                         id = leia.nextInt();
                         this.pagarController.excluir(id);
                         break;
                     default: 
-                        System.out.printf("Opção inválida");
+                        System.out.printf("\nOpção inválida");
                 }
                 break;
             case 6:
@@ -270,7 +270,7 @@ public class Menu {
             case 7:
                 return false;
             default:
-                System.out.printf("Opção inválida");
+                System.out.printf("\nOpção inválida");
                 break;
         }
         return true;

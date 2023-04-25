@@ -19,19 +19,19 @@ public class ReceberView extends FinanceiroView {
 
     @Override
     public void entrar() {
-    System.out.printf("REGISTRAR RECEITA");
+    System.out.printf("\nREGISTRAR RECEITA");
     super.entrar();
-    System.out.printf("Informe o ID do cliente: ");
+    System.out.printf("\nInforme o ID do cliente: ");
     receber.setCliente(faker.gerarId());
-    System.out.printf("Informe o número da NF: ");
+    System.out.printf("\nInforme o número da NF: ");
     receber.setNota_fiscal(faker.gerarNf());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();
-        System.out.printf("\n=== DADOS DO CLIENTE ===");
+        System.out.printf("\n\n=== DADOS DO CLIENTE ===");
         this.cliente.imprimir();
-        System.out.printf("\nO numero da nota e: %s", receber.getNota_fiscal());
+        System.out.printf("\n\nO numero da nota e: %s", receber.getNota_fiscal());
     }
 }

@@ -13,19 +13,19 @@ public abstract class PessoaFisicaView extends PessoaView {
 
         super.entrar();
 
-        System.out.printf("Informe o CPF: ");
+        System.out.printf("\nInforme o CPF: ");
         pessoa.setCpf(faker.gerarCPF());
-        System.out.printf("Informe o RG: ");
+        System.out.printf("\nInforme o RG: ");
         pessoa.setRg(faker.gerarRg());
-        System.out.printf("Informe o orgão emissor: ");
+        System.out.printf("\nInforme o orgão emissor: ");
         pessoa.setEmissor(faker.gerarEmissor());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();
-        System.out.println("CPF: "+ pessoa.getCpf());
-        System.out.println("RG: "+ pessoa.getRg());
-        System.out.println("Orgão Expedidor: "+ pessoa.getEmissor());
+        System.out.println("\nCPF: "+ pessoa.getCpf());
+        System.out.println("\nRG: "+ pessoa.getRg());
+        System.out.println("\nOrgão Expedidor: "+ pessoa.getEmissor());
     } 
 }

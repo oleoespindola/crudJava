@@ -19,19 +19,19 @@ public class PagarView extends FinanceiroView {
 
     @Override
     public void entrar() {
-        System.out.printf("REGISTRO DE PAGAMENTOS");
+        System.out.printf("\nREGISTRO DE PAGAMENTOS");
         super.entrar();
-        System.out.printf("Informe o ID do fornecedor: ");
+        System.out.printf("\nInforme o ID do fornecedor: ");
         pagar.setFornecedor(faker.gerarId());
-        System.out.printf("Informe o código de barras");
+        System.out.printf("\nInforme o código de barras");
         pagar.setBoleto(faker.gerarBoleto());
     }
 
     @Override
     public void imprimir() {
         super.imprimir();        
-        System.out.printf("\n=== Dados do fornecedor ===");
+        System.out.printf("\n\n=== Dados do fornecedor ===");
         this.fornecedor.imprimir();
-        System.out.println("Número do Boleto: " + pagar.getBoleto());
+        System.out.println("\nNúmero do Boleto: " + pagar.getBoleto());
     }
 }

@@ -9,12 +9,12 @@ public class Faker {
     Random random = new Random();
 
     // Listas de nomes pré-definias
-    List<String> listaDeNomes = List.of("Ana", "Pedro", "Gabriela", "Lucas ", "Camila", "Rafael", "Carolina", "Felipe");
+    List<String> listaDeNomes = List.of("Ana", "Pedro", "Gabriela", "Lucas", "Camila", "Rafael", "Carolina", "Felipe");
 
     List<String> listaDeSobrenomes = List.of("Silva", "Santos", "Oliveira", "Pereira", "Fernandes", "Costa",
             "Rodrigues", "Souza", "Almeida", "Santos");
 
-    List<String> provedorEmail = List.of("gmail.com", "outlook.com", "yahoo.com.br");
+    List<String> provedorEmail = List.of("@gmail.com", "@outlook.com", "@yahoo.com.br");
 
     List<String> listaDeCidades = List.of("Guarani", "Quilombo dos Orixás", "Ibirapitanga", "Juremá do Norte",
             "Maracajá-Açu", "Xangô do Sul", "Itapuíba", "Ojú Obá", "Anajá Mirim", "Ubirajara");
@@ -29,92 +29,134 @@ public class Faker {
 
     // Produtor de Dados
     public int gerarId() {
-        return this.random.nextInt(900) + 99;
+        int result = this.random.nextInt(900) + 99;
+        System.out.printf("%d", result);
+        return result;
     }
 
     public String gerarNome() {
-        return this.listaDeNomes.get(this.random.nextInt(this.listaDeNomes.size())) + " "
+        String result = this.listaDeNomes.get(this.random.nextInt(this.listaDeNomes.size())) + " "
                 + this.listaDeSobrenomes.get(this.random.nextInt(this.listaDeSobrenomes.size()));
+        System.out.printf("%S", result);
+        return result;
     }
 
     public String gerarLogradouro() {
-        return this.listaDeSobrenomes.get(this.random.nextInt(this.listaDeSobrenomes.size())) + " "
+        String result = this.listaDeSobrenomes.get(this.random.nextInt(this.listaDeSobrenomes.size())) + " "
                 + this.listaDeSobrenomes.get(this.random.nextInt(this.listaDeSobrenomes.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public int gerarNumero() {
-        return this.random.nextInt(100);
+        int result = this.random.nextInt(100);
+        System.out.printf("%d", result);
+        return result;
     }
 
     public String gerarComplemento() {
-        return "";
+        String result = "";
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarBairro() {
-        return this.listaDeBairros.get(this.random.nextInt(this.listaDeBairros.size()));
+        String result = this.listaDeBairros.get(this.random.nextInt(this.listaDeBairros.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarCidade() {
-        return this.listaDeCidades.get(this.random.nextInt(this.listaDeCidades.size()));
+        String result = this.listaDeCidades.get(this.random.nextInt(this.listaDeCidades.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarEstado() {
-        return this.listaDeEstados.get(this.random.nextInt(this.listaDeEstados.size()));
+        String result = this.listaDeEstados.get(this.random.nextInt(this.listaDeEstados.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public int gerarCep() {
-        return (this.random.nextInt(90000000) + 999999);
+        int result = (this.random.nextInt(90000000) + 999999);
+        System.out.printf("%d", result);
+        return result;
     }
 
     public String gerarCPF() {
-        return this.random.nextInt(900) + 99 + "." + this.random.nextInt(900) + 99 + "." + this.random.nextInt(900) + 9
-                + "-" + this.random.nextInt(90) + 9;
+        String result = (this.random.nextInt(900) + 99) + "." + (this.random.nextInt(900) + 99) + "."
+                + (this.random.nextInt(900) + 99)
+                + "-" + (this.random.nextInt(90) + 9);
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarRg() {
-        return this.random.nextInt(90) + 9 + "." + this.random.nextInt(900) + 99 + "." + this.random.nextInt(900) + 9
+        String result = (this.random.nextInt(90) + 9) + "." + (this.random.nextInt(900) + 99) + "."
+                + (this.random.nextInt(900) + 9)
                 + "-" + this.random.nextInt(9);
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarEmissor() {
-        return this.listaDeEstados.get(this.random.nextInt(this.listaDeEstados.size()));
+        String result = this.listaDeEstados.get(this.random.nextInt(this.listaDeEstados.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarCNPJ() {
-        return this.random.nextInt(90) + 9 + "." + this.random.nextInt(900) + 99 + "." + this.random.nextInt(900) + 9
-                + "/0001-" + this.random.nextInt(90) + 9;
+        String result = (this.random.nextInt(90) + 9) + "." + (this.random.nextInt(900) + 99) + "."
+                + (this.random.nextInt(900) + 9)
+                + "/0001-" + (this.random.nextInt(90) + 9);
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarInscricaoEstadual() {
-        return this.random.nextInt(90) + 9 + "." + this.random.nextInt(900000) + 99999 + "-" + this.random.nextInt(9);
+        String result = (this.random.nextInt(90) + 9) + "." + (this.random.nextInt(900000) + 99999) + "-" + this.random.nextInt(9);
+        System.out.printf("%s", result);
+        return result;
     }
 
     public double gerarValor() {
-        return this.random.nextDouble(9000) + 999;
+        double result = (this.random.nextDouble(9000) + 999);
+        System.out.printf("%.2f", result);
+        return result;
     }
 
     public String gerarData() {
-        return this.random.nextInt(28) + "/" + this.random.nextInt(12) + "/2023";
+        String result = this.random.nextInt(28) + "/" + this.random.nextInt(12) + "/2023";
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarNf() {
-        return this.random.nextInt(90) + 9 + "-" + this.random.nextInt(900) + 99;
+        String result = this.random.nextInt(90) + 9 + "-" + this.random.nextInt(900) + 99;
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarBoleto() {
-        String boleto = this.random.nextInt(900) + 99 + ".";
+        String result = this.random.nextInt(900) + 99 + ".";
         for (int i = 0; i < 5; i++) {
-            boleto = boleto + "." + this.random.nextInt(900) + 99;
+            result = result + "." + this.random.nextInt(900) + 99;
         }
-        return boleto;
+        System.out.printf("%s", result);
+        return result;
     }
 
-    public String gerarEmail() { 
-        return gerarNome() + this.provedorEmail.get(this.random.nextInt(this.provedorEmail.size()));
+    public String gerarEmail() {
+        String result = gerarNome() + this.provedorEmail.get(this.random.nextInt(this.provedorEmail.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
     public String gerarSite() {
-        return this.sites.get(this.random.nextInt(this.sites.size()));
+        String result = this.sites.get(this.random.nextInt(this.sites.size()));
+        System.out.printf("%s", result);
+        return result;
     }
 
 }
