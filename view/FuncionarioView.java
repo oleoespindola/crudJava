@@ -4,14 +4,17 @@ import models.FuncionarioModel;
 
 public class FuncionarioView extends PessoaFisicaView {
 
+    // Atributos 
     FuncionarioModel funcionario = new FuncionarioModel();
 
+    // Construtor 
     public FuncionarioView() {}
 
     public FuncionarioView(FuncionarioModel funcionario) {
         this.funcionario = funcionario;
     }
 
+    // Método 
     public FuncionarioModel getFuncionario() {
         return this.funcionario;
     }

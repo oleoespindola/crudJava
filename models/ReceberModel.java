@@ -1,6 +1,6 @@
 package models;
 
-public class ReceberModel extends FinanceiroModel{
+public class ReceberModel {
 
     // Atributos
     private int id_cliente;

@@ -1,11 +1,12 @@
 package models;
 
-public abstract class PessoaFisicaModel extends PessoaModel {
+public class PessoaFisicaModel {
 
     // Atrinutos
     private String cpf;
     private String rg;
     private String emissor;
+    private PessoaModel pessoa_Model;
 
     // Constructor
     public PessoaFisicaModel() {}
@@ -39,4 +40,11 @@ public abstract class PessoaFisicaModel extends PessoaModel {
         return emissor;
     }
 
+    public void setpessoa_Model(PessoaModel pessoa_Model) {
+        this.pessoa_Model = pessoa_Model;
+    }
+
+    public PessoaModel getpessoa_Model() {
+        return pessoa_Model;
+    }
 }

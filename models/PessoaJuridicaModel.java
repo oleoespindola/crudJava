@@ -1,5 +1,5 @@
 package models;
-public abstract class PessoaJuridicaModel extends PessoaModel {
+public class PessoaJuridicaModel  {
 
     //Atributos
     private String cnpj;

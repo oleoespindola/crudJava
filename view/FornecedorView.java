@@ -4,18 +4,22 @@ import models.FornecedorModel;
 
 public class FornecedorView extends PessoaJuridicaView {
 
+    // Atributos
     FornecedorModel fornecedor = new FornecedorModel();
 
+    // Construtores
     public FornecedorView() {}
 
     public FornecedorView(FornecedorModel fornecedor) {
         this.fornecedor = fornecedor;
     }
 
+    // Método 
     public FornecedorModel getFornecedor() {
         return this.fornecedor;
     }
-
+    
+    // Sobrecarga
     @Override
     public void entrar() {
         System.out.printf("\nCADASTRO DE FORNECEDORES");

@@ -5,10 +5,10 @@ import models.FinanceiroModel;
 
 public abstract class FinanceiroView implements InterfaceView {
 
-    FinanceiroModel financeiro = new FinanceiroModel() {
-        
-    };
+    // Atributo 
+    FinanceiroModel financeiro = new FinanceiroModel();
 
+    // Sobrecargas 
     @Override
     public void entrar() {
         System.out.printf("\nInforme o ID da transação: ");

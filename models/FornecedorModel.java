@@ -1,6 +1,6 @@
 package models;
 
-public class FornecedorModel extends PessoaFisicaModel {
+public class FornecedorModel {
 
     // Atributos
     private double limite_compra;

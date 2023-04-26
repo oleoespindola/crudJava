@@ -1,6 +1,6 @@
 package models;
 
-public class FuncionarioModel extends PessoaFisicaModel {
+public class FuncionarioModel {
 
     // Atributos
     private String data_admissao;

@@ -1,6 +1,6 @@
 package models;
 
-public abstract class PessoaModel {
+public class PessoaModel {
 
     // Atributos
     private int id;

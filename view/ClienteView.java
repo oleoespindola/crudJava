@@ -5,19 +5,23 @@ import controllers.ClienteController;
 
 public class ClienteView extends PessoaFisicaView {
 
+    // Atributos 
     ClienteModel cliente = new ClienteModel();
     ClienteController controller = new ClienteController();
 
+    // Construtores 
     public ClienteView() {}
 
     public ClienteView(ClienteModel cliente) {
         this.cliente = cliente;
     }
 
+    // Método 
     public ClienteModel getCliente() {
         return cliente;
     }
 
+    // Sobrecarga 
     @Override
     public void entrar() {
         System.out.printf("CADASTRO DE CLIENTES");

@@ -5,18 +5,22 @@ import models.EnderecoModel;
 
 public class EnderecoView implements InterfaceView{
 
+    // Atributo 
     EnderecoModel endereco = new EnderecoModel();
 
+    // Contrutor 
     public EnderecoView () {}
 
     public EnderecoView (EnderecoModel endereco) {
         this.endereco = endereco;
     }
 
+    // Método 
     public EnderecoModel getEndereco() {
         return endereco;
     }
 
+    // Sobrecarga 
     @Override
     public void entrar() {
         System.out.printf("\nInforme o logradouro: ");

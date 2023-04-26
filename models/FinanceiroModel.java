@@ -1,6 +1,6 @@
 package models;
 
-public abstract class FinanceiroModel {
+public class FinanceiroModel {
 
     // Atributos
     private int id;

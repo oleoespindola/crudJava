@@ -1,6 +1,6 @@
 package models;
 
-public class PagarModel extends FinanceiroModel {
+public class PagarModel {
 
     // Atributos
     private int id_fornecedor;

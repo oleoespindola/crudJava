@@ -4,10 +4,10 @@ import models.PessoaJuridicaModel;
 
 public abstract class PessoaJuridicaView extends PessoaView {
 
-    PessoaJuridicaModel pessoa = new PessoaJuridicaModel() {
-        
-    };
+    // Atributos
+    PessoaJuridicaModel pessoa = new PessoaJuridicaModel();
 
+    // Sobrecarga
     @Override
     public void entrar() {
 

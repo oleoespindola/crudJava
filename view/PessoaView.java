@@ -5,11 +5,12 @@ import models.*;
 
 public abstract class PessoaView implements InterfaceView{
 
-    PessoaModel pessoa;
-    
+    // Atributos
+    PessoaModel pessoa = new PessoaModel();
     TelefoneView telefone;
     EnderecoView endereco;
 
+    // Sobrecarga
     @Override
     public void entrar() {
         System.out.printf("\nInforme o ID: ");
