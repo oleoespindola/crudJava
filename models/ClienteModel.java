@@ -21,14 +21,6 @@ public class ClienteModel {
         return limite_credito;
     }
 
-    public void setpessoa_fisica(PessoaFisicaModel pessoa_fisica) {
-        this.pessoa_fisica = pessoa_fisica;
-    }
-
-    public PessoaFisicaModel getpessoa_fisica() {
-        return pessoa_fisica;
-    }
-
     // Cobrança
     public void setEndereco_cobranca(EnderecoModel endereco_cobranca) {
         this.endereco_cobranca = endereco_cobranca;
@@ -37,5 +29,12 @@ public class ClienteModel {
     public EnderecoModel getEndereco_cobranca() {
         return endereco_cobranca;
     }
-    
+
+    public void setPessoa_fisica(PessoaFisicaModel pessoa_fisica) {
+        this.pessoa_fisica = pessoa_fisica;
+    }
+
+    public PessoaFisicaModel getPessoa_fisica() {
+        return pessoa_fisica;
+    } 
 }

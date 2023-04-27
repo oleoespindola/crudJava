@@ -40,11 +40,11 @@ public class PessoaFisicaModel {
         return emissor;
     }
 
-    public void setpessoa_Model(PessoaModel pessoa_Model) {
+    public void setPessoa_Model(PessoaModel pessoa_Model) {
         this.pessoa_Model = pessoa_Model;
     }
 
-    public PessoaModel getpessoa_Model() {
+    public PessoaModel getPessoa_Model() {
         return pessoa_Model;
     }
 }

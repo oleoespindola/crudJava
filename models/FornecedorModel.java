@@ -6,6 +6,7 @@ public class FornecedorModel {
     private double limite_compra;
     private String data_cadastro;
     private String site;
+    private PessoaJuridicaModel pessoa_juridica;
 
     //Construtor
     public FornecedorModel() {}
@@ -37,6 +38,14 @@ public class FornecedorModel {
 
     public String getSite() {
         return site;
+    }
+
+    public void setPessoa_juridica(PessoaJuridicaModel pessoa_juridica) {
+        this.pessoa_juridica = pessoa_juridica;
+    }
+
+    public PessoaJuridicaModel getPessoa_juridica() {
+        return pessoa_juridica;
     }
 
 }

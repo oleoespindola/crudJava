@@ -5,6 +5,7 @@ public class ReceberModel {
     // Atributos
     private int id_cliente;
     private String nota_fiscal;
+    private FinanceiroModel financeiro;
 
     // Construtor
     public ReceberModel() {}
@@ -28,4 +29,12 @@ public class ReceberModel {
     public String getNota_fiscal() {
         return nota_fiscal;
     }    
+
+    public void setFinanceiro(FinanceiroModel financeiro) {
+        this.financeiro = financeiro;
+    }
+
+    public FinanceiroModel getFinanceiro() {
+        return financeiro;
+    }
 }
