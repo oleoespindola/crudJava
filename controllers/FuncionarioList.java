@@ -1,27 +1,31 @@
 package controllers;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import models.FuncionarioModel;
 
 public class FuncionarioList {
-    ArrayList<FuncionarioModel> funcionarios = new ArrayList<FuncionarioModel>();
+    Map<Integer, FuncionarioModel> funcionarios = new HashMap<Integer, FuncionarioModel>();
 
     public void incluir(FuncionarioModel funcionario) {
-        this.funcionarios.add(funcionario.getId(), funcionario);
+        this.funcionarios.put(funcionario.getId(), funcionario);
     }
 
     public void alterar(int id, FuncionarioModel funcionario) {
-        this.funcionarios.set(id, funcionario);
+        this.funcionarios.put(id, funcionario);
     }
 
     public FuncionarioModel consultarPosicao(int posicao) {
-        return this.funcionarios.get(posicao);
+        ArrayList<FuncionarioModel> listaFuncionarios = new ArrayList<>();
+        for (FuncionarioModel funcionario : this.funcionarios.values()) {
+            listaFuncionarios.add(funcionario);
+        } 
+        return listaFuncionarios.get(posicao);
     }
 
-    public FuncionarioModel consultarCPF(String CPF) {
-        for(FuncionarioModel funcionario : this.funcionarios) {
-            if(CPF == funcionario.getCpf()) {
+    public FuncionarioModel consultarCPF(String cpf) {
+        for(FuncionarioModel funcionario : this.funcionarios.values()) {
+            if(cpf.equals(funcionario.getCpf())) {
                 return funcionario;
             }
         }
@@ -29,8 +33,8 @@ public class FuncionarioList {
     }
 
     public FuncionarioModel consultarNome(String nome) {
-        for(FuncionarioModel funcionario : this.funcionarios) {
-            if(nome == funcionario.getNome()) {
+        for(FuncionarioModel funcionario : this.funcionarios.values()) {
+            if(nome.equals(funcionario.getNome())) {
                 return funcionario;
             }
         }

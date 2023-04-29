@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import controllers.*;
 
-public class Menu {
+public class MenuView {
 
     ClienteController clienteController  = new ClienteController();
     FornecedorController fornecedorController  = new FornecedorController();
@@ -20,9 +20,9 @@ public class Menu {
     
     FluxoCaixaView fluxoCaixaView;
 
-    Scanner leia = new Scanner(System.in);
+    Scanner leia = new Scanner(System.in).useDelimiter("\r?\n");
 
-    public Menu() {
+    public MenuView() {
         boolean executar = true;
         while(executar) {
             executar = menuPrincupal();
@@ -38,7 +38,7 @@ public class Menu {
         Double valor;
 
         System.out.printf(
-                "\n1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
+                "\n\n1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
         int opcao = leia.nextInt();
         switch (opcao) {
             case 1:

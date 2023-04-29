@@ -12,6 +12,7 @@ public abstract class PessoaView implements InterfaceView{
 
     @Override
     public void entrar() {
+
         System.out.printf("\nInforme o ID: ");
         pessoa.setId(faker.gerarId());
         System.out.printf("\nInfome  o nome do Funcionário: ");

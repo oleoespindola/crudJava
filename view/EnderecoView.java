@@ -21,7 +21,7 @@ public class EnderecoView implements InterfaceView{
     public void entrar() {
         System.out.printf("\nInforme o logradouro: ");
         endereco.setLogradouro(faker.gerarLogradouro());
-        System.out.printf("\nInforme o numero");
+        System.out.printf("\nInforme o numero: ");
         endereco.setNumero(faker.gerarNumero());
         System.out.printf("\nInforme o complemento (se houver): ");
         endereco.setComplemento(faker.gerarComplemento());
@@ -37,8 +37,13 @@ public class EnderecoView implements InterfaceView{
 
     @Override
     public void imprimir() {
-        System.out.println("\nLogradouro: "+ endereco.getLogradouro()+ "\nNúmero: "+ endereco.getNumero()+ "\nComplemento: "+ endereco.getComplemento()+ 
-        "\nBairro: "+ endereco.getBairro()+ "\nCidade: "+ endereco.getCidade()+ "\nEstado: "+ endereco.getEstado()+ "\nCEP: "+ endereco.getCep());
+        System.out.printf("\nLogradouro: %s", this.endereco.getLogradouro());
+        System.out.printf("\nNúmero: %d", this.endereco.getNumero());
+        System.out.printf("\nComplemento: %s", this.endereco.getComplemento());
+        System.out.printf("\nBairro: %s", this.endereco.getBairro());
+        System.out.printf("\nCidade: %s", this.endereco.getCidade());
+        System.out.printf("\nEstado: %s", this.endereco.getEstado());
+        System.out.printf("\nCEP: %d", this.endereco.getCep());
     }
     
 }

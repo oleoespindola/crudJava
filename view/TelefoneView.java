@@ -2,10 +2,12 @@ package view;
 
 import interfaces.InterfaceView;
 import models.TelefoneModel;
+import test.Faker;
 
 public class TelefoneView implements InterfaceView{
 
     TelefoneModel telefone = new TelefoneModel();
+    Faker faker = new Faker();
 
     public TelefoneView() {}
 
@@ -20,14 +22,15 @@ public class TelefoneView implements InterfaceView{
     @Override
     public void entrar() {
         System.out.printf("\nInforme o DDD: ");
-        telefone.setDdd(14);
+        this.telefone.setDdd(this.faker.gerarDDD());
         System.out.printf("\nInforme o telefone: ");
-        telefone.setNumero(987687645);
+        this.telefone.setNumero(this.faker.gerarTelefone());
+        System.out.printf("%d", this.telefone.getNumero());
     }
 
     @Override
     public void imprimir() {
-        System.out.printf("\nTelefone:(%d) %d\n", telefone.getDdd(), telefone.getNumero());
+        System.out.printf("\nTelefone:(%d) %d", telefone.getDdd(), telefone.getNumero());
     }
     
 }

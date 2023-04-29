@@ -18,8 +18,8 @@ public class FuncionarioController {
         return this.funcionarios.consultarPosicao(posicao);
     }
 
-    public FuncionarioModel consultarCPF(String CPF) {
-        return this.funcionarios.consultarCPF(CPF);
+    public FuncionarioModel consultarCPF(String cpf) {
+        return this.funcionarios.consultarCPF(cpf);
     }
 
     public FuncionarioModel consutarNome(String nome) {

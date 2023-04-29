@@ -1,10 +1,13 @@
 package view;
 
+import interfaces.InterfaceView;
 import models.FuncionarioModel;
 
-public class FuncionarioView extends PessoaFisicaView {
+public class FuncionarioView implements InterfaceView {
 
     FuncionarioModel funcionario = new FuncionarioModel();
+    EnderecoView endereco = new EnderecoView();
+    TelefoneView telefone = new TelefoneView();
 
     public FuncionarioView() {}
 
@@ -18,9 +21,26 @@ public class FuncionarioView extends PessoaFisicaView {
 
     public void entrar() {
         System.out.printf("\nCADASTRO DE FUNCIONÁRIOS");
-
-        super.entrar();
-
+        System.out.printf("\nInforme o ID: ");
+        funcionario.setId(faker.gerarId());
+        System.out.printf("\nInfome  o nome do Funcionário: ");
+        funcionario.setNome(faker.gerarNome());
+        System.out.printf("\nCADASTRO DE ENDEREÇO");
+        this.endereco = new EnderecoView();
+        this.endereco.entrar();
+        this.funcionario.setEnderecoModel(this.endereco.getEndereco());
+        System.out.printf("\nCADASTRO DO TELEFONE");
+        this.telefone = new TelefoneView();
+        this.telefone.entrar();
+        this.funcionario.setTelefoneModel(this.telefone.getTelefone());
+        System.out.printf("\nInforme o e-mail: ");
+        funcionario.setEmail(faker.gerarEmail());   
+        System.out.printf("\nInforme o CPF: ");
+        funcionario.setCpf(faker.gerarCPF());
+        System.out.printf("\nInforme o RG: ");
+        funcionario.setRg(faker.gerarRg());
+        System.out.printf("\nInforme o orgão emissor: ");
+        funcionario.setEmissor(faker.gerarEmissor());
         System.out.printf("\nData de admissão: ");
         this.funcionario.setData_admissao(faker.gerarData());
         System.out.printf("\nData de demissão (se houver): ");
@@ -32,11 +52,22 @@ public class FuncionarioView extends PessoaFisicaView {
     }
 
     public void imprimir() {
-        super.imprimir();
-        System.out.println("\nData de admissao: "+ this.funcionario.getData_admissao());
-        System.out.println("\nData de demissao: "+ this.funcionario.getData_demissao());
-        System.out.println("\nCTPS: "+ this.funcionario.getCtps());
-        System.out.println("\nSalário : R$"+ this.funcionario.getSalario());
+
+        System.out.printf("\nID: %d", this.funcionario.getId());
+        System.out.printf("\nNome: %s", funcionario.getNome());
+        this.telefone = new TelefoneView(this.funcionario.getTelefoneModel());
+        this.telefone.imprimir();
+        this.endereco = new EnderecoView(this.funcionario.getEnderecoModel());
+        this.endereco.imprimir();
+        System.out.printf("\nEmail: %s", funcionario.getEmail());
+        System.out.printf("\nCPF: %s", funcionario.getCpf());
+        System.out.printf("\nRG: %s", funcionario.getRg());
+        System.out.printf("\nOrgão Expedidor: %s", funcionario.getEmissor());
+        System.out.printf("\nData de admissao: %s", this.funcionario.getData_admissao());
+        System.out.printf("\nData de demissao: %s", this.funcionario.getData_demissao());
+        System.out.printf("\nCTPS: %s", this.funcionario.getCtps());
+        System.out.printf("\nSalário : R$ %.2f", this.funcionario.getSalario());
+        
     }
 
 }

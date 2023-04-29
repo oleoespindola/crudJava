@@ -37,7 +37,7 @@ public class Faker {
     public String gerarNome() {
         String result = this.listaDeNomes.get(this.random.nextInt(this.listaDeNomes.size())) + " "
                 + this.listaDeSobrenomes.get(this.random.nextInt(this.listaDeSobrenomes.size()));
-        System.out.printf("%S", result);
+        System.out.printf("%s", result);
         return result;
     }
 
@@ -148,7 +148,7 @@ public class Faker {
     }
 
     public String gerarEmail() {
-        String result = gerarNome() + this.provedorEmail.get(this.random.nextInt(this.provedorEmail.size()));
+        String result = this.listaDeNomes.get(this.random.nextInt(this.listaDeNomes.size())) + this.provedorEmail.get(this.random.nextInt(this.provedorEmail.size()));
         System.out.printf("%s", result);
         return result;
     }
@@ -157,6 +157,18 @@ public class Faker {
         String result = this.sites.get(this.random.nextInt(this.sites.size()));
         System.out.printf("%s", result);
         return result;
+    }
+
+    public int gerarDDD() {
+        int ddd = (this.random.nextInt(90) + 9);
+        System.out.printf("%d", ddd);
+        return ddd;
+    }
+
+    public long gerarTelefone() {
+        long telefone = (this.random.nextLong(900000000) + 99999999);
+        System.out.printf("%d", telefone);
+        return telefone;
     }
 
 }
