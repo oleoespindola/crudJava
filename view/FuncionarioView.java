@@ -27,7 +27,6 @@ public class FuncionarioView implements InterfaceView {
         System.out.printf("\nNome: ");
         this.funcionario.setNome(faker.gerarNome());
         System.out.printf("\nENDEREÇO");
-        this.endereco = new EnderecoView();
         this.endereco.entrar();
         this.funcionario.setEnderecoModel(this.endereco.getEndereco());
         System.out.printf("\nTELEFONE");

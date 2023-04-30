@@ -27,7 +27,6 @@ public class FornecedorView implements InterfaceView {
         System.out.printf("\nNome: ");
         this.fornecedor.setNome(faker.gerarNome());
         System.out.printf("\nENDEREÇO");
-        this.endereco = new EnderecoView();
         this.endereco.entrar();
         this.fornecedor.setEnderecoModel(this.endereco.getEndereco());
         System.out.printf("\nTELEFONE");

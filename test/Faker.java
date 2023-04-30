@@ -171,4 +171,8 @@ public class Faker {
         return telefone;
     }
 
+    public int gerarEncargos() {
+        return this.random.nextInt(15);
+    }
+
 }

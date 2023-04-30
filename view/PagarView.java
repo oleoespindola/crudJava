@@ -34,11 +34,11 @@ public class PagarView extends FinanceiroView {
         System.out.printf("\nValor: ");
         this.pagar.setValor(faker.gerarValor());
         System.out.printf("\nJuros: ");
-        this.pagar.setJuros(faker.gerarValor() / 10);
+        this.pagar.setJuros(faker.gerarEncargos());
         System.out.printf("\nMulta");
-        this.pagar.setMulta(faker.gerarValor() / 10);
+        this.pagar.setMulta(faker.gerarEncargos());
         System.out.printf("\nDesconto: ");
-        this.pagar.setDesconto(faker.gerarValor() / 80);
+        this.pagar.setDesconto(faker.gerarEncargos());
 
         // Pagar
         System.out.printf("\nInforme o ID do fornecedor: ");

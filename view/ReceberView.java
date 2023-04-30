@@ -35,11 +35,11 @@ public class ReceberView implements InterfaceView {
         System.out.printf("\nValor: ");
         this.receber.setValor(faker.gerarValor());
         System.out.printf("\nJuros: ");
-        this.receber.setJuros(faker.gerarValor()/10);
+        this.receber.setJuros(faker.gerarEncargos());
         System.out.printf("\nMulta");
-        this.receber.setMulta(faker.gerarValor()/10);
+        this.receber.setMulta(faker.gerarEncargos());
         System.out.printf("\nDesconto: ");
-        this.receber.setDesconto(faker.gerarValor()/80);
+        this.receber.setDesconto(faker.gerarEncargos());
         
         // Receitas
         System.out.printf("\nInforme o ID do cliente: ");

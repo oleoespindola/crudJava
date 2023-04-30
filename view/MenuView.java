@@ -87,7 +87,7 @@ public class MenuView {
                 break;
             case 2:
                 System.out.printf(
-                        "   a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n  e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
+                        "   a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n    e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -127,7 +127,7 @@ public class MenuView {
                 break;
             case 3:
                 System.out.printf(
-                        "   a. Incluir\nb. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n  e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
+                        "   a. Incluir\n   b. Alterar pelo ID\n   c. Consultar pela posição na Lista\n   d. Consultar pelo ID\n   e. Consultar pelo CNPJ\n   f. Excluir pelo ID\n   :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -169,7 +169,7 @@ public class MenuView {
                 break;
             case 4:
                 System.out.printf(
-                        "   a. Incluir\n    b. Alterar pelo número\n    c. Consultar pelo Nome do Cliente\n d. Consultar pelo Número\n  e. Consultar pelo Valor\n   f. Consultar pela Nota Fiscal\n g. Excluir pelo ID\n    :: ");
+                        "   a. Incluir\n   b. Alterar pelo número\n   c. Consultar pelo Nome do Cliente\n   d. Consultar pelo Número\n   e. Consultar pelo Valor\n   f. Consultar pela Nota Fiscal\n   g. Excluir pelo ID\n   :: ");
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
@@ -217,7 +217,7 @@ public class MenuView {
                 break;
             case 5:
                 System.out.printf(
-                        "   a. Incluir\n    b. Alterar pelo número\n    c. Consultar pelo CNPJ do Fornecedor\n  d. Consultar pelo Número\n  e. Consultar pelo Valor\n   f. Consultar pelo Boleto\n  g. Excluir pelo ID\n    :: ");
+                        "   a. Incluir\n   b. Alterar pelo número\n   c. Consultar pelo CNPJ do Fornecedor\n   d. Consultar pelo Número\n   e. Consultar pelo Valor\n   f. Consultar pelo Boleto\n   g. Excluir pelo ID\n   :: ");
                 subMenu = leia.next();
                 switch(subMenu) {
                     case "a":

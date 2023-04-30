@@ -26,7 +26,6 @@ public class ClienteView implements InterfaceView {
         System.out.printf("\nNome: ");
         this.cliente.setNome(faker.gerarNome());
         System.out.printf("\nENDEREÇO");
-        this.endereco = new EnderecoView();
         this.endereco.entrar();
         this.cliente.setEnderecoModel(this.endereco.getEndereco());
         System.out.printf("\nTELEFONE");
@@ -44,10 +43,11 @@ public class ClienteView implements InterfaceView {
         this.cliente.setContato(faker.gerarNome());
 
         //Cliente
-        System.out.printf("Informe o limite de crédito do cliente: ");
+        System.out.printf("\nInforme o limite de crédito do cliente: ");
         this.cliente.setLimite_credito(faker.gerarValor());
-        System.out.printf("ENDEREÇO DE COBRANÇA");
-        this.cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
+        System.out.printf("\nENDEREÇO DE COBRANÇA");
+        this.endereco.entrar();
+        this.cliente.setEndereco_cobranca(this.endereco.getEndereco());
     }
     
     public void imprimir() {
@@ -66,7 +66,7 @@ public class ClienteView implements InterfaceView {
         System.out.printf("\nContato: %s", this.cliente.getContato());
 
         // Cliente
-        System.out.printf("Limite de Credito: %.2f", this.cliente.getLimite_credito());
+        System.out.printf("\nLimite de Credito: %.2f", this.cliente.getLimite_credito());
         this.endereco = new EnderecoView(this.cliente.getEndereco_cobranca());
         this.endereco.imprimir();
     }
