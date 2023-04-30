@@ -1,40 +1,39 @@
 package controllers;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import models.ReceberModel;
 
 public class ReceberList {
 
-    ArrayList<ReceberModel> receitas = new ArrayList<ReceberModel>();
+    Map<Integer, ReceberModel> receitas = new HashMap<Integer, ReceberModel>();
 
     public ArrayList<ReceberModel> getReceitas() {
-        return receitas;
+        ArrayList<ReceberModel> receitasList = new ArrayList<>();
+        for (ReceberModel receita : this.receitas.values()) {
+            receitasList.add(receita);
+        }
+        return receitasList;
     }
 
     public void incluir(ReceberModel receber) {
-        this.receitas.add(receber.getId(), receber);
+        this.receitas.put(receber.getId(), receber);
     }
 
     public void alterarPeloNumero(int numero) {
-        for(ReceberModel receita : this.receitas) {
+        for(ReceberModel receita : this.receitas.values()) {
             if(numero == receita.getNumero()) {
-                this.receitas.set(receita.getId(), receita);
+                this.receitas.put(receita.getId(), receita);
             }
         }
     }
 
     public ReceberModel consultarPeloCliente(int id) {
-        for(ReceberModel receita: this.receitas) {
-            if(id == receita.getCliente()) {
-                return receita;
-            }
-        }
-        return null;
+        return this.receitas.get(id);
     }
     
      public ReceberModel consultarPeloNumero(int numero) {
-        for(ReceberModel receita : this.receitas){
+        for(ReceberModel receita : this.receitas.values()){
             if(numero == receita.getNumero()) {
                 return receita;
             }
@@ -43,7 +42,7 @@ public class ReceberList {
     }
 
     public ReceberModel ConsultarPeloValor(double valor) {
-        for(ReceberModel receita : this.receitas) {
+        for(ReceberModel receita : this.receitas.values()) {
             if(valor == receita.getValor()) {
                 return receita;
             }
@@ -52,8 +51,8 @@ public class ReceberList {
     }
 
     public ReceberModel consultarPelaNF(String nota_fiscal) {
-        for(ReceberModel receita : this.receitas) {
-            if(nota_fiscal == receita.getNota_fiscal()) {
+        for(ReceberModel receita : this.receitas.values()) {
+            if(nota_fiscal.equals(receita.getNota_fiscal())) {
                 return receita;
             }
         }

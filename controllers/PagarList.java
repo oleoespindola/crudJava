@@ -1,35 +1,44 @@
 package controllers;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import models.PagarModel;
 
 public class PagarList {
 
-    ArrayList<PagarModel> pagamentos = new  ArrayList<PagarModel>();
+    Map<Integer, PagarModel> pagamentos = new  HashMap<Integer, PagarModel>();
 
     public ArrayList<PagarModel> getPagamentos() {
-        return pagamentos;
+        ArrayList<PagarModel> pagamentosList = new ArrayList<>();
+        for (PagarModel pagamento : this.pagamentos.values()) {
+            pagamentosList.add(pagamento);
+        }
+        return pagamentosList;
     }
 
     public void incluir(PagarModel pagar) {
-        this.pagamentos.add(pagar);
+        this.pagamentos.put(pagar.getId(), pagar);
     }
 
     public void alterarPeloNumero(int numero, PagarModel pagar) {
-        for(PagarModel pagamento : this.pagamentos) {
+        for(PagarModel pagamento : this.pagamentos.values()) {
             if(numero == pagamento.getNumero()) {
-                this.pagamentos.set(pagamento.getId(), pagar);
+                this.pagamentos.put(pagamento.getId(), pagamento);
             }
         }
     }
 
     public PagarModel consultarPeloFornecedor(int idFornecedor) {
-        return this.pagamentos.get(idFornecedor);
+        for (PagarModel pagamento : this.pagamentos.values()) {
+            if( idFornecedor == pagamento.getFornecedor()) {
+                return pagamento;
+            }
+        }
+        return null;
     }
 
     public PagarModel consultarPeloNumero(int numero) {
-        for(PagarModel pagamento : this.pagamentos) {
+        for(PagarModel pagamento : this.pagamentos.values()) {
             if(pagamento.getNumero() == numero) {
                 return pagamento;
             }
@@ -38,7 +47,7 @@ public class PagarList {
     }
 
     public PagarModel ConsultarPeloValor(double valor) {
-        for(PagarModel pagamento : this.pagamentos) {
+        for(PagarModel pagamento : this.pagamentos.values()) {
             if(pagamento.getValor() == valor) {
                 return pagamento;
             }
@@ -47,8 +56,8 @@ public class PagarList {
     }
 
     public PagarModel consultarPeloBoleto(String boleto) {
-        for(PagarModel pagamento: this.pagamentos) {
-            if(boleto == pagamento.getBoleto()) {
+        for(PagarModel pagamento: this.pagamentos.values()) {
+            if(boleto.equals(pagamento.getBoleto())) {
                 return pagamento;
             }
         }

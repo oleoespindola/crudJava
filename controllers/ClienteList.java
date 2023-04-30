@@ -1,21 +1,19 @@
 package controllers;
 
-// Bibliotecas Java
-import java.util.ArrayList;
+import java.util.*;
 
-// Bibliotecas do protjeto
 import models.ClienteModel;
 
 public class ClienteList {
 
-    ArrayList<ClienteModel> clientes = new ArrayList<ClienteModel>();
+    Map<Integer, ClienteModel> clientes = new HashMap<Integer, ClienteModel>();
 
     public void incluir(ClienteModel cliente) {
-        this.clientes.add(cliente.getId(), cliente);
+        this.clientes.put(cliente.getId(), cliente);
     }
 
     public void alterar(int id, ClienteModel cliente) {
-        this.clientes.set(id, cliente);
+        this.clientes.put(id, cliente);
     }
 
     public ClienteModel consultarPosicao(int posicao) {
@@ -23,8 +21,8 @@ public class ClienteList {
     }
 
     public ClienteModel consultarCNPJ(String cnpj) {
-        for(ClienteModel cliente : this.clientes) {
-            if(cnpj == cliente.getCnpj()) {
+        for(ClienteModel cliente : this.clientes.values()) {
+            if(cnpj.equals(cliente.getCnpj())) {
                 return cliente;
             }
         }
@@ -32,17 +30,12 @@ public class ClienteList {
     }
 
     public ClienteModel consultarId(int id) {
-        for(ClienteModel cliente : this.clientes) {
-            if(id == cliente.getId()) {
-                return cliente;
-            }
-        }
-        return null;
+        return this.clientes.get(id);
     }
 
     public ClienteModel consutarNome(String nome) {
-        for(ClienteModel cliente : this.clientes) {
-            if(nome == cliente.getNome()) {
+        for(ClienteModel cliente : this.clientes.values()) {
+            if(nome.equals(cliente.getNome())) {
                 return cliente;
             }
         }

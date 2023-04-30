@@ -1,27 +1,31 @@
 package controllers;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import models.FornecedorModel;
 
 public class FornecedorList {
-    ArrayList<FornecedorModel> fornecedores = new ArrayList<FornecedorModel>();
+    Map<Integer, FornecedorModel> fornecedores = new HashMap<Integer, FornecedorModel>();
 
     public void incluir(FornecedorModel fornecedor) {
-        this.fornecedores.add(fornecedor.getId(), fornecedor);
+        this.fornecedores.put(fornecedor.getId(), fornecedor);
     }
 
     public void alterar(int id, FornecedorModel fornecedor) {
-        this.fornecedores.set(id, fornecedor);
+        this.fornecedores.put(id, fornecedor);
     }
 
     public FornecedorModel consultarPosicao(int posicao) {
-        return this.fornecedores.get(posicao);
+        ArrayList<FornecedorModel> fornecedorList = new ArrayList<>();
+        for (FornecedorModel fornecedor : this.fornecedores.values()) {
+            fornecedorList.add(fornecedor);
+        }
+        return fornecedorList.get(posicao);
     }
 
-    public FornecedorModel consultarCNPJ(String CNPJ) {
-        for(FornecedorModel fornecedor : this.fornecedores) {
-            if(CNPJ == fornecedor.getCnpj()) {
+    public FornecedorModel consultarCNPJ(String cnpj) {
+        for(FornecedorModel fornecedor : this.fornecedores.values()) {
+            if(cnpj.equals(fornecedor.getCnpj())) {
                 return fornecedor;
             }
         }
@@ -29,7 +33,7 @@ public class FornecedorList {
     }
 
     public FornecedorModel consultarId(int id) {
-        for(FornecedorModel fornecedor : this.fornecedores) {
+        for(FornecedorModel fornecedor : this.fornecedores.values()) {
             if(id == fornecedor.getId()) {
                 return fornecedor;
             }
