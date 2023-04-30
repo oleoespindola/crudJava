@@ -8,17 +8,15 @@ Esse programa é um sistema de controle financeiro que permite cadastrar, ler e 
 
 Esse programa foi desenvolvido em Java.
 
-- Java 8 ou superior instalado na máquina.
-- IDE (Eclipse, NetBeans, IntelliJ) ou Editor de Texto (Sublime, VSCode) para executar o código.
+Para executar:
+- Java 8 ou superior.
+- IDE (Eclipse, NetBeans, IntelliJ) ou Editor de Texto (Sublime, VSCode).
 
 ## **Funcionamento**
 
 O programa é executado a partir da classe **`Menu`**. Ele possui um menu principal e um submenu para cada opção do menu principal. O usuário pode escolher as opções do menu e submenu usando o teclado.
 
-## **Funcionamento**
-
-Ao ser executado, o programa apresenta um menu principal com as seguintes opções:
-
+O menu principal apresenta as seguintes opções:
 1. Funcionário
 2. Fornecedor
 3. Cliente
@@ -36,19 +34,9 @@ Cada submenu apresenta as seguintes opções:
 3. Excluir
 4. Voltar
 
-Ao selecionar a opção "**Cadastrar**", o usuário pode cadastrar um novo funcionário, fornecedor, cliente, conta a receber, **conta** a pagar ou fluxo de caixa, dependendo da categoria escolhida.
+### Arquitetura das **classes**
 
-Ao selecionar a opção "Ler", o usuário pode ler as informações do último funcionário, fornecedor, cliente, conta a receber, conta a pagar ou fluxo de caixa cadastrado.
-
-Ao selecionar a opção "**Excluir**", o usuário pode excluir o último funcionário, fornecedor, cliente, conta a receber, conta a pagar ou fluxo de caixa cadastrado.
-
-Ao selecionar a opção "**Voltar**", o usuário volta para o menu principal.
-
-Ao selecionar a opção "**Sair**" no menu principal, o programa é encerrado.
-
-### Principais c**lasses do sistema**
-
-O sistema possui as seguintes classes:
+Baseado em MVC, para cada uma das classes abaixo existe um model, uam view e uum controller. Arquivos com a estrutura `*List.java` foram criados no package controller para armazenas os objetos models instanciados. 
 
 - **`Funcionario`**: representa os funcionários da empresa
 - **`Fornecedor`**: representa os fornecedores da empresa
@@ -58,6 +46,10 @@ O sistema possui as seguintes classes:
 - **`FluxoCaixa`**: representa o fluxo de caixa da empresa
 
 Cada classe tem seus atributos e métodos próprios, que são definidos de acordo com a sua finalidade e função no sistema. Além disso, cada classe pode ter relacionamentos e interações com outras classes do sistema, como por exemplo, um funcionário realizando uma compra de um fornecedor ou um cliente efetuando o pagamento de uma conta a receber.
+
+### Faker
+
+insere um objeto na `InterfaceView` para inserir dados nas listas e otimizar testes. 
 
 ### Colaboração e sugestões de melhorias
 
