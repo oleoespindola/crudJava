@@ -6,8 +6,6 @@ import interfaces.InterfaceView;
 public class ClienteView implements InterfaceView {
 
     ClienteModel cliente = new ClienteModel();
-
-    // Classes atributos 
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 

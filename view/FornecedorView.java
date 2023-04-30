@@ -6,8 +6,6 @@ import models.FornecedorModel;
 public class FornecedorView implements InterfaceView {
 
     FornecedorModel fornecedor = new FornecedorModel();
-
-    // Classes atributos 
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 

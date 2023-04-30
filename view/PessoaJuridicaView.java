@@ -8,7 +8,6 @@ public abstract class PessoaJuridicaView extends PessoaView {
         
     };
 
-    @Override
     public void entrar() {
 
         super.entrar();
@@ -21,7 +20,6 @@ public abstract class PessoaJuridicaView extends PessoaView {
         pessoa.setContato(faker.gerarNome());
     }
 
-    @Override
     public void imprimir() {
         super.imprimir();
         System.out.println("\nCNPJ: "+ pessoa.getCnpj());

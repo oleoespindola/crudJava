@@ -6,11 +6,9 @@ import models.*;
 public abstract class PessoaView implements InterfaceView{
 
     PessoaModel pessoa;
-    
     TelefoneView telefone;
     EnderecoView endereco;
 
-    @Override
     public void entrar() {
 
         System.out.printf("\nInforme o ID: ");

@@ -8,7 +8,6 @@ public abstract class PessoaFisicaView extends PessoaView {
         
     };
 
-    @Override
     public void entrar() {
 
         super.entrar();
@@ -21,7 +20,6 @@ public abstract class PessoaFisicaView extends PessoaView {
         pessoa.setEmissor(faker.gerarEmissor());
     }
 
-    @Override
     public void imprimir() {
         super.imprimir();
         System.out.println("\nCPF: "+ pessoa.getCpf());

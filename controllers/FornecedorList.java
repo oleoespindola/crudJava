@@ -21,7 +21,7 @@ public class FornecedorList {
 
     public FornecedorModel consultarCNPJ(String CNPJ) {
         for(FornecedorModel fornecedor : this.fornecedores) {
-            if(CNPJ == fornecedor.getCpf()) {
+            if(CNPJ == fornecedor.getCnpj()) {
                 return fornecedor;
             }
         }

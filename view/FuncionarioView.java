@@ -7,8 +7,6 @@ public class FuncionarioView implements InterfaceView {
 
 
     FuncionarioModel funcionario = new FuncionarioModel();
-
-    // Classes atributos 
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 

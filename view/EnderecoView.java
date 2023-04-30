@@ -17,7 +17,6 @@ public class EnderecoView implements InterfaceView{
         return endereco;
     }
 
-    @Override
     public void entrar() {
         System.out.printf("\nInforme o logradouro: ");
         endereco.setLogradouro(faker.gerarLogradouro());
@@ -35,7 +34,6 @@ public class EnderecoView implements InterfaceView{
         endereco.setCep(faker.gerarCep());
     }
 
-    @Override
     public void imprimir() {
         System.out.printf("\nLogradouro: %s", this.endereco.getLogradouro());
         System.out.printf("\nNúmero: %d", this.endereco.getNumero());
