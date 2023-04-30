@@ -1,12 +1,15 @@
 package view;
 
 import models.ClienteModel;
-import controllers.ClienteController;
+import interfaces.InterfaceView;
 
-public class ClienteView extends PessoaFisicaView {
+public class ClienteView implements InterfaceView {
 
     ClienteModel cliente = new ClienteModel();
-    ClienteController controller = new ClienteController();
+
+    // Classes atributos 
+    EnderecoView endereco = new EnderecoView();
+    TelefoneView telefone = new TelefoneView();
 
     public ClienteView() {}
 
@@ -18,21 +21,55 @@ public class ClienteView extends PessoaFisicaView {
         return cliente;
     }
 
-    @Override
     public void entrar() {
-        System.out.printf("CADASTRO DE CLIENTES");
-        super.entrar();
+        // Pessoa
+        System.out.printf("\nInforme o ID: ");
+        this.cliente.setId(faker.gerarId());
+        System.out.printf("\nNome: ");
+        this.cliente.setNome(faker.gerarNome());
+        System.out.printf("\nENDEREÇO");
+        this.endereco = new EnderecoView();
+        this.endereco.entrar();
+        this.cliente.setEnderecoModel(this.endereco.getEndereco());
+        System.out.printf("\nTELEFONE");
+        this.telefone = new TelefoneView();
+        this.telefone.entrar();
+        this.cliente.setTelefoneModel(this.telefone.getTelefone());
+        System.out.printf("\nInforme o e-mail: ");
+        this.cliente.setEmail(faker.gerarEmail());
+
+        // Pessoa Jurídica
+        this.cliente.setCnpj(faker.gerarCNPJ());
+        System.out.printf("\nInforme a inscrção estadual: ");
+        this.cliente.setInscricao_estadual(faker.gerarInscricaoEstadual());
+        System.out.printf("\nInforme um contato: ");
+        this.cliente.setContato(faker.gerarNome());
+
+        //Cliente
         System.out.printf("Informe o limite de crédito do cliente: ");
-        cliente.setLimite_credito(faker.gerarValor());
-        System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
-        cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
-        controller.incluir(this.cliente);
+        this.cliente.setLimite_credito(faker.gerarValor());
+        System.out.printf("ENDEREÇO DE COBRANÇA");
+        this.cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
     }
     
-    @Override
     public void imprimir() {
-        super.imprimir();
-        System.out.println("Limite de Credito: " + cliente.getLimite_credito());
-        System.out.println("Endereco de Cobranca: " + cliente.getEndereco_cobranca());
+        // Pessoa 
+        System.out.printf("\nID: %d", this.cliente.getId());
+        System.out.printf("\nNome: %s", this.cliente.getNome());
+        this.telefone = new TelefoneView(this.cliente.getTelefoneModel());
+        this.telefone.imprimir();
+        this.endereco = new EnderecoView(this.cliente.getEnderecoModel());
+        this.endereco.imprimir();
+        System.out.printf("\nEmail: %s", this.cliente.getEmail());
+
+        // Pessoa Jurírica 
+        System.out.printf("\nCNPJ: %s", this.cliente.getCnpj());
+        System.out.printf("\nIncricao Estadual : %s", this.cliente.getInscricao_estadual());
+        System.out.printf("\nContato: %s", this.cliente.getContato());
+
+        // Cliente
+        System.out.printf("Limite de Credito: %.2f", this.cliente.getLimite_credito());
+        this.endereco = new EnderecoView(this.cliente.getEndereco_cobranca());
+        this.endereco.imprimir();
     }
 }

@@ -1,7 +1,9 @@
 package controllers;
 
+// Bibliotecas Java
 import java.util.ArrayList;
 
+// Bibliotecas do protjeto
 import models.ClienteModel;
 
 public class ClienteList {

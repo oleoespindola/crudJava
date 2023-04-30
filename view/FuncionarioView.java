@@ -5,7 +5,10 @@ import models.FuncionarioModel;
 
 public class FuncionarioView implements InterfaceView {
 
+
     FuncionarioModel funcionario = new FuncionarioModel();
+
+    // Classes atributos 
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 
@@ -20,27 +23,31 @@ public class FuncionarioView implements InterfaceView {
     }
 
     public void entrar() {
-        System.out.printf("\nCADASTRO DE FUNCIONÁRIOS");
+        // Pessoa
         System.out.printf("\nInforme o ID: ");
-        funcionario.setId(faker.gerarId());
-        System.out.printf("\nInfome  o nome do Funcionário: ");
-        funcionario.setNome(faker.gerarNome());
-        System.out.printf("\nCADASTRO DE ENDEREÇO");
+        this.funcionario.setId(faker.gerarId());
+        System.out.printf("\nNome: ");
+        this.funcionario.setNome(faker.gerarNome());
+        System.out.printf("\nENDEREÇO");
         this.endereco = new EnderecoView();
         this.endereco.entrar();
         this.funcionario.setEnderecoModel(this.endereco.getEndereco());
-        System.out.printf("\nCADASTRO DO TELEFONE");
+        System.out.printf("\nTELEFONE");
         this.telefone = new TelefoneView();
         this.telefone.entrar();
         this.funcionario.setTelefoneModel(this.telefone.getTelefone());
         System.out.printf("\nInforme o e-mail: ");
-        funcionario.setEmail(faker.gerarEmail());   
+        this.funcionario.setEmail(faker.gerarEmail());
+
+        // Pessoa Física 
         System.out.printf("\nInforme o CPF: ");
         funcionario.setCpf(faker.gerarCPF());
         System.out.printf("\nInforme o RG: ");
         funcionario.setRg(faker.gerarRg());
         System.out.printf("\nInforme o orgão emissor: ");
         funcionario.setEmissor(faker.gerarEmissor());
+
+        // Funcionário
         System.out.printf("\nData de admissão: ");
         this.funcionario.setData_admissao(faker.gerarData());
         System.out.printf("\nData de demissão (se houver): ");
@@ -52,17 +59,21 @@ public class FuncionarioView implements InterfaceView {
     }
 
     public void imprimir() {
-
+        // Pessoa 
         System.out.printf("\nID: %d", this.funcionario.getId());
-        System.out.printf("\nNome: %s", funcionario.getNome());
+        System.out.printf("\nNome: %s", this.funcionario.getNome());
         this.telefone = new TelefoneView(this.funcionario.getTelefoneModel());
         this.telefone.imprimir();
         this.endereco = new EnderecoView(this.funcionario.getEnderecoModel());
         this.endereco.imprimir();
-        System.out.printf("\nEmail: %s", funcionario.getEmail());
-        System.out.printf("\nCPF: %s", funcionario.getCpf());
-        System.out.printf("\nRG: %s", funcionario.getRg());
-        System.out.printf("\nOrgão Expedidor: %s", funcionario.getEmissor());
+        System.out.printf("\nEmail: %s", this.funcionario.getEmail());
+
+        // Pessoa Físisca
+        System.out.printf("\nCPF: %s", this.funcionario.getCpf());
+        System.out.printf("\nRG: %s", this.funcionario.getRg());
+        System.out.printf("\nOrgão Expedidor: %s", this.funcionario.getEmissor());
+
+        // Funcionário 
         System.out.printf("\nData de admissao: %s", this.funcionario.getData_admissao());
         System.out.printf("\nData de demissao: %s", this.funcionario.getData_demissao());
         System.out.printf("\nCTPS: %s", this.funcionario.getCtps());
