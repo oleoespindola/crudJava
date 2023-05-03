@@ -10,15 +10,34 @@ public abstract class PessoaFisicaView extends PessoaView {
     // Sobrecarga
     @Override
     public void entrar() {
-
         super.entrar();
-
-        System.out.printf("\nInforme o CPF: ");
-        pessoa.setCpf(faker.gerarCPF());
-        System.out.printf("\nInforme o RG: ");
-        pessoa.setRg(faker.gerarRg());
-        System.out.printf("\nInforme o orgão emissor: ");
-        pessoa.setEmissor(faker.gerarEmissor());
+        while(true){
+            try {
+                System.out.printf("\nInforme o CPF: ");
+                pessoa.setCpf(faker.gerarCPF());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o RG: ");
+                pessoa.setRg(faker.gerarRg());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o orgão emissor: ");
+                pessoa.setEmissor(faker.gerarEmissor());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }    
     }
 
     @Override

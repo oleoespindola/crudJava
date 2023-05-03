@@ -19,15 +19,28 @@ public class TelefoneView implements InterfaceView{
 
     @Override
     public void entrar() {
-        System.out.printf("\nInforme o DDD: ");
-        telefone.setDdd(14);
-        System.out.printf("\nInforme o telefone: ");
-        telefone.setNumero(987687645);
+        while(true){
+            try {
+                System.out.printf("\nInforme o DDD: ");
+                telefone.setDdd(14);
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o telefone: ");
+                telefone.setNumero(987687645);
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }   
     }
 
     @Override
     public void imprimir() {
         System.out.printf("\nTelefone:(%d) %d\n", telefone.getDdd(), telefone.getNumero());
-    }
-    
+    } 
 }

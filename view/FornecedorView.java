@@ -24,12 +24,33 @@ public class FornecedorView extends PessoaJuridicaView {
     public void entrar() {
         System.out.printf("\nCADASTRO DE FORNECEDORES");
         super.entrar();
-        System.out.printf("\nLimite de compra: ");
-        fornecedor.setLimite_compra(faker.gerarValor());;
-        System.out.printf("\nData do cadastro: ");
-        fornecedor.setData_cadastro(faker.gerarData());;
-        System.out.printf("\nSite: ");
-        fornecedor.setSite(faker.gerarSite());
+        while(true){
+            try {
+                System.out.printf("\nLimite de compra: ");
+                fornecedor.setLimite_compra(faker.gerarValor());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nData do cadastro: ");
+                fornecedor.setData_cadastro(faker.gerarData());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nSite: ");
+                fornecedor.setSite(faker.gerarSite());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }   
     }
 
     @Override

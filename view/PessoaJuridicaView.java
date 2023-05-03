@@ -10,15 +10,34 @@ public abstract class PessoaJuridicaView extends PessoaView {
     // Sobrecarga
     @Override
     public void entrar() {
-
         super.entrar();
-
-        System.out.printf("\nInfome o CNPJ: ");
-        pessoa.setCnpj(faker.gerarCNPJ());
-        System.out.printf("\nInforme a inscrção estadual: ");
-        pessoa.setInscricao_estadual(faker.gerarInscricaoEstadual());
-        System.out.printf("\nInforme um contato: ");
-        pessoa.setContato(faker.gerarNome());
+        while(true){
+            try {
+                System.out.printf("\nInfome o CNPJ: ");
+                pessoa.setCnpj(faker.gerarCNPJ());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme a inscrção estadual: ");
+                pessoa.setInscricao_estadual(faker.gerarInscricaoEstadual());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme um contato: ");
+                pessoa.setContato(faker.gerarNome());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }  
     }
 
     @Override

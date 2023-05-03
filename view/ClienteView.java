@@ -26,7 +26,6 @@ public class ClienteView extends PessoaFisicaView {
     public void entrar() {
         System.out.printf("CADASTRO DE CLIENTES");
         super.entrar();
-
         while(true){
             try {
                 System.out.printf("Informe o limite de crédito do cliente: ");

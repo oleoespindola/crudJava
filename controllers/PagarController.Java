@@ -43,4 +43,5 @@ public class PagarController {
     public void excluir(int id) {
         this.pagamentos.excluirPeloId(id);
     }
+    
 }

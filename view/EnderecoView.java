@@ -1,6 +1,7 @@
 package view;
 
 import interfaces.InterfaceView;
+
 import models.EnderecoModel;
 
 public class EnderecoView implements InterfaceView{

@@ -11,6 +11,7 @@ public class ClienteController {
             this.clientes.incluir(cliente);
         }
     }
+    
     public void alterar(int id, ClienteModel cliente) {
         this.clientes.alterar(id, cliente);
     }

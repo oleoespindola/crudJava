@@ -13,20 +13,55 @@ public abstract class PessoaView implements InterfaceView{
     // Sobrecarga
     @Override
     public void entrar() {
-        System.out.printf("\nInforme o ID: ");
-        pessoa.setId(faker.gerarId());
-        System.out.printf("\nInfome  o nome do Funcionário: ");
-        pessoa.setNome(faker.gerarNome());
-        System.out.printf("\nCADASTRO DE ENDEREÇO");
-        this.endereco = new EnderecoView();
-        this.endereco.entrar();
-        pessoa.setEnderecoModel(this.endereco.getEndereco());
-        System.out.printf("\nCADASTRO DO TELEFONE");
-        this.telefone = new TelefoneView();
-        this.telefone.entrar();
-        pessoa.setTelefoneModel(this.telefone.getTelefone());
-        System.out.printf("\nInforme o e-mail: ");
-        pessoa.setEmail(faker.gerarEmail());       
+        while(true){
+            try {
+                System.out.printf("\nInforme o ID: ");
+                pessoa.setId(faker.gerarId());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInfome  o nome do Funcionário: ");
+                pessoa.setNome(faker.gerarNome());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nCADASTRO DE ENDEREÇO");
+                this.endereco = new EnderecoView();
+                this.endereco.entrar();
+                pessoa.setEnderecoModel(this.endereco.getEndereco());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nCADASTRO DO TELEFONE");
+                this.telefone = new TelefoneView();
+                this.telefone.entrar();
+                pessoa.setTelefoneModel(this.telefone.getTelefone());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o e-mail: ");
+                pessoa.setEmail(faker.gerarEmail());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }          
     }
 
     @Override

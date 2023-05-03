@@ -19,12 +19,26 @@ public class ReceberView extends FinanceiroView {
 
     @Override
     public void entrar() {
-    System.out.printf("\nREGISTRAR RECEITA");
-    super.entrar();
-    System.out.printf("\nInforme o ID do cliente: ");
-    receber.setCliente(faker.gerarId());
-    System.out.printf("\nInforme o número da NF: ");
-    receber.setNota_fiscal(faker.gerarNf());
+        System.out.printf("\nREGISTRAR RECEITA");
+        super.entrar();
+        while(true){
+            try {
+                System.out.printf("\nInforme o ID do cliente: ");
+                receber.setCliente(faker.gerarId());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o número da NF: ");
+                receber.setNota_fiscal(faker.gerarNf());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
     }
 
     @Override
