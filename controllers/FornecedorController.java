@@ -6,8 +6,10 @@ public class FornecedorController {
 
     FornecedorList Fornecedores = new FornecedorList();
 
-    public void incluir(FornecedorModel Fornecedor) {
-        this.Fornecedores.incluir(Fornecedor);
+    for(int i = 0; i < x ; i++){
+        public void incluir(FornecedorModel Fornecedor) {
+            this.Fornecedores.incluir(Fornecedor);
+        }
     }
 
     public void alterar(int id, FornecedorModel Fornecedor) {

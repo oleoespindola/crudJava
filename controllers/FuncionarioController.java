@@ -6,8 +6,10 @@ public class FuncionarioController {
 
     FuncionarioList funcionarios = new FuncionarioList();
 
-    public void incluir(FuncionarioModel funcionario) {
-        this.funcionarios.incluir(funcionario);
+    for(int i = 0; i < x ; i++){
+        public void incluir(FuncionarioModel funcionario) {
+            this.funcionarios.incluir(funcionario);
+        }
     }
 
     public void alterar(int id, FuncionarioModel funcionario) {

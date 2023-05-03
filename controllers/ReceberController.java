@@ -11,9 +11,11 @@ public class ReceberController {
         return this.receitas.getReceitas();
     }
 
-    public void incluir(ReceberModel receber) {
-        receber.setTotal(receber.getValor() - ((receber.getJuros() / 100) + receber.getDesconto()));
-        this.receitas.incluir(receber);
+    for(int i = 0; i < x ; i++){
+        public void incluir(ReceberModel receber) {
+            receber.setTotal(receber.getValor() - ((receber.getJuros() / 100) + receber.getDesconto()));
+            this.receitas.incluir(receber);
+        }
     }
 
     public void alterarPeloNumero(int numero) {

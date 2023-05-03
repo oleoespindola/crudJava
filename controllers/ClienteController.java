@@ -6,10 +6,11 @@ public class ClienteController {
 
     ClienteList clientes = new ClienteList();
 
-    public void incluir(ClienteModel cliente) {
-        this.clientes.incluir(cliente);
+   for(int i = 0; i < x ; i++){
+        public void incluir(ClienteModel cliente) {
+            this.clientes.incluir(cliente);
+        }
     }
-
     public void alterar(int id, ClienteModel cliente) {
         this.clientes.alterar(id, cliente);
     }

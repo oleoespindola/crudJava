@@ -12,9 +12,11 @@ public class PagarController {
         return this.pagamentos.getPagamentos();
     }
 
-    public void incluir(PagarModel pagar) {
-        pagar.setTotal(pagar.getValor() - ((pagar.getJuros()/100 * pagar.getValor()) + pagar.getDesconto()));
-        this.pagamentos.incluir(pagar);
+    for(int i = 0; i < x ; i++){
+        public void incluir(PagarModel pagar) {
+            pagar.setTotal(pagar.getValor() - ((pagar.getJuros()/100 * pagar.getValor()) + pagar.getDesconto()));
+            this.pagamentos.incluir(pagar);
+        }
     }
 
     public void alterarPeloNumero(int numero, PagarModel pagar) {
