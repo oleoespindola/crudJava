@@ -7,7 +7,7 @@ public class FuncionarioController {
     FuncionarioList funcionarios = new FuncionarioList();
 
     for(int i = 0; i < x ; i++){
-        public void incluir(FuncionarioModel funcionario) {
+        public void incluir(FuncionarioModel funcionario, int x) {
             this.funcionarios.incluir(funcionario);
         }
     }

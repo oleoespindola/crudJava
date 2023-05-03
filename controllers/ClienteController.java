@@ -7,7 +7,7 @@ public class ClienteController {
     ClienteList clientes = new ClienteList();
 
    for(int i = 0; i < x ; i++){
-        public void incluir(ClienteModel cliente) {
+        public void incluir(ClienteModel cliente, int x) {
             this.clientes.incluir(cliente);
         }
     }

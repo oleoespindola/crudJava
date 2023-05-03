@@ -13,7 +13,7 @@ public class PagarController {
     }
 
     for(int i = 0; i < x ; i++){
-        public void incluir(PagarModel pagar) {
+        public void incluir(PagarModel pagar, int x) {
             pagar.setTotal(pagar.getValor() - ((pagar.getJuros()/100 * pagar.getValor()) + pagar.getDesconto()));
             this.pagamentos.incluir(pagar);
         }

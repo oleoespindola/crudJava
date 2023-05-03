@@ -47,8 +47,10 @@ public class Menu {
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
+                        System.out.println("Quantidade: ");
+                        int x = leia.nextInt();
                         this.funcionarioView.entrar();
-                        this.funcionarioController.incluir(this.funcionarioView.getFuncionario());
+                        this.funcionarioController.incluir(this.funcionarioView.getFuncionario(), x);
                         break;
                     case "b":
                         System.out.printf("\nInforme o ID: ");
@@ -91,8 +93,10 @@ public class Menu {
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
+                        System.out.println("Quantidade: ");
+                        int x = leia.nextInt();
                         this.clienteView.entrar();
-                        this.clienteController.incluir(this.clienteView.getCliente());
+                        this.clienteController.incluir(this.clienteView.getCliente(), x);
                         break;
                     case "b":
                         System.out.printf("\nInforme o ID: ");
@@ -131,8 +135,10 @@ public class Menu {
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
+                        System.out.println("Quantidade: ");
+                        int x = leia.nextInt();
                         this.fornecedorView.entrar();
-                        this.fornecedorController.incluir(this.fornecedorView.getFornecedor());
+                        this.fornecedorController.incluir(this.fornecedorView.getFornecedor(), x);
                         break;
                     case "b":
                         System.out.printf("\nInforme o ID: ");
@@ -173,8 +179,10 @@ public class Menu {
                 subMenu = leia.next();
                 switch (subMenu) {
                     case "a":
+                        System.out.println("Quantidade: ");
+                        int x = leia.nextInt();
                         this.receberView.entrar();
-                        this.receberController.incluir(this.receberView.getReceber());
+                        this.receberController.incluir(this.receberView.getReceber(), x);
                         break;
                     case "b":
                         System.out.printf("\nInforme o número: ");
@@ -221,8 +229,10 @@ public class Menu {
                 subMenu = leia.next();
                 switch(subMenu) {
                     case "a":
+                        System.out.println("Quantidade: ");
+                        int x = leia.nextInt();
                         this.pagarView.entrar();
-                        this.pagarController.incluir(this.pagarView.getPagar());
+                        this.pagarController.incluir(this.pagarView.getPagar(), x);
                         break;
                     case "b":
                         System.out.printf("\nInforme o numero: ");

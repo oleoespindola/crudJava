@@ -26,10 +26,23 @@ public class ClienteView extends PessoaFisicaView {
     public void entrar() {
         System.out.printf("CADASTRO DE CLIENTES");
         super.entrar();
-        System.out.printf("Informe o limite de crédito do cliente: ");
-        cliente.setLimite_credito(faker.gerarValor());
-        System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
-        cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
+
+        while(true){
+            try {
+                System.out.printf("Informe o limite de crédito do cliente: ");
+                cliente.setLimite_credito(faker.gerarValor());
+                break;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        while(true){
+            try {
+                System.out.printf("CADASTRO DO ENDEREÇO DE COBRANÇA: ");
+                cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
+                break;
+            } catch (Exception e) {
+                    // TODO: handle exception
+            }
         controller.incluir(this.cliente);
     }
     

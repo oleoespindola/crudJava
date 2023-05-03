@@ -12,7 +12,7 @@ public class ReceberController {
     }
 
     for(int i = 0; i < x ; i++){
-        public void incluir(ReceberModel receber) {
+        public void incluir(ReceberModel receber, int x) {
             receber.setTotal(receber.getValor() - ((receber.getJuros() / 100) + receber.getDesconto()));
             this.receitas.incluir(receber);
         }
