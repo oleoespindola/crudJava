@@ -27,7 +27,7 @@ public class PagarView extends FinanceiroView {
                 pagar.setFornecedor(faker.gerarId());
                 break;
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         }
         while(true){
@@ -36,7 +36,7 @@ public class PagarView extends FinanceiroView {
                 pagar.setBoleto(faker.gerarBoleto());
                 break;
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         } 
     }

@@ -32,7 +32,7 @@ public class ClienteView extends PessoaFisicaView {
                 cliente.setLimite_credito(faker.gerarValor());
                 break;
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         while(true){
             try {
@@ -40,7 +40,7 @@ public class ClienteView extends PessoaFisicaView {
                 cliente.setEndereco_cobranca(new EnderecoView().getEndereco());
                 break;
             } catch (Exception e) {
-                    // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         controller.incluir(this.cliente);
     }

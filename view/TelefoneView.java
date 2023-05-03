@@ -25,7 +25,7 @@ public class TelefoneView implements InterfaceView{
                 telefone.setDdd(14);
                 break;
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         }
         while(true){
@@ -34,7 +34,7 @@ public class TelefoneView implements InterfaceView{
                 telefone.setNumero(987687645);
                 break;
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.printf("\nERRO! Tente novamente: ");
             }
         }   
     }
