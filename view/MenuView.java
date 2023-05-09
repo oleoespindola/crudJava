@@ -1,5 +1,6 @@
 package view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import controllers.*;
@@ -30,6 +31,7 @@ public class MenuView {
     }
 
     public boolean menuPrincupal() {
+        int opcao = 0;
         String subMenu;
         String cnpj;
         int id;
@@ -37,9 +39,18 @@ public class MenuView {
         int numero;
         Double valor;
 
-        System.out.printf(
-                "\n\n1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
-        int opcao = leia.nextInt();
+        while(true) {
+            try {
+                System.out.printf(
+                        "\n\n1 - Cadastro de Funcionarios\n2 - Cadastro de Clientes\n3 - Cadastro de Fornecedores\n4 - Contas a receber\n5 - Contas a pagar\n6 - Fluxo de Caixa\n7 - Sair\n:: ");
+                opcao = leia.nextInt();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.print("erro");
+                leia.next();
+            } 
+        }
+
         switch (opcao) {
             case 1:
                 System.out.printf(
