@@ -7,6 +7,7 @@ public class FuncionarioModel extends PessoaFisicaModel {
     private String data_demissao;
     private String ctps;
     private double salario;
+    private PessoaFisicaModel pessoa_fisica;
 
     // Constructor
     public FuncionarioModel() {}
@@ -47,5 +48,13 @@ public class FuncionarioModel extends PessoaFisicaModel {
 
     public double getSalario() {
         return salario;
+    }
+
+    public void setPessoa_fisica(PessoaFisicaModel pessoa_fisica) {
+        this.pessoa_fisica = pessoa_fisica;
+    }
+
+    public PessoaFisicaModel getPessoa_fisica() {
+        return pessoa_fisica;
     }
 }

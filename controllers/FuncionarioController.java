@@ -6,9 +6,11 @@ public class FuncionarioController {
 
     FuncionarioList funcionarios = new FuncionarioList();
 
-    public void incluir(FuncionarioModel funcionario) {
-        this.funcionarios.incluir(funcionario);
-    }
+    public void incluir(FuncionarioModel funcionario, int x) {
+            for(int i = 0; i < x ; i++){
+            this.funcionarios.incluir(funcionario);
+        }
+        }
 
     public void alterar(int id, FuncionarioModel funcionario) {
         this.funcionarios.alterar(id, funcionario);
@@ -29,4 +31,5 @@ public class FuncionarioController {
     public void excluir (int id) {
         this.funcionarios.excluir(id);
     }
+    
 }

@@ -5,6 +5,7 @@ public class PagarModel extends FinanceiroModel {
     // Atributos
     private int id_fornecedor;
     private String boleto;
+    private FinanceiroModel financeiro;
 
     // Constructor
     public PagarModel() {}
@@ -29,4 +30,11 @@ public class PagarModel extends FinanceiroModel {
         return boleto;
     }
 
+    public void setFinanceiro(FinanceiroModel financeiro) {
+        this.financeiro = financeiro;
+    }
+
+    public FinanceiroModel getFinanceiro() {
+        return financeiro;
+    }
 }

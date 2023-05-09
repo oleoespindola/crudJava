@@ -5,16 +5,19 @@ import interfaces.InterfaceView;
 
 public class ClienteView implements InterfaceView {
 
+    // Atributos 
     ClienteModel cliente = new ClienteModel();
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 
+    // Construtores 
     public ClienteView() {}
 
     public ClienteView(ClienteModel cliente) {
         this.cliente = cliente;
     }
 
+    // Método 
     public ClienteModel getCliente() {
         return cliente;
     }

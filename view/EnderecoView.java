@@ -1,18 +1,22 @@
 package view;
 
 import interfaces.InterfaceView;
+
 import models.EnderecoModel;
 
 public class EnderecoView implements InterfaceView{
 
+    // Atributo 
     EnderecoModel endereco = new EnderecoModel();
 
+    // Contrutor 
     public EnderecoView () {}
 
     public EnderecoView (EnderecoModel endereco) {
         this.endereco = endereco;
     }
 
+    // Método 
     public EnderecoModel getEndereco() {
         return endereco;
     }
@@ -43,5 +47,4 @@ public class EnderecoView implements InterfaceView{
         System.out.printf("\nEstado: %s", this.endereco.getEstado());
         System.out.printf("\nCEP: %d", this.endereco.getCep());
     }
-    
 }

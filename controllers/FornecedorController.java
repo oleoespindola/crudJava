@@ -6,9 +6,11 @@ public class FornecedorController {
 
     FornecedorList Fornecedores = new FornecedorList();
 
-    public void incluir(FornecedorModel Fornecedor) {
-        this.Fornecedores.incluir(Fornecedor);
-    }
+    public void incluir(FornecedorModel Fornecedor, int x) {
+            for(int i = 0; i < x ; i++){
+            this.Fornecedores.incluir(Fornecedor);
+        }
+        }
 
     public void alterar(int id, FornecedorModel Fornecedor) {
         this.Fornecedores.alterar(id, Fornecedor);
@@ -29,4 +31,5 @@ public class FornecedorController {
     public void excluir (int id) {
         this.Fornecedores.excluir(id);
     }
+    
 }

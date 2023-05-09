@@ -5,30 +5,94 @@ import models.FinanceiroModel;
 
 public abstract class FinanceiroView implements InterfaceView {
 
-    FinanceiroModel financeiro = new FinanceiroModel() {
-        
-    };
+    // Atributo 
+    FinanceiroModel financeiro = new FinanceiroModel();
 
+    // Sobrecargas 
     @Override
     public void entrar() {
-        System.out.printf("\nInforme o ID da transação: ");
-        financeiro.setId(faker.gerarId());
-        System.out.printf("\nInforme o número da transação: ");
-        financeiro.setNumero(faker.gerarId());
-        System.out.printf("\nData da emissão: ");
-        financeiro.setEmissao(faker.gerarData());
-        System.out.printf("\nData de vencimento: ");
-        financeiro.setVencimento(faker.gerarData());
-        System.out.printf("\nData do pagamento: ");
-        financeiro.setPagamento(faker.gerarData());
-        System.out.printf("\nValor: ");
-        financeiro.setValor(faker.gerarValor());
-        System.out.printf("\nJuros: ");
-        financeiro.setJuros(faker.gerarValor()/10);
-        System.out.printf("\nMulta");
-        financeiro.setMulta(faker.gerarValor()/10);
-        System.out.printf("\nDesconto: ");
-        financeiro.setDesconto(faker.gerarValor()/80);
+
+        while(true){
+            try {
+                System.out.printf("\nInforme o ID da transação: ");
+                financeiro.setId(faker.gerarId());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nInforme o número da transação: ");
+                financeiro.setNumero(faker.gerarId());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nData da emissão: ");
+                financeiro.setEmissao(faker.gerarData());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nData de vencimento: ");
+                financeiro.setVencimento(faker.gerarData());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nData do pagamento: ");
+                financeiro.setPagamento(faker.gerarData());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nValor: ");
+                financeiro.setValor(faker.gerarValor());
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nJuros: ");
+                financeiro.setJuros(faker.gerarValor()/10);
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+        while(true){
+            try {
+                System.out.printf("\nMulta");
+                financeiro.setMulta(faker.gerarValor()/10);
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
+         while(true){
+            try {
+                System.out.printf("\nDesconto: ");
+                financeiro.setDesconto(faker.gerarValor()/80);
+                break;
+            } catch (Exception e) {
+                System.out.printf("Informe um dado válido");
+            }
+        }
     }
 
     @Override

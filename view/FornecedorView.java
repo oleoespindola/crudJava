@@ -5,20 +5,24 @@ import models.FornecedorModel;
 
 public class FornecedorView implements InterfaceView {
 
+    // Atributos
     FornecedorModel fornecedor = new FornecedorModel();
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 
+    // Construtores
     public FornecedorView() {}
 
     public FornecedorView(FornecedorModel fornecedor) {
         this.fornecedor = fornecedor;
     }
 
+    // Método 
     public FornecedorModel getFornecedor() {
         return this.fornecedor;
     }
-
+    
+    // Sobrecarga
     @Override
     public void entrar() {
         // Pessoa

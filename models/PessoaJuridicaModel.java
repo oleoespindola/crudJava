@@ -1,10 +1,11 @@
 package models;
-public abstract class PessoaJuridicaModel extends PessoaModel {
+public class PessoaJuridicaModel extends PessoaModel {
 
     //Atributos
     private String cnpj;
     private String inscricao_estadual;
     private String contato;
+    private PessoaModel pessoa_model;
 
     // Cosntructor
     public PessoaJuridicaModel() {}
@@ -38,4 +39,12 @@ public abstract class PessoaJuridicaModel extends PessoaModel {
         return contato;
     }
 
+    public void setPessoa_model(PessoaModel pessoa_model) {
+        this.pessoa_model = pessoa_model;
+    }
+
+    public PessoaModel getPessoa_model() {
+        return pessoa_model;
+    }
+   
 }

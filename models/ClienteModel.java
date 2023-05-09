@@ -5,6 +5,7 @@ public class ClienteModel extends PessoaJuridicaModel {
     // Atribuitos
     private double limite_credito;
     private EnderecoModel endereco_cobranca;
+    private PessoaFisicaModel pessoa_fisica;
 
     // Constructor
     public ClienteModel() {}
@@ -28,5 +29,12 @@ public class ClienteModel extends PessoaJuridicaModel {
     public EnderecoModel getEndereco_cobranca() {
         return endereco_cobranca;
     }
-    
+
+    public void setPessoa_fisica(PessoaFisicaModel pessoa_fisica) {
+        this.pessoa_fisica = pessoa_fisica;
+    }
+
+    public PessoaFisicaModel getPessoa_fisica() {
+        return pessoa_fisica;
+    } 
 }

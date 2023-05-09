@@ -6,16 +6,19 @@ import models.FuncionarioModel;
 public class FuncionarioView implements InterfaceView {
 
 
+    // Atributos 
     FuncionarioModel funcionario = new FuncionarioModel();
     EnderecoView endereco = new EnderecoView();
     TelefoneView telefone = new TelefoneView();
 
+    // Construtor 
     public FuncionarioView() {}
 
     public FuncionarioView(FuncionarioModel funcionario) {
         this.funcionario = funcionario;
     }
 
+    // Método 
     public FuncionarioModel getFuncionario() {
         return this.funcionario;
     }
@@ -77,5 +80,4 @@ public class FuncionarioView implements InterfaceView {
         System.out.printf("\nSalário : R$ %.2f", this.funcionario.getSalario());
         
     }
-
 }
