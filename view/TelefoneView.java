@@ -18,26 +18,26 @@ public class TelefoneView implements InterfaceView{
 
 
     public void entrar() {
-        System.out.printf("\nInforme o DDD: ");
-        this.telefone.setDdd(faker.gerarDDD());
-        System.out.printf("\nInforme o telefone: ");
-        this.telefone.setNumero(faker.gerarTelefone());
+        
+        
         while(true){
             try {
                 System.out.printf("\nInforme o DDD: ");
-                telefone.setDdd(14);
+                this.telefone.setDdd(faker.gerarDDD());
                 break;
             } catch (Exception e) {
                 System.out.printf("\nERRO! Tente novamente: ");
+                leia.next();
             }
         }
         while(true){
             try {
                 System.out.printf("\nInforme o telefone: ");
-                telefone.setNumero(987687645);
+                this.telefone.setNumero(faker.gerarTelefone());
                 break;
             } catch (Exception e) {
                 System.out.printf("\nERRO! Tente novamente: ");
+                leia.next();
             }
         }   
     }

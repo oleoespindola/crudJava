@@ -47,19 +47,31 @@ public class MenuView {
                 break;
             } catch (InputMismatchException e) {
                 System.out.print("erro");
-                leia.next();
+                leia.nextInt();
             } 
         }
 
         switch (opcao) {
             case 1:
-                System.out.printf(
-                        "    a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo CPF\n    e. Consultar pelo Nome\n    f. Excluir pelo ID\n    :: ");
-                subMenu = leia.next();
+                try {
+                    System.out.printf(
+                            "    a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo CPF\n    e. Consultar pelo Nome\n    f. Excluir pelo ID\n    :: ");
+                    subMenu = leia.next();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("erro");
+                    leia.next();
+                }    
                 switch (subMenu) {
                     case "a":
-                        System.out.println("Quantidade: ");
-                        int x = leia.nextInt();
+                        try {
+                            System.out.println("Quantidade: ");
+                            int x = leia.nextInt();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.print("erro");
+                            leia.nextInt();
+                        }
                         this.funcionarioView.entrar();
                         this.funcionarioController.incluir(this.funcionarioView.getFuncionario(), x);
                         break;
@@ -99,13 +111,25 @@ public class MenuView {
                 }
                 break;
             case 2:
-                System.out.printf(
+                try {
+                    System.out.printf(
                         "   a. Incluir\n    b. Alterar pelo ID\n    c. Consultar pela posição na Lista\n    d. Consultar pelo ID\n    e. Consultar pelo CNPJ\n    f. Excluir pelo ID\n    :: ");
-                subMenu = leia.next();
+                    subMenu = leia.next();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("erro");
+                    leia.next();
+                }
                 switch (subMenu) {
                     case "a":
-                        System.out.println("Quantidade: ");
-                        int x = leia.nextInt();
+                        try {
+                            System.out.println("Quantidade: ");
+                            int x = leia.nextInt();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.print("erro");
+                            leia.nextInt();
+                        }
                         this.clienteView.entrar();
                         this.clienteController.incluir(this.clienteView.getCliente(), x);
                         break;
@@ -141,13 +165,25 @@ public class MenuView {
                 }
                 break;
             case 3:
-                System.out.printf(
+                try {
+                    System.out.printf(
                         "   a. Incluir\n   b. Alterar pelo ID\n   c. Consultar pela posição na Lista\n   d. Consultar pelo ID\n   e. Consultar pelo CNPJ\n   f. Excluir pelo ID\n   :: ");
-                subMenu = leia.next();
+                    subMenu = leia.next();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("erro");
+                    leia.next();
+                }
                 switch (subMenu) {
                     case "a":
-                        System.out.println("Quantidade: ");
-                        int x = leia.nextInt();
+                        try {
+                            System.out.println("Quantidade: ");
+                            int x = leia.nextInt();
+                            break;
+                        } catch (InputMismatchException e) {
+                            System.out.print("erro");
+                            leia.nextInt();
+                        }
                         this.fornecedorView.entrar();
                         this.fornecedorController.incluir(this.fornecedorView.getFornecedor(), x);
                         break;
@@ -185,9 +221,15 @@ public class MenuView {
                 }
                 break;
             case 4:
-                System.out.printf(
+                try {
+                    System.out.printf(
                         "   a. Incluir\n   b. Alterar pelo número\n   c. Consultar pelo Nome do Cliente\n   d. Consultar pelo Número\n   e. Consultar pelo Valor\n   f. Consultar pela Nota Fiscal\n   g. Excluir pelo ID\n   :: ");
-                subMenu = leia.next();
+                    subMenu = leia.next();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("erro");
+                    leia.next();
+                }
                 switch (subMenu) {
                     case "a":
                         this.receberView.entrar();
@@ -233,9 +275,15 @@ public class MenuView {
                 }
                 break;
             case 5:
-                System.out.printf(
+                try {
+                    System.out.printf(
                         "   a. Incluir\n   b. Alterar pelo número\n   c. Consultar pelo CNPJ do Fornecedor\n   d. Consultar pelo Número\n   e. Consultar pelo Valor\n   f. Consultar pelo Boleto\n   g. Excluir pelo ID\n   :: ");
-                subMenu = leia.next();
+                    subMenu = leia.next();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("erro");
+                    leia.next();
+                }
                 switch(subMenu) {
                     case "a":
                         this.pagarView.entrar();

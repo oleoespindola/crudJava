@@ -26,10 +26,22 @@ public class FornecedorView implements InterfaceView {
     @Override
     public void entrar() {
         // Pessoa
-        System.out.printf("\nInforme o ID: ");
-        this.fornecedor.setId(faker.gerarId());
-        System.out.printf("\nNome: ");
-        this.fornecedor.setNome(faker.gerarNome());
+        try {
+            System.out.printf("\nInforme o ID: ");
+            this.fornecedor.setId(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nNome: ");
+            this.fornecedor.setNome(faker.gerarNome());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
         System.out.printf("\nENDEREÇO");
         this.endereco.entrar();
         this.fornecedor.setEnderecoModel(this.endereco.getEndereco());
@@ -37,23 +49,66 @@ public class FornecedorView implements InterfaceView {
         this.telefone = new TelefoneView();
         this.telefone.entrar();
         this.fornecedor.setTelefoneModel(this.telefone.getTelefone());
-        System.out.printf("\nInforme o e-mail: ");
-        this.fornecedor.setEmail(faker.gerarEmail());
+        try {
+            System.out.printf("\nInforme o e-mail: ");
+            this.fornecedor.setEmail(faker.gerarEmail());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
 
         // Pessoa Jurídica
-        this.fornecedor.setCnpj(faker.gerarCNPJ());
-        System.out.printf("\nInforme a inscrção estadual: ");
-        this.fornecedor.setInscricao_estadual(faker.gerarInscricaoEstadual());
-        System.out.printf("\nInforme um contato: ");
+        try {
+            System.out.printf("\nInforme o Cnpj: ");
+            this.fornecedor.setCnpj(faker.gerarCNPJ());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme a inscrção estadual: ");
+            this.fornecedor.setInscricao_estadual(faker.gerarInscricaoEstadual());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme um contato: ");
         this.fornecedor.setContato(faker.gerarNome());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
 
         // Fornecedor
-        System.out.printf("\nLimite de compra: ");
-        this.fornecedor.setLimite_compra(faker.gerarValor());;
-        System.out.printf("\nData do cadastro: ");
-        this.fornecedor.setData_cadastro(faker.gerarData());;
-        System.out.printf("\nSite: ");
-        this.fornecedor.setSite(faker.gerarSite());
+        try {
+            System.out.printf("\nLimite de compra: ");
+            this.fornecedor.setLimite_compra(faker.gerarValor());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData do cadastro: ");
+            this.fornecedor.setData_cadastro(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nSite: ");
+            this.fornecedor.setSite(faker.gerarSite());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }  
     }
 
     @Override

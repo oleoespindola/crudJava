@@ -22,30 +22,96 @@ public class ReceberView implements InterfaceView {
 
     public void entrar() {
         // Financeiro
-        System.out.printf("\nInforme o ID da transação: ");
-        this.receber.setId(faker.gerarId());
-        System.out.printf("\nInforme o número da transação: ");
-        this.receber.setNumero(faker.gerarId());
-        System.out.printf("\nData da emissão: ");
-        this.receber.setEmissao(faker.gerarData());
-        System.out.printf("\nData de vencimento: ");
-        this.receber.setVencimento(faker.gerarData());
-        System.out.printf("\nData do pagamento: ");
-        this.receber.setPagamento(faker.gerarData());
-        System.out.printf("\nValor: ");
-        this.receber.setValor(faker.gerarValor());
-        System.out.printf("\nJuros: ");
-        this.receber.setJuros(faker.gerarEncargos());
-        System.out.printf("\nMulta");
-        this.receber.setMulta(faker.gerarEncargos());
-        System.out.printf("\nDesconto: ");
-        this.receber.setDesconto(faker.gerarEncargos());
+        try {
+            System.out.printf("\nInforme o ID da transação: ");
+            this.receber.setId(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o número da transação: ");
+            this.receber.setNumero(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData da emissão: ");
+            this.receber.setEmissao(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData de vencimento: ");
+            this.receber.setVencimento(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData do pagamento: ");
+            this.receber.setPagamento(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nValor: ");
+            this.receber.setValor(faker.gerarValor());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nJuros: ");
+            this.receber.setJuros(faker.gerarEncargos());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nMulta");
+            this.receber.setMulta(faker.gerarEncargos());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nDesconto: ");
+            this.receber.setDesconto(faker.gerarEncargos());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }     
         
-        // Receitas
-        System.out.printf("\nInforme o ID do cliente: ");
-        receber.setCliente(faker.gerarId()); // **IMPORTANTE** Registrar somente ID válidos
-        System.out.printf("\nInforme o número da NF: ");
-        receber.setNota_fiscal(faker.gerarNf());
+        // Receitas try {
+        try {  
+            System.out.printf("\nInforme o número da NF: ");
+            receber.setNota_fiscal(faker.gerarNf());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o ID do cliente: ");
+            receber.setCliente(faker.gerarId()); // **IMPORTANTE** Registrar somente ID válidos
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
     }
 
     public void imprimir() {

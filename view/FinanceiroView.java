@@ -19,6 +19,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -28,6 +29,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -37,6 +39,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -46,6 +49,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -55,6 +59,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -64,6 +69,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -73,6 +79,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
         while(true){
@@ -82,6 +89,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
          while(true){
@@ -91,6 +99,7 @@ public abstract class FinanceiroView implements InterfaceView {
                 break;
             } catch (Exception e) {
                 System.out.printf("Informe um dado válido");
+                leia.next();
             }
         }
     }

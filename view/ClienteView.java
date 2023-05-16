@@ -24,10 +24,22 @@ public class ClienteView implements InterfaceView {
 
     public void entrar() {
         // Pessoa
-        System.out.printf("\nInforme o ID: ");
-        this.cliente.setId(faker.gerarId());
-        System.out.printf("\nNome: ");
-        this.cliente.setNome(faker.gerarNome());
+        try {
+            System.out.printf("\nInforme o ID: ");
+            this.cliente.setId(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nNome: ");
+            this.cliente.setNome(faker.gerarNome());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
         System.out.printf("\nENDEREÇO");
         this.endereco.entrar();
         this.cliente.setEnderecoModel(this.endereco.getEndereco());
@@ -35,19 +47,50 @@ public class ClienteView implements InterfaceView {
         this.telefone = new TelefoneView();
         this.telefone.entrar();
         this.cliente.setTelefoneModel(this.telefone.getTelefone());
-        System.out.printf("\nInforme o e-mail: ");
-        this.cliente.setEmail(faker.gerarEmail());
+        try {
+            System.out.printf("\nInforme o e-mail: ");
+            this.cliente.setEmail(faker.gerarEmail());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        
 
         // Pessoa Jurídica
-        this.cliente.setCnpj(faker.gerarCNPJ());
-        System.out.printf("\nInforme a inscrção estadual: ");
-        this.cliente.setInscricao_estadual(faker.gerarInscricaoEstadual());
-        System.out.printf("\nInforme um contato: ");
-        this.cliente.setContato(faker.gerarNome());
+        }try {
+            System.out.println("Informe o Cnpj:");
+            this.cliente.setCnpj(faker.gerarCNPJ());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme a inscrção estadual: ");
+            this.cliente.setInscricao_estadual(faker.gerarInscricaoEstadual());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }try {
+            System.out.printf("\nInforme um contato: ");
+            this.cliente.setContato(faker.gerarNome());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
 
         //Cliente
-        System.out.printf("\nInforme o limite de crédito do cliente: ");
-        this.cliente.setLimite_credito(faker.gerarValor());
+        try {
+            System.out.printf("\nInforme o limite de crédito do cliente: ");
+            this.cliente.setLimite_credito(faker.gerarValor());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
         System.out.printf("\nENDEREÇO DE COBRANÇA");
         this.endereco.entrar();
         this.cliente.setEndereco_cobranca(this.endereco.getEndereco());

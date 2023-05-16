@@ -21,30 +21,96 @@ public class PagarView extends FinanceiroView {
 
     public void entrar() {
         // Financeiro
-        System.out.printf("\nInforme o ID da transação: ");
+        try {
+            System.out.printf("\nInforme o ID da transação: ");
         this.pagar.setId(faker.gerarId());
-        System.out.printf("\nInforme o número da transação: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o número da transação: ");
         this.pagar.setNumero(faker.gerarId());
-        System.out.printf("\nData da emissão: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData da emissão: ");
         this.pagar.setEmissao(faker.gerarData());
-        System.out.printf("\nData de vencimento: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData de vencimento: ");
         this.pagar.setVencimento(faker.gerarData());
-        System.out.printf("\nData do pagamento: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData do pagamento: ");
         this.pagar.setPagamento(faker.gerarData());
-        System.out.printf("\nValor: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nValor: ");
         this.pagar.setValor(faker.gerarValor());
-        System.out.printf("\nJuros: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nJuros: ");
         this.pagar.setJuros(faker.gerarEncargos());
-        System.out.printf("\nMulta");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nMulta");
         this.pagar.setMulta(faker.gerarEncargos());
-        System.out.printf("\nDesconto: ");
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nDesconto: ");
         this.pagar.setDesconto(faker.gerarEncargos());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        } 
 
         // Pagar
-        System.out.printf("\nInforme o ID do fornecedor: ");
-        pagar.setFornecedor(faker.gerarId()); // **IMPORTANTE** Registrar somente ID válidos
-        System.out.printf("\nInforme o código de barras");
+        try {
+            System.out.printf("\nInforme o ID do fornecedor: "); // **IMPORTANTE** Registrar somente ID válidos
+        pagar.setFornecedor(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o código de barras");
         pagar.setBoleto(faker.gerarBoleto());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
     }
 
     public void imprimir() {

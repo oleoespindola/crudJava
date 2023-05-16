@@ -25,10 +25,22 @@ public class FuncionarioView implements InterfaceView {
 
     public void entrar() {
         // Pessoa
-        System.out.printf("\nInforme o ID: ");
-        this.funcionario.setId(faker.gerarId());
-        System.out.printf("\nNome: ");
-        this.funcionario.setNome(faker.gerarNome());
+        try {
+            System.out.printf("\nInforme o ID: ");
+            this.funcionario.setId(faker.gerarId());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nNome: ");
+            this.funcionario.setNome(faker.gerarNome());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
         System.out.printf("\nENDEREÇO");
         this.endereco.entrar();
         this.funcionario.setEnderecoModel(this.endereco.getEndereco());
@@ -36,26 +48,74 @@ public class FuncionarioView implements InterfaceView {
         this.telefone = new TelefoneView();
         this.telefone.entrar();
         this.funcionario.setTelefoneModel(this.telefone.getTelefone());
-        System.out.printf("\nInforme o e-mail: ");
-        this.funcionario.setEmail(faker.gerarEmail());
+        try {
+            System.out.printf("\nInforme o e-mail: ");
+            this.funcionario.setEmail(faker.gerarEmail());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
 
         // Pessoa Física 
-        System.out.printf("\nInforme o CPF: ");
-        funcionario.setCpf(faker.gerarCPF());
-        System.out.printf("\nInforme o RG: ");
-        funcionario.setRg(faker.gerarRg());
-        System.out.printf("\nInforme o orgão emissor: ");
-        funcionario.setEmissor(faker.gerarEmissor());
+        try {
+            System.out.printf("\nInforme o CPF: ");
+            funcionario.setCpf(faker.gerarCPF());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o RG: ");
+            funcionario.setRg(faker.gerarRg());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o orgão emissor: ");
+            funcionario.setEmissor(faker.gerarEmissor());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
 
         // Funcionário
-        System.out.printf("\nData de admissão: ");
-        this.funcionario.setData_admissao(faker.gerarData());
-        System.out.printf("\nData de demissão (se houver): ");
-        this.funcionario.setData_demissao(faker.gerarData());
-        System.out.printf("\nCTPS: ");
-        this.funcionario.setCtps(faker.gerarInscricaoEstadual());
-        System.out.printf("\nInforme o salário: ");
-        this.funcionario.setSalario(faker.gerarValor());
+        try {
+            System.out.printf("\nData de admissão: ");
+            this.funcionario.setData_admissao(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nData de demissão (se houver): ");
+            this.funcionario.setData_demissao(faker.gerarData());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nCTPS: ");
+            this.funcionario.setCtps(faker.gerarInscricaoEstadual());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o salário: ");
+            this.funcionario.setSalario(faker.gerarValor());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }  
     }
 
     public void imprimir() {

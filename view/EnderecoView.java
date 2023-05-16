@@ -22,20 +22,62 @@ public class EnderecoView implements InterfaceView{
     }
 
     public void entrar() {
-        System.out.printf("\nInforme o logradouro: ");
-        endereco.setLogradouro(faker.gerarLogradouro());
-        System.out.printf("\nInforme o numero: ");
-        endereco.setNumero(faker.gerarNumero());
-        System.out.printf("\nInforme o complemento (se houver): ");
-        endereco.setComplemento(faker.gerarComplemento());
-        System.out.printf("\nInforme o bairro: ");
-        endereco.setBairro(faker.gerarBairro());
-        System.out.printf("\nInforme a cidade: ");
-        endereco.setCidade(faker.gerarCidade());
-        System.out.printf("\nInforme o estado: ");
-        endereco.setEstado(faker.gerarEstado());
-        System.out.printf("\nInfoeme o CEP: ");
-        endereco.setCep(faker.gerarCep());
+        try {
+            System.out.printf("\nInforme o logradouro: ");
+            endereco.setLogradouro(faker.gerarLogradouro());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o numero: ");
+            endereco.setNumero(faker.gerarNumero());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o complemento (se houver): ");
+            endereco.setComplemento(faker.gerarComplemento());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o bairro: ");
+            endereco.setBairro(faker.gerarBairro());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme a cidade: ");
+            endereco.setCidade(faker.gerarCidade());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInforme o estado: ");
+            endereco.setEstado(faker.gerarEstado());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
+        try {
+            System.out.printf("\nInfoeme o CEP: ");
+            endereco.setCep(faker.gerarCep());
+            break;
+        } catch (Exception e) {
+            System.out.print("erro");
+            leia.next();
+        }
     }
 
     public void imprimir() {
